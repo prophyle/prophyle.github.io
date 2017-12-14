@@ -34,7 +34,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="File formats" href="formats.html" />
-    <link rel="prev" title="Building databases" href="databases.html" />
+    <link rel="prev" title="Building custom databases" href="databases_custom.html" />
   
    
 
@@ -50,7 +50,7 @@
           <a href="formats.html" title="File formats"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="databases.html" title="Building databases"
+          <a href="databases_custom.html" title="Building custom databases"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
       </ul>
@@ -73,10 +73,12 @@
     
     
       <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">ProPhyle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="example.html">Quick example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">Building databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation and running</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases_predefined.html">Building predefined databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases_custom.html">Building custom databases</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Read classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="formats.html">File formats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference.html">Command-line interface</a></li>
@@ -116,11 +118,11 @@
   <div class="section" id="read-classification">
 <span id="classification"></span><h1>Read classification<a class="headerlink" href="#read-classification" title="Permalink to this headline">¶</a></h1>
 <p>When the index construction is finished, you can classify your reads using</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">classify</span> <span class="o">&lt;</span><span class="n">index_dir</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">reads</span><span class="o">.</span><span class="n">fq</span><span class="o">&gt;</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle classify &lt;index_dir&gt; &lt;reads.fq&gt;
 </pre></div>
 </div>
 <p>For the index from above, the command would be:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">classify</span> <span class="n">my_BV_index</span> <span class="n">my_reads</span><span class="o">.</span><span class="n">fq</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle classify my_BV_index my_reads.fq
 </pre></div>
 </div>
 <p>The assignments are reported in the SAM format.
@@ -133,7 +135,7 @@ Unless specified otherwise, the <em>k</em>-mer length is deduced from the index.
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="databases.html" title="previous chapter (use the left arrow)">Building databases</a>
+        <a class="btn btn-default" href="databases_custom.html" title="previous chapter (use the left arrow)">Building custom databases</a>
       </div>
     
       <div class="pull-right">
@@ -155,7 +157,7 @@ Unless specified otherwise, the <em>k</em>-mer length is deduced from the index.
           <a href="formats.html" title="File formats"
              >next</a> |</li>
         <li class="right" >
-          <a href="databases.html" title="Building databases"
+          <a href="databases_custom.html" title="Building custom databases"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
       </ul>
@@ -167,7 +169,7 @@ Unless specified otherwise, the <em>k</em>-mer length is deduced from the index.
 </script>
 <script type="text/javascript" src="_static/js/bootstrap.js"></script>
   <div class="footer">
-    &copy; Copyright 2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    &copy; Copyright 2016–2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
   </div>
   </body>
 </html>

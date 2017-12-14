@@ -73,10 +73,12 @@
     
     
       <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">ProPhyle</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Quick example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">Building databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation and running</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases_predefined.html">Building predefined databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases_custom.html">Building custom databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="classification.html">Read classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="formats.html">File formats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference.html">Command-line interface</a></li>
@@ -115,28 +117,39 @@
             
   <div class="section" id="quick-example">
 <span id="example"></span><h1>Quick example<a class="headerlink" href="#quick-example" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<p>Quick test (small k, subsampled bacterial database):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
-<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">10</span> <span class="o">-</span><span class="n">s</span> <span class="mf">0.1</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="n">test_idx</span>
-<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">test_idx</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
+<ol class="arabic">
+<li><p class="first">Install ProPhyle using <a class="reference external" href="https://bioconda.github.io/">Bioconda</a>:</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>conda config --add channels defaults
+conda config --add channels conda-forge
+conda config --add channels bioconda
+conda install prophyle
 </pre></div>
 </div>
-<p>Bacterial database (k=31):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
-<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">31</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="n">idx_bac</span>
-<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">idx_bac</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
+</div></blockquote>
+</li>
+<li><p class="first">Download the <a class="reference external" href="https://www.ncbi.nlm.nih.gov/refseq/">RefSeq</a> bacterial database:</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle download bacteria
 </pre></div>
 </div>
-<p>Example for bacterial and viral database (k=31):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
-<span class="n">prophyle</span> <span class="n">download</span> <span class="n">viruses</span>
-<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">31</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">viruses</span><span class="o">.</span><span class="n">nw</span> <span class="n">idx_bac_vir</span>
-<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">idx_bac_vir</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
+</div></blockquote>
+</li>
+<li><p class="first">To quickly test ProPhyle functionality, create an index for randomly sampled 10% genomes from the E.coli subtree of the NCBI taxonomy with k-mer size 25:</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle index -s <span class="m">0</span>.1 -k <span class="m">25</span> ~/prophyle/bacteria.nw@561 _index_ecoli
 </pre></div>
 </div>
+</div></blockquote>
+</li>
+<li><p class="first">Classify your reads:</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle classify _index_ecoli reads.fq &gt; result.sam
+</pre></div>
 </div>
+</div></blockquote>
+</li>
+</ol>
 </div>
 
 
@@ -179,7 +192,7 @@
 </script>
 <script type="text/javascript" src="_static/js/bootstrap.js"></script>
   <div class="footer">
-    &copy; Copyright 2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    &copy; Copyright 2016–2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
   </div>
   </body>
 </html>

@@ -73,10 +73,12 @@
     
     
       <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">ProPhyle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="example.html">Quick example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">Building databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation and running</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases_predefined.html">Building predefined databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases_custom.html">Building custom databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="classification.html">Read classification</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">File formats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference.html">Command-line interface</a></li>
@@ -115,26 +117,33 @@
             
   <div class="section" id="file-formats">
 <span id="formats"></span><h1>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>Formats<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="trees">
-<h3>Trees<a class="headerlink" href="#trees" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://evolution.genetics.washington.edu/phylip/newicktree.html">Newick</a>
-format <a class="reference external" href="http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#reading-and-writing-newick-trees">1</a>
-with NHX annotations, which can be easily created and modified using the
-<a class="reference external" href="http://etetoolkit.org/">ete3</a> python package.</p>
+<div class="section" id="input-trees">
+<h2>Input trees<a class="headerlink" href="#input-trees" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="newick">
+<h3>Newick<a class="headerlink" href="#newick" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://evolution.genetics.washington.edu/phylip/newicktree.html">Newick</a> trees are eventually transformed to NHX.</p>
+</div>
+<div class="section" id="new-hampshire-x-format-nhx">
+<h3>New Hampshire X Format (NHX)<a class="headerlink" href="#new-hampshire-x-format-nhx" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://sites.google.com/site/cmzmasek/home/software/forester/nhx">NHX format</a>
+is parsed using the <a class="reference external" href="http://etetoolkit.org/">ETE3 library</a>  (see specification of <a class="reference external" href="http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#reading-and-writing-newick-trees">format 1</a>).</p>
+</div>
 </div>
 <div class="section" id="classification-output">
-<h3>Classification output<a class="headerlink" href="#classification-output" title="Permalink to this headline">¶</a></h3>
-<p>Support for both <a class="reference external" href="http://samtools.github.io/hts-specs/">SAM</a> and <a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#output-format">Kraken</a>
-output formats.</p>
+<h2>Classification output<a class="headerlink" href="#classification-output" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://samtools.github.io/hts-specs/">SAM format</a></p>
+<div class="section" id="kraken-like-format">
+<h3>Kraken-like format<a class="headerlink" href="#kraken-like-format" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#output-format">Kraken</a></p>
 </div>
-<div class="section" id="analysis-output">
-<h3>Analysis output<a class="headerlink" href="#analysis-output" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><dl class="first docutils">
-<dt><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#sample-reports">kraken-report</a> format:</dt>
-<dd><ol class="first last arabic simple">
+</div>
+<div class="section" id="abundences">
+<h2>Abundences<a class="headerlink" href="#abundences" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="kraken-report-format">
+<h3>Kraken-report format<a class="headerlink" href="#kraken-report-format" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#sample-reports">kraken-report</a> format:</p>
+<blockquote>
+<div><ol class="arabic simple">
 <li>Percentage of reads covered by the clade rooted at this taxon</li>
 <li>Number of reads covered by the clade rooted at this taxon</li>
 <li>Number of reads assigned directly to this taxon</li>
@@ -142,13 +151,16 @@ output formats.</p>
 <li>NCBI taxonomy ID</li>
 <li>indented scientific name</li>
 </ol>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
+</div></blockquote>
+</div>
+<div class="section" id="metaphlan2-format">
+<h3>Metaphlan2 format<a class="headerlink" href="#metaphlan2-format" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
 <dt><a class="reference external" href="https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-files">MetaPhlAn2</a> format:</dt>
-<dd><p class="first last">1. clades, ranging from taxonomic kingdoms (Bacteria, Archaea, etc.) through species.
-The taxonomic level of each clade is prefixed to indicate its level: Kingdom: <code class="docutils literal"><span class="pre">k__</span></code>, Phylum: <code class="docutils literal"><span class="pre">p__</span></code>, Class: <code class="docutils literal"><span class="pre">c__</span></code>, Order: <code class="docutils literal"><span class="pre">o__</span></code>, Family: <code class="docutils literal"><span class="pre">f__</span></code>, Genus: <code class="docutils literal"><span class="pre">g__</span></code>, Species: <code class="docutils literal"><span class="pre">s__</span></code>.
+<dd><ol class="first arabic simple">
+<li>clades, ranging from taxonomic kingdoms (Bacteria, Archaea, etc.) through species.</li>
+</ol>
+<p class="last">2. The taxonomic level of each clade is prefixed to indicate its level: Kingdom: <code class="docutils literal"><span class="pre">k__</span></code>, Phylum: <code class="docutils literal"><span class="pre">p__</span></code>, Class: <code class="docutils literal"><span class="pre">c__</span></code>, Order: <code class="docutils literal"><span class="pre">o__</span></code>, Family: <code class="docutils literal"><span class="pre">f__</span></code>, Genus: <code class="docutils literal"><span class="pre">g__</span></code>, Species: <code class="docutils literal"><span class="pre">s__</span></code>.
 Since sequence-based profiling is relative and does not provide absolute cellular abundance measures,
 clades are hierarchically summed. Each level will sum to 100%; that is, the sum of all kindom-level
 clades is 100%, the sum of all genus-level clades (including unclassified) is also 100%, and so forth.
@@ -156,14 +168,14 @@ OTU equivalents can be extracted by using only the species-level <code class="do
 (again, making sure to include clades unclassified at this level).</p>
 </dd>
 </dl>
-</li>
-<li><p class="first">Custom <a class="reference external" href="https://ccb.jhu.edu/software/centrifuge/manual.shtml#centrifuge-summary-output-the-default-filename-is-centrifuge_report.tsv">Centrifuge</a> format:</p>
+</div>
+<div class="section" id="centrifuge-format">
+<h3>Centrifuge format<a class="headerlink" href="#centrifuge-format" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://ccb.jhu.edu/software/centrifuge/manual.shtml#centrifuge-summary-output-the-default-filename-is-centrifuge_report.tsv">Centrifuge</a> format:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#name                                                           taxID   taxRank    kmerCount   numReads   numUniqueReads   abundance</span>
 <span class="n">Wigglesworthia</span> <span class="n">glossinidia</span> <span class="n">endosymbiont</span> <span class="n">of</span> <span class="n">Glossina</span> <span class="n">brevipalpis</span> <span class="mi">36870</span>   <span class="n">leaf</span>       <span class="mi">703004</span>      <span class="mf">5981.37</span>    <span class="mi">5964</span>             <span class="mi">0</span>
 </pre></div>
 </div>
-</li>
-</ul>
 <ol class="arabic simple">
 <li>name of a genome, or the name corresponding to a taxonomic ID (the second column) at a rank higher than the strain (e.g., Wigglesworthia glossinidia endosymbiont of Glossina brevipalpis).</li>
 <li>taxonomic ID (e.g., 36870).</li>
@@ -173,6 +185,40 @@ OTU equivalents can be extracted by using only the species-level <code class="do
 <li>number of reads uniquely classified to this genomic sequence (e.g., 5964).</li>
 <li>not used yet.</li>
 </ol>
+</div>
+</div>
+<div class="section" id="index">
+<h2>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="standard">
+<h3>Standard<a class="headerlink" href="#standard" title="Permalink to this headline">¶</a></h3>
+<p>Directory with the following files:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">index.fa</span></code> – assembled contigs, name of sequences are of the following format: <code class="docutils literal"><span class="pre">[node_name]&#64;c[contig_number]</span></code></li>
+<li><code class="docutils literal"><span class="pre">index.fa.amb</span></code> – list of ambiguous nucleotides, no values</li>
+<li><code class="docutils literal"><span class="pre">index.fa.ann</span></code> – list of contigs and their starting positions in the master string</li>
+<li><code class="docutils literal"><span class="pre">index.fa.[k].klcp</span></code> – k-LCP array</li>
+<li><code class="docutils literal"><span class="pre">index.fa.bwt</span></code> – Burrows-Wheeler Transform of the master string (merged sequences + reverse completement) + OCC table (BWA format)</li>
+<li><code class="docutils literal"><span class="pre">index.fa.kmers.tsv</span></code> – k-mer statistics, format: <code class="docutils literal"><span class="pre">[node_name].[full|reduced].fa</span>&#160;&#160;&#160; <span class="pre">[#kmers]</span></code>, where <code class="docutils literal"><span class="pre">full</span></code> refers to all associated k-mers and <code class="docutils literal"><span class="pre">reduced</span></code> to represented k-mers</li>
+<li><code class="docutils literal"><span class="pre">index.fa.pac</span></code> – packed sequences (BWA format)</li>
+<li><code class="docutils literal"><span class="pre">index.fa.sa</span></code> – sampled suffix array (BWA format)</li>
+<li><code class="docutils literal"><span class="pre">index.json</span></code> – JSON dictionary with a k-mer size (<code class="docutils literal"><span class="pre">k</span></code>) and ProPhyle version specification (<code class="docutils literal"><span class="pre">prophyle-version</span></code>, <code class="docutils literal"><span class="pre">prophyle-revision</span></code>, <code class="docutils literal"><span class="pre">prophyle-commit</span></code>)</li>
+<li><code class="docutils literal"><span class="pre">log.txt</span></code></li>
+<li><code class="docutils literal"><span class="pre">tree.nw</span></code> – phylogenetic tree adjusted for classification</li>
+<li><code class="docutils literal"><span class="pre">tree.preliminary.nw</span></code> – phylogenetic tree before adjusting</li>
+</ul>
+</div>
+<div class="section" id="compressed-for-transmission-only">
+<h3>Compressed (for transmission only)<a class="headerlink" href="#compressed-for-transmission-only" title="Permalink to this headline">¶</a></h3>
+<p>Archive <code class="docutils literal"><span class="pre">[name].tar.gz</span></code> with the following subset of index files:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">index.fa.amb</span></code></li>
+<li><code class="docutils literal"><span class="pre">index.fa.ann</span></code></li>
+<li><code class="docutils literal"><span class="pre">index.fa.bwt</span></code> – Burrows-Wheeler Transform <em>without</em> the OCC table</li>
+<li><code class="docutils literal"><span class="pre">index.fa.kmers.tsv</span></code></li>
+<li><code class="docutils literal"><span class="pre">index.json</span></code></li>
+<li><code class="docutils literal"><span class="pre">tree.nw</span></code></li>
+<li><code class="docutils literal"><span class="pre">tree.preliminary.nw</span></code></li>
+</ul>
 </div>
 </div>
 </div>
@@ -217,7 +263,7 @@ OTU equivalents can be extracted by using only the species-level <code class="do
 </script>
 <script type="text/javascript" src="_static/js/bootstrap.js"></script>
   <div class="footer">
-    &copy; Copyright 2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    &copy; Copyright 2016–2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
   </div>
   </body>
 </html>

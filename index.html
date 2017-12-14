@@ -68,11 +68,13 @@
   <div class="sidebar-toc">
     
     
-      <ul>
+      <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ProPhyle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="example.html">Quick example</a></li>
 <li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases.html">Building databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation and running</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases_predefined.html">Building predefined databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases_custom.html">Building custom databases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="classification.html">Read classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="formats.html">File formats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference.html">Command-line interface</a></li>
@@ -111,17 +113,36 @@
             
   <div class="section" id="prophyle">
 <h1>ProPhyle<a class="headerlink" href="#prophyle" title="Permalink to this headline">¶</a></h1>
-<p>ProPhyle is a metagenomic classifier based on BWT-index and phylogenetic trees,
+<p>ProPhyle is a phylogeny-based metagenomic classifier,
 whose indexing strategy is based on the bottom-up propagation of genomes’
 k-mers in the tree, assembling contigs at each node and matching using a
-standard full-text search. The analysis of shared k-mers between NGS reads and
-the genomes in the index determines which nodes are the best candidates for
-their classification.</p>
-<div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://github.com/karel-brinda/ProPhyle">GitHub repository</a> -
-<a class="reference external" href="http://github.com/karel-brinda/ProPhyle/issues">Bug reporting</a> -
-<a class="reference external" href="mailto:kbrinda&#37;&#52;&#48;hsph&#46;harvard&#46;edu">Contact</a></p>
+full-text search.</p>
+<p>Compared to other state-of-the-arts classifiers, ProPhyle provides several unique features:</p>
+<ul class="simple">
+<li><strong>Low memory requirements.</strong> Compared to <a class="reference external" href="https://ccb.jhu.edu/software/kraken/">Kraken</a>, ProPhyle has 9x smaller memory footprint for index construction and 5x smaller footprint for querying.</li>
+<li><strong>Flexibility.</strong> ProPhyle is easy to use with any user-provided phylogenetic trees and reference genomes.</li>
+<li><strong>Standard bioinformatics formats.</strong> <a class="reference external" href="https://sites.google.com/site/cmzmasek/home/software/forester/nhx">Newick/NHX</a> is used for representing phylogenetic trees and <a class="reference external" href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM</a> for reporting the assignments.</li>
+<li><strong>Lossless k-mer indexing.</strong> ProPhyle stores a list of <em>all</em> genomes containing a <em>k</em>-mer.  It can be, therefore, accurate even with trees containing similar genomes (e.g, phylogenetic trees for a single species).</li>
+<li><strong>Deterministic behavior.</strong> ProPhyle is a fully deterministic classifier with a mathematically well-defined behavior.</li>
+</ul>
+<div class="section" id="issues">
+<h2>Issues<a class="headerlink" href="#issues" title="Permalink to this headline">¶</a></h2>
+<p>Please use <a class="reference external" href="https://github.com/prophyle/prophyle/issues">Github issues</a>.</p>
+</div>
+<div class="section" id="changelog">
+<h2>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="https://github.com/prophyle/prophyle/releases">Releases</a>.</p>
+</div>
+<div class="section" id="licence">
+<h2>Licence<a class="headerlink" href="#licence" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/prophyle/prophyle/blob/master/LICENSE.txt">MIT</a></p>
+</div>
+<div class="section" id="authors">
+<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://brinda.cz">Karel Brinda</a> &lt;<a class="reference external" href="mailto:kbrinda&#37;&#52;&#48;hsph&#46;harvard&#46;edu">kbrinda<span>&#64;</span>hsph<span>&#46;</span>harvard<span>&#46;</span>edu</a>&gt;</p>
+<p>Kamil Salikhov &lt;<a class="reference external" href="mailto:kamil&#46;salikhov&#37;&#52;&#48;univ-mlv&#46;fr">kamil<span>&#46;</span>salikhov<span>&#64;</span>univ-mlv<span>&#46;</span>fr</a>&gt;</p>
+<p>Simone Pignotti &lt;<a class="reference external" href="mailto:pignottisimone&#37;&#52;&#48;gmail&#46;com">pignottisimone<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
+<p><a class="reference external" href="http://www-igm.univ-mlv.fr/~koutcher/">Gregory Kucherov</a> &lt;<a class="reference external" href="mailto:gregory&#46;kucherov&#37;&#52;&#48;univ-mlv&#46;fr">gregory<span>&#46;</span>kucherov<span>&#64;</span>univ-mlv<span>&#46;</span>fr</a>&gt;</p>
 <div class="toctree-wrapper compound" id="mastertoc">
 </div>
 </div>
@@ -160,7 +181,7 @@ their classification.</p>
 </script>
 <script type="text/javascript" src="_static/js/bootstrap.js"></script>
   <div class="footer">
-    &copy; Copyright 2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    &copy; Copyright 2016–2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
   </div>
   </body>
 </html>
