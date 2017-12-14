@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Other information &#8212; ProPhyle  documentation</title>
+    <title>Read classification &#8212; ProPhyle  documentation</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href=".static/prophyle.css" type="text/css" />
@@ -33,6 +33,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="File formats" href="formats.html" />
+    <link rel="prev" title="Building databases" href="databases.html" />
   
    
 
@@ -44,6 +46,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="formats.html" title="File formats"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="databases.html" title="Building databases"
+             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
       </ul>
     </div>
@@ -64,11 +72,14 @@
   <div class="sidebar-toc">
     
     
-      <p class="caption"><span class="caption-text">ProPhyle Manual</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a></li>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="example.html">Quick example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">Building databases</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Read classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="formats.html">File formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Command-line interface</a></li>
 </ul>
 
     
@@ -96,19 +107,41 @@
             <ol class="breadcrumb">
               <li><a href="index.html">Docs</a></li>
               
-              <li>Other information</li>
+              <li>Read classification</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="other-information">
-<span id="id1"></span><h1>Other information<a class="headerlink" href="#other-information" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="read-classification">
+<span id="classification"></span><h1>Read classification<a class="headerlink" href="#read-classification" title="Permalink to this headline">¶</a></h1>
+<p>When the index construction is finished, you can classify your reads using</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">classify</span> <span class="o">&lt;</span><span class="n">index_dir</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">reads</span><span class="o">.</span><span class="n">fq</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For the index from above, the command would be:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">classify</span> <span class="n">my_BV_index</span> <span class="n">my_reads</span><span class="o">.</span><span class="n">fq</span>
+</pre></div>
+</div>
+<p>The assignments are reported in the SAM format.
+Unless specified otherwise, the <em>k</em>-mer length is deduced from the index.</p>
 </div>
 
 
           </div>
             
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="databases.html" title="previous chapter (use the left arrow)">Building databases</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="formats.html" title="next chapter (use the right arrow)">File formats</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
         </div>
         <div class="clearfix"></div>
     </div>
@@ -118,6 +151,12 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="formats.html" title="File formats"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="databases.html" title="Building databases"
+             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
       </ul>
     </div>

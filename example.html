@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Introduction &#8212; ProPhyle  documentation</title>
+    <title>Quick example &#8212; ProPhyle  documentation</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href=".static/prophyle.css" type="text/css" />
@@ -33,8 +33,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tutorials" href="tutorials/index.html" />
-    <link rel="prev" title="ProPhyle manual" href="index.html" />
+    <link rel="next" title="Requirements" href="requirements.html" />
+    <link rel="prev" title="ProPhyle" href="index.html" />
   
    
 
@@ -47,10 +47,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="tutorials/index.html" title="Tutorials"
+          <a href="requirements.html" title="Requirements"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="index.html" title="ProPhyle manual"
+          <a href="index.html" title="ProPhyle"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
       </ul>
@@ -72,11 +72,14 @@
   <div class="sidebar-toc">
     
     
-      <p class="caption"><span class="caption-text">ProPhyle Manual</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a></li>
+      <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quick example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">Building databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classification.html">Read classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="formats.html">File formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Command-line interface</a></li>
 </ul>
 
     
@@ -104,16 +107,36 @@
             <ol class="breadcrumb">
               <li><a href="index.html">Docs</a></li>
               
-              <li>Introduction</li>
+              <li>Quick example</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="introduction">
-<span id="id1"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<p>ProPhyle is a metagenomic classifier based on BWT-index and phylogenetic trees, whose indexing strategy is based on the bottom-up propagation of genomes’ k-mers in the tree, assembling contigs at each node and matching using a standard full-text search. The analysis of shared k-mers between NGS reads and the genomes in the index determines which nodes are the best candidates for their classification.</p>
-<p>To start using ProPhyle, visit the <a class="reference internal" href="tutorials/index.html#tutorials"><span class="std std-ref">Tutorials</span></a> or the <a class="reference internal" href="reference/index.html#reference"><span class="std std-ref">Reference</span></a> page.</p>
+  <div class="section" id="quick-example">
+<span id="example"></span><h1>Quick example<a class="headerlink" href="#quick-example" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Quick test (small k, subsampled bacterial database):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
+<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">10</span> <span class="o">-</span><span class="n">s</span> <span class="mf">0.1</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="n">test_idx</span>
+<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">test_idx</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
+</pre></div>
+</div>
+<p>Bacterial database (k=31):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
+<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">31</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="n">idx_bac</span>
+<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">idx_bac</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
+</pre></div>
+</div>
+<p>Example for bacterial and viral database (k=31):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
+<span class="n">prophyle</span> <span class="n">download</span> <span class="n">viruses</span>
+<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">31</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">viruses</span><span class="o">.</span><span class="n">nw</span> <span class="n">idx_bac_vir</span>
+<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">idx_bac_vir</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -122,11 +145,11 @@
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="index.html" title="previous chapter (use the left arrow)">ProPhyle manual</a>
+        <a class="btn btn-default" href="index.html" title="previous chapter (use the left arrow)">ProPhyle</a>
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="tutorials/index.html" title="next chapter (use the right arrow)">Tutorials</a>
+        <a class="btn btn-default" href="requirements.html" title="next chapter (use the right arrow)">Requirements</a>
       </div>
     </div>
     <div class="clearer"></div>
@@ -141,10 +164,10 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="tutorials/index.html" title="Tutorials"
+          <a href="requirements.html" title="Requirements"
              >next</a> |</li>
         <li class="right" >
-          <a href="index.html" title="ProPhyle manual"
+          <a href="index.html" title="ProPhyle"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
       </ul>

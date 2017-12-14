@@ -14,7 +14,7 @@
   <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>ProPhyle manual &#8212; ProPhyle  documentation</title>
+    <title>ProPhyle &#8212; ProPhyle  documentation</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href=".static/prophyle.css" type="text/css" />
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Introduction" href="introduction.html" />
+    <link rel="next" title="Quick example" href="example.html" />
   
    
 
@@ -46,7 +46,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="introduction.html" title="Introduction"
+          <a href="example.html" title="Quick example"
              accesskey="N">next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">ProPhyle  documentation</a> &#187;</li> 
       </ul>
@@ -68,11 +68,14 @@
   <div class="sidebar-toc">
     
     
-      <p class="caption"><span class="caption-text">ProPhyle Manual</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a></li>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Quick example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">Building databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classification.html">Read classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="formats.html">File formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Command-line interface</a></li>
 </ul>
 
     
@@ -100,30 +103,25 @@
             <ol class="breadcrumb">
               <li><a href="#">Docs</a></li>
               
-              <li>ProPhyle manual</li>
+              <li>ProPhyle</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="prophyle-manual">
-<h1>ProPhyle manual<a class="headerlink" href="#prophyle-manual" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="prophyle">
+<h1>ProPhyle<a class="headerlink" href="#prophyle" title="Permalink to this headline">¶</a></h1>
+<p>ProPhyle is a metagenomic classifier based on BWT-index and phylogenetic trees,
+whose indexing strategy is based on the bottom-up propagation of genomes’
+k-mers in the tree, assembling contigs at each node and matching using a
+standard full-text search. The analysis of shared k-mers between NGS reads and
+the genomes in the index determines which nodes are the best candidates for
+their classification.</p>
 <div class="section" id="links">
 <h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://github.com/karel-brinda/ProPhyle">GitHub repository</a> -
 <a class="reference external" href="http://github.com/karel-brinda/ProPhyle/issues">Bug reporting</a> -
 <a class="reference external" href="mailto:kbrinda&#37;&#52;&#48;hsph&#46;harvard&#46;edu">Contact</a></p>
-</div>
-<div class="section" id="table-of-contents">
-<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt><a class="reference internal" href="introduction.html#introduction"><span class="std std-ref">Introduction</span></a></dt>
-<dd>Introduction to ProPhyle.</dd>
-<dt><a class="reference internal" href="tutorials/index.html#tutorials"><span class="std std-ref">Tutorials</span></a></dt>
-<dd>Tutorials demonstrating installation and basic usage of ProPhyle.</dd>
-<dt><a class="reference internal" href="reference/index.html#reference"><span class="std std-ref">Reference</span></a></dt>
-<dd>Automatically generated documentation for ProPhyle’s CLI.</dd>
-</dl>
 <div class="toctree-wrapper compound" id="mastertoc">
 </div>
 </div>
@@ -135,7 +133,7 @@
   <div class="footer-relations">
     
       <div class="pull-right">
-        <a class="btn btn-default" href="introduction.html" title="next chapter (use the right arrow)">Introduction</a>
+        <a class="btn btn-default" href="example.html" title="next chapter (use the right arrow)">Quick example</a>
       </div>
     </div>
     <div class="clearer"></div>
@@ -150,7 +148,7 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="introduction.html" title="Introduction"
+          <a href="example.html" title="Quick example"
              >next</a> |</li>
         <li class="nav-item nav-item-0"><a href="#">ProPhyle  documentation</a> &#187;</li> 
       </ul>

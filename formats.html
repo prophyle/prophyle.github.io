@@ -1,0 +1,223 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>File formats &#8212; ProPhyle  documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href=".static/prophyle.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Command-line interface" href="reference.html" />
+    <link rel="prev" title="Read classification" href="classification.html" />
+  
+   
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="reference.html" title="Command-line interface"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classification.html" title="Read classification"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+        <a href="
+    index.html" class="text-logo">ProPhyle</a>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="example.html">Quick example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="databases.html">Building databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classification.html">Read classification</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">File formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Command-line interface</a></li>
+</ul>
+
+    
+  </div>
+</div>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="index.html">Docs</a></li>
+              
+              <li>File formats</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="file-formats">
+<span id="formats"></span><h1>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Formats<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="trees">
+<h3>Trees<a class="headerlink" href="#trees" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://evolution.genetics.washington.edu/phylip/newicktree.html">Newick</a>
+format <a class="reference external" href="http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#reading-and-writing-newick-trees">1</a>
+with NHX annotations, which can be easily created and modified using the
+<a class="reference external" href="http://etetoolkit.org/">ete3</a> python package.</p>
+</div>
+<div class="section" id="classification-output">
+<h3>Classification output<a class="headerlink" href="#classification-output" title="Permalink to this headline">¶</a></h3>
+<p>Support for both <a class="reference external" href="http://samtools.github.io/hts-specs/">SAM</a> and <a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#output-format">Kraken</a>
+output formats.</p>
+</div>
+<div class="section" id="analysis-output">
+<h3>Analysis output<a class="headerlink" href="#analysis-output" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#sample-reports">kraken-report</a> format:</dt>
+<dd><ol class="first last arabic simple">
+<li>Percentage of reads covered by the clade rooted at this taxon</li>
+<li>Number of reads covered by the clade rooted at this taxon</li>
+<li>Number of reads assigned directly to this taxon</li>
+<li>A rank code, indicating (U)nclassified, (D)omain, (K)ingdom, (P)hylum, (C)lass, (O)rder, (F)amily, (G)enus, or (S)pecies. All other ranks are simply ‘-‘.</li>
+<li>NCBI taxonomy ID</li>
+<li>indented scientific name</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><a class="reference external" href="https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-files">MetaPhlAn2</a> format:</dt>
+<dd><p class="first last">1. clades, ranging from taxonomic kingdoms (Bacteria, Archaea, etc.) through species.
+The taxonomic level of each clade is prefixed to indicate its level: Kingdom: <code class="docutils literal"><span class="pre">k__</span></code>, Phylum: <code class="docutils literal"><span class="pre">p__</span></code>, Class: <code class="docutils literal"><span class="pre">c__</span></code>, Order: <code class="docutils literal"><span class="pre">o__</span></code>, Family: <code class="docutils literal"><span class="pre">f__</span></code>, Genus: <code class="docutils literal"><span class="pre">g__</span></code>, Species: <code class="docutils literal"><span class="pre">s__</span></code>.
+Since sequence-based profiling is relative and does not provide absolute cellular abundance measures,
+clades are hierarchically summed. Each level will sum to 100%; that is, the sum of all kindom-level
+clades is 100%, the sum of all genus-level clades (including unclassified) is also 100%, and so forth.
+OTU equivalents can be extracted by using only the species-level <code class="docutils literal"><span class="pre">s__</span></code> clades from this file
+(again, making sure to include clades unclassified at this level).</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Custom <a class="reference external" href="https://ccb.jhu.edu/software/centrifuge/manual.shtml#centrifuge-summary-output-the-default-filename-is-centrifuge_report.tsv">Centrifuge</a> format:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#name                                                           taxID   taxRank    kmerCount   numReads   numUniqueReads   abundance</span>
+<span class="n">Wigglesworthia</span> <span class="n">glossinidia</span> <span class="n">endosymbiont</span> <span class="n">of</span> <span class="n">Glossina</span> <span class="n">brevipalpis</span> <span class="mi">36870</span>   <span class="n">leaf</span>       <span class="mi">703004</span>      <span class="mf">5981.37</span>    <span class="mi">5964</span>             <span class="mi">0</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<ol class="arabic simple">
+<li>name of a genome, or the name corresponding to a taxonomic ID (the second column) at a rank higher than the strain (e.g., Wigglesworthia glossinidia endosymbiont of Glossina brevipalpis).</li>
+<li>taxonomic ID (e.g., 36870).</li>
+<li>taxonomic rank (e.g., leaf).</li>
+<li>number of k-mers propagated up to the node (e.g., 703004).</li>
+<li>number of reads classified to this node including multi-classified reads (divided by the number of assignments, e.g., 5981.37).</li>
+<li>number of reads uniquely classified to this genomic sequence (e.g., 5964).</li>
+<li>not used yet.</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="classification.html" title="previous chapter (use the left arrow)">Read classification</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="reference.html" title="next chapter (use the right arrow)">Command-line interface</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="reference.html" title="Command-line interface"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="classification.html" title="Read classification"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>

@@ -7,20 +7,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   
   <!-- Licensed under the Apache 2.0 License -->
-  <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
+  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
   <!-- Licensed under the SIL Open Font License -->
-  <link rel="stylesheet" type="text/css" href="../_static/fonts/source-serif-pro/source-serif-pro.css" />
-  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-    <title>Default databases &#8212; ProPhyle  documentation</title>
-    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../.static/prophyle.css" type="text/css" />
+    <title>Building databases &#8212; ProPhyle  documentation</title>
+    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href=".static/prophyle.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
+        URL_ROOT:    './',
         VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -28,12 +28,12 @@
         SOURCELINK_SUFFIX: '.txt'
       };
     </script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Custom NCBI indexes" href="ncbi_db.html" />
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Read classification" href="classification.html" />
     <link rel="prev" title="Installation" href="install.html" />
   
    
@@ -44,16 +44,15 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
+          <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="ncbi_db.html" title="Custom NCBI indexes"
+          <a href="classification.html" title="Read classification"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="install.html" title="Installation"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">ProPhyle  documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Tutorials</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
       </ul>
     </div>
     <div class="container-wrapper">
@@ -64,7 +63,7 @@
   <div id="left-column">
     <div class="sphinxsidebar">
         <a href="
-    ../index.html" class="text-logo">ProPhyle</a>
+    index.html" class="text-logo">ProPhyle</a>
         
 <div class="sidebar-block">
   <div class="sidebar-wrapper">
@@ -73,16 +72,14 @@
   <div class="sidebar-toc">
     
     
-      <p class="caption"><span class="caption-text">ProPhyle Manual</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Default databases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ncbi_db.html">Custom NCBI indexes</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
+      <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="example.html">Quick example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building databases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classification.html">Read classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="formats.html">File formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Command-line interface</a></li>
 </ul>
 
     
@@ -92,7 +89,7 @@
 <div class="sidebar-block">
   <div class="sidebar-wrapper">
     <div id="main-search">
-      <form class="form-inline" action="../search.html" method="GET" role="form">
+      <form class="form-inline" action="search.html" method="GET" role="form">
         <div class="input-group">
           <input name="q" type="text" class="form-control" placeholder="Search...">
         </div>
@@ -108,18 +105,16 @@
           
           <div role="navigation" aria-label="breadcrumbs navigation">
             <ol class="breadcrumb">
-              <li><a href="../index.html">Docs</a></li>
+              <li><a href="index.html">Docs</a></li>
               
-                <li><a href="index.html">Tutorials</a></li>
-              
-              <li>Default databases</li>
+              <li>Building databases</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
-  <div class="section" id="default-databases">
-<span id="default-db"></span><h1>Default databases<a class="headerlink" href="#default-databases" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="building-databases">
+<span id="databases"></span><h1>Building databases<a class="headerlink" href="#building-databases" title="Permalink to this headline">¶</a></h1>
 <p>ProPhyle comes with several genome libraries containing
 RefSeq genomes, augmented with the NCBI taxonomy.</p>
 <div class="section" id="downloading-genomes">
@@ -160,41 +155,6 @@ like this:</p>
 <p>Index construction might take several hours, based on the database size, <em>k</em> and the number
 of used cores.</p>
 </div>
-<div class="section" id="classification-of-reads">
-<h2>Classification of reads<a class="headerlink" href="#classification-of-reads" title="Permalink to this headline">¶</a></h2>
-<p>When the index construction is finished, you can classify your reads using</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">classify</span> <span class="o">&lt;</span><span class="n">index_dir</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">reads</span><span class="o">.</span><span class="n">fq</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-<p>For the index from above, the command would be:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">classify</span> <span class="n">my_BV_index</span> <span class="n">my_reads</span><span class="o">.</span><span class="n">fq</span>
-</pre></div>
-</div>
-<p>The assignments are reported in the SAM format.
-Unless specified otherwise, the <em>k</em>-mer length is deduced from the index.</p>
-</div>
-<div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
-<p>Quick test (small k, subsampled bacterial database):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
-<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">10</span> <span class="o">-</span><span class="n">s</span> <span class="mf">0.1</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="n">test_idx</span>
-<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">test_idx</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
-</pre></div>
-</div>
-<p>Bacterial database (k=31):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
-<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">31</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="n">idx_bac</span>
-<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">idx_bac</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
-</pre></div>
-</div>
-<p>Example for bacterial and viral database (k=31):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
-<span class="n">prophyle</span> <span class="n">download</span> <span class="n">viruses</span>
-<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">31</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">viruses</span><span class="o">.</span><span class="n">nw</span> <span class="n">idx_bac_vir</span>
-<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">idx_bac_vir</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
-</pre></div>
-</div>
-</div>
 </div>
 
 
@@ -207,7 +167,7 @@ Unless specified otherwise, the <em>k</em>-mer length is deduced from the index.
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="ncbi_db.html" title="next chapter (use the right arrow)">Custom NCBI indexes</a>
+        <a class="btn btn-default" href="classification.html" title="next chapter (use the right arrow)">Read classification</a>
       </div>
     </div>
     <div class="clearer"></div>
@@ -219,16 +179,15 @@ Unless specified otherwise, the <em>k</em>-mer length is deduced from the index.
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="General Index"
+          <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="ncbi_db.html" title="Custom NCBI indexes"
+          <a href="classification.html" title="Read classification"
              >next</a> |</li>
         <li class="right" >
           <a href="install.html" title="Installation"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">ProPhyle  documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" >Tutorials</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
       </ul>
     </div>
 <script type="text/javascript">
@@ -236,7 +195,7 @@ Unless specified otherwise, the <em>k</em>-mer length is deduced from the index.
     $("#left-column").toggle();
   });
 </script>
-<script type="text/javascript" src="../_static/js/bootstrap.js"></script>
+<script type="text/javascript" src="_static/js/bootstrap.js"></script>
   <div class="footer">
     &copy; Copyright 2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
   </div>
