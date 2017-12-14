@@ -1,0 +1,244 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Default databases &#8212; ProPhyle  documentation</title>
+    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../.static/prophyle.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Custom NCBI indexes" href="ncbi_db.html" />
+    <link rel="prev" title="Installation" href="install.html" />
+  
+   
+
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ncbi_db.html" title="Custom NCBI indexes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ProPhyle  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Tutorials</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar">
+        <a href="
+    ../index.html" class="text-logo">ProPhyle</a>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <p class="caption"><span class="caption-text">ProPhyle Manual</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Default databases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ncbi_db.html">Custom NCBI indexes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">Reference</a></li>
+</ul>
+
+    
+  </div>
+</div>
+        
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../index.html">Docs</a></li>
+              
+                <li><a href="index.html">Tutorials</a></li>
+              
+              <li>Default databases</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="default-databases">
+<span id="default-db"></span><h1>Default databases<a class="headerlink" href="#default-databases" title="Permalink to this headline">¶</a></h1>
+<p>ProPhyle comes with several genome libraries containing
+RefSeq genomes, augmented with the NCBI taxonomy.</p>
+<div class="section" id="downloading-genomes">
+<h2>Downloading genomes<a class="headerlink" href="#downloading-genomes" title="Permalink to this headline">¶</a></h2>
+<p>These libraries can be downloaded using <code class="docutils literal"><span class="pre">prophyle</span> <span class="pre">download</span> <span class="pre">&lt;library&gt;</span> <span class="pre">[&lt;library&gt;</span> <span class="pre">...]</span></code>,
+where <code class="docutils literal"><span class="pre">&lt;library&gt;</span></code> should be replaced by <code class="docutils literal"><span class="pre">bacteria</span></code>, <code class="docutils literal"><span class="pre">viruses</span></code>, or <code class="docutils literal"><span class="pre">plasmids</span></code>.
+The command also copies a prebuild Newick/NHX tree for the specified library.
+If the <cite>-d</cite> parameter is not specified, all files are placed to <cite>~/prophyle</cite>.</p>
+<p>To download all viral and bacterial genomes from RefSeq, execute:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span> <span class="n">viruses</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="index-construction">
+<h2>Index construction<a class="headerlink" href="#index-construction" title="Permalink to this headline">¶</a></h2>
+<p>Once a library is downloaded, a ProPhyle index can be constructed using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">index</span> <span class="p">[</span><span class="o">-</span><span class="n">g</span> <span class="n">DIR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">j</span> <span class="n">INT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">k</span> <span class="n">INT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">M</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">P</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">K</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">tree</span><span class="o">.</span><span class="n">nw</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">tree</span><span class="o">.</span><span class="n">nw</span><span class="o">&gt;</span> <span class="o">...</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">index</span><span class="o">.</span><span class="n">dir</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p><cite>&lt;tree.nw&gt;</cite> is a Newick/NHX for the index. The trees from the previous command
+are placed in <cite>~/prophyle</cite> and they are called <cite>bacteria.nw</cite>, <cite>viruses.nw</cite>, etc.
+<cite>&lt;index.dir&gt;</cite> is the directory directory where your index files are going to
+be placed.</p>
+<p>There are multiple other parameters that can be used.
+<cite>-j</cite> can be used to specify the number of CPU cores used for index construction (all cores are used otherwise).
+<cite>-k</cite> serves to set the <em>k</em>-mer length (31 in default).
+<cite>-M</cite> activates low complexity regions filtering using DustMasker. Please, ensure that the program is install (try to run <cite>dustmasker</cite>).
+If multiple trees are used, they are going to be merged. Therefore, a name collision can
+appear. To prevent such a situation, ProPhyle prepends numerical prefixes to the
+node names (unless <cite>-P</cite> is used).
+The <cite>-K</cite> parameter can be used to deactivate <em>k</em>-LCP array construction. The resulting index
+would be slightly smaller, but querying would become much slower.</p>
+<p>So the entire command for index construction can look, for instance,
+like this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">25</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">viruses</span><span class="o">.</span><span class="n">nw</span> <span class="n">my_BV_index</span>
+</pre></div>
+</div>
+<p>Index construction might take several hours, based on the database size, <em>k</em> and the number
+of used cores.</p>
+</div>
+<div class="section" id="classification-of-reads">
+<h2>Classification of reads<a class="headerlink" href="#classification-of-reads" title="Permalink to this headline">¶</a></h2>
+<p>When the index construction is finished, you can classify your reads using</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">classify</span> <span class="o">&lt;</span><span class="n">index_dir</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">reads</span><span class="o">.</span><span class="n">fq</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For the index from above, the command would be:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">classify</span> <span class="n">my_BV_index</span> <span class="n">my_reads</span><span class="o">.</span><span class="n">fq</span>
+</pre></div>
+</div>
+<p>The assignments are reported in the SAM format.
+Unless specified otherwise, the <em>k</em>-mer length is deduced from the index.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Quick test (small k, subsampled bacterial database):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
+<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">10</span> <span class="o">-</span><span class="n">s</span> <span class="mf">0.1</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="n">test_idx</span>
+<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">test_idx</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
+</pre></div>
+</div>
+<p>Bacterial database (k=31):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
+<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">31</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="n">idx_bac</span>
+<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">idx_bac</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
+</pre></div>
+</div>
+<p>Example for bacterial and viral database (k=31):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span>
+<span class="n">prophyle</span> <span class="n">download</span> <span class="n">viruses</span>
+<span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">31</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">viruses</span><span class="o">.</span><span class="n">nw</span> <span class="n">idx_bac_vir</span>
+<span class="n">prophyle</span> <span class="n">classify</span> <span class="n">idx_bac_vir</span> <span class="n">reads</span><span class="o">.</span><span class="n">fq</span> <span class="o">&gt;</span> <span class="n">result</span><span class="o">.</span><span class="n">sam</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="install.html" title="previous chapter (use the left arrow)">Installation</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="ncbi_db.html" title="next chapter (use the right arrow)">Custom NCBI indexes</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ncbi_db.html" title="Custom NCBI indexes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">ProPhyle  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Tutorials</a> &#187;</li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>
