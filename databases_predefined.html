@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Building predefined databases &#8212; ProPhyle 0.3.1.0 documentation</title>
+    <title>4. Building predefined databases &#8212; ProPhyle 0.3.1.0 documentation</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -26,8 +26,8 @@
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Building custom databases" href="databases_custom.html" />
-    <link rel="prev" title="Installation and running" href="install.html" />
+    <link rel="next" title="5. Building custom databases" href="databases_custom.html" />
+    <link rel="prev" title="3. Installing ProPhyle" href="install.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -71,7 +71,7 @@
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="install.html">Get it</a></li>
-    <li><a href="contents.html">Docs</a></li>
+    <li><a href="tutorial.html">Tutorial</a></li>
     <li><a href="http://github.com/prophyle/prophyle">Extend/Develop</a></li>
   </ul>
   <div>
@@ -92,33 +92,34 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="databases_custom.html" title="Building custom databases"
+          <a href="databases_custom.html" title="5. Building custom databases"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="install.html" title="Installation and running"
+          <a href="install.html" title="3. Installing ProPhyle"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
- 
+
+          <li class="nav-item nav-item-1"><a href="tutorial.html" accesskey="U">Tutorial</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Building predefined databases</a><ul>
-<li><a class="reference internal" href="#downloading-genomes">Downloading genomes</a></li>
-<li><a class="reference internal" href="#index-construction">Index construction</a></li>
+<li><a class="reference internal" href="#">4. Building predefined databases</a><ul>
+<li><a class="reference internal" href="#downloading-genomes">4.1. Downloading genomes</a></li>
+<li><a class="reference internal" href="#index-construction">4.2. Index construction</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="install.html"
-                        title="previous chapter">Installation and running</a></p>
+                        title="previous chapter">3. Installing ProPhyle</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="databases_custom.html"
-                        title="next chapter">Building custom databases</a></p>
+                        title="next chapter">5. Building custom databases</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -145,11 +146,11 @@
           <div class="body" role="main">
             
   <div class="section" id="building-predefined-databases">
-<span id="databases"></span><h1>Building predefined databases<a class="headerlink" href="#building-predefined-databases" title="Permalink to this headline">¶</a></h1>
+<span id="databases"></span><h1>4. Building predefined databases<a class="headerlink" href="#building-predefined-databases" title="Permalink to this headline">¶</a></h1>
 <p>ProPhyle comes with several genome libraries containing
 RefSeq genomes, augmented with the NCBI taxonomy.</p>
 <div class="section" id="downloading-genomes">
-<h2>Downloading genomes<a class="headerlink" href="#downloading-genomes" title="Permalink to this headline">¶</a></h2>
+<h2>4.1. Downloading genomes<a class="headerlink" href="#downloading-genomes" title="Permalink to this headline">¶</a></h2>
 <p>These libraries can be downloaded using <code class="docutils literal"><span class="pre">prophyle</span> <span class="pre">download</span> <span class="pre">&lt;library&gt;</span> <span class="pre">[&lt;library&gt;</span> <span class="pre">...]</span></code>,
 where <code class="docutils literal"><span class="pre">&lt;library&gt;</span></code> should be replaced by <code class="docutils literal"><span class="pre">bacteria</span></code>, <code class="docutils literal"><span class="pre">viruses</span></code>, or <code class="docutils literal"><span class="pre">plasmids</span></code>.
 The command also copies a prebuild Newick/NHX tree for the specified library.
@@ -160,7 +161,7 @@ If the <cite>-d</cite> parameter is not specified, all files are placed to <cite
 </div>
 </div>
 <div class="section" id="index-construction">
-<h2>Index construction<a class="headerlink" href="#index-construction" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. Index construction<a class="headerlink" href="#index-construction" title="Permalink to this headline">¶</a></h2>
 <p>Once a library is downloaded, a ProPhyle index can be constructed using:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">index</span> <span class="p">[</span><span class="o">-</span><span class="n">g</span> <span class="n">DIR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">j</span> <span class="n">INT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">k</span> <span class="n">INT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">M</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">P</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">K</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">tree</span><span class="o">.</span><span class="n">nw</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">tree</span><span class="o">.</span><span class="n">nw</span><span class="o">&gt;</span> <span class="o">...</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">index</span><span class="o">.</span><span class="n">dir</span><span class="o">&gt;</span>
 </pre></div>
@@ -201,14 +202,15 @@ of used cores.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="databases_custom.html" title="Building custom databases"
+          <a href="databases_custom.html" title="5. Building custom databases"
              >next</a> |</li>
         <li class="right" >
-          <a href="install.html" title="Installation and running"
+          <a href="install.html" title="3. Installing ProPhyle"
              >previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
- 
+
+          <li class="nav-item nav-item-1"><a href="tutorial.html" >Tutorial</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Command-line interface &#8212; ProPhyle 0.3.1.0 documentation</title>
+    <title>Reference &#8212; ProPhyle 0.3.1.0 documentation</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -26,7 +26,7 @@
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="File formats" href="formats.html" />
+    <link rel="prev" title="8. Command-line interface" href="cli.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -70,7 +70,7 @@
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="install.html">Get it</a></li>
-    <li><a href="contents.html">Docs</a></li>
+    <li><a href="tutorial.html">Tutorial</a></li>
     <li><a href="http://github.com/prophyle/prophyle">Extend/Develop</a></li>
   </ul>
   <div>
@@ -91,7 +91,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="formats.html" title="File formats"
+          <a href="cli.html" title="8. Command-line interface"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
@@ -100,14 +100,9 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Command-line interface</a></li>
-</ul>
-
   <h4>Previous topic</h4>
-  <p class="topless"><a href="formats.html"
-                        title="previous chapter">File formats</a></p>
+  <p class="topless"><a href="cli.html"
+                        title="previous chapter">8. Command-line interface</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -133,350 +128,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="command-line-interface">
-<span id="reference"></span><h1>Command-line interface<a class="headerlink" href="#command-line-interface" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="prophyle-main-program">
-<h2>ProPhyle – main program<a class="headerlink" href="#prophyle-main-program" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="prophyle">
-<h3><code class="docutils literal"><span class="pre">prophyle</span></code><a class="headerlink" href="#prophyle" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle  -h
-
-usage: prophyle.py [-h] [-v]  ...
-
-Program: prophyle (phylogeny-based metagenomic classification)
-Version: 0.2.0.0
-Authors: Karel Brinda &lt;kbrinda@hsph.harvard.edu&gt;, Kamil Salikhov &lt;kamil.salikhov@univ-mlv.fr&gt;,
-                 Simone Pignotti &lt;pignottisimone@gmail.com&gt;, Gregory Kucherov &lt;gregory.kucherov@univ-mlv.fr&gt;
-
-Usage:   prophyle &lt;command&gt; [options]
-
-optional arguments:
-  -h, --help     show this help message and exit
-  -v, --version  show program&#39;s version number and exit
-
-subcommands:
-
-    download     download a genomic database
-    index        build index
-    classify     classify reads
-    analyze      analyze results
-    compress     compress a ProPhyle index (experimental)
-    decompress   decompress a compressed ProPhyle index (experimental)
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="prophyle-download">
-<h3><code class="docutils literal"><span class="pre">prophyle</span> <span class="pre">download</span></code><a class="headerlink" href="#prophyle-download" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle download -h
-
-usage: prophyle.py download [-h] [-d DIR] [-l STR] [-F]
-                            &lt;library&gt; [&lt;library&gt; ...]
-
-positional arguments:
-  &lt;library&gt;   genomic library [&#39;bacteria&#39;, &#39;viruses&#39;, &#39;plasmids&#39;, &#39;hmp&#39;,
-              &#39;all&#39;]
-
-optional arguments:
-  -h, --help  show this help message and exit
-  -d DIR      directory for the tree and the sequences [~/prophyle]
-  -l STR      log file
-  -F          rewrite library files if they already exist
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="prophyle-index">
-<h3><code class="docutils literal"><span class="pre">prophyle</span> <span class="pre">index</span></code><a class="headerlink" href="#prophyle-index" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle index -h
-
-usage: prophyle.py index [-h] [-g DIR] [-j INT] [-k INT] [-l STR] [-s FLOAT]
-                         [-F] [-M] [-P] [-K] [-T] [-A]
-                         &lt;tree.nw&gt; [&lt;tree.nw&gt; ...] &lt;index.dir&gt;
-
-positional arguments:
-  &lt;tree.nw&gt;    phylogenetic tree (in Newick/NHX)
-  &lt;index.dir&gt;  index directory (will be created)
-
-optional arguments:
-  -h, --help   show this help message and exit
-  -g DIR       directory with the library sequences [dir. of the first tree]
-  -j INT       number of threads [auto (4)]
-  -k INT       k-mer length [31]
-  -l STR       log file [&lt;index.dir&gt;/log.txt]
-  -s FLOAT     rate of sampling of the tree [no sampling]
-  -F           rewrite index files if they already exist
-  -M           mask repeats/low complexity regions (using DustMasker)
-  -P           do not add prefixes to node names when multiple trees are used
-  -K           skip k-LCP construction (then restarted search only)
-  -T           keep temporary files from k-mer propagation
-  -A           autocomplete tree (names of internal nodes and FASTA paths)
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="prophyle-classify">
-<h3><code class="docutils literal"><span class="pre">prophyle</span> <span class="pre">classify</span></code><a class="headerlink" href="#prophyle-classify" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle classify -h
-
-usage: prophyle.py classify [-h] [-k INT] [-K] [-m {h1,c1}] [-f {kraken,sam}]
-                            [-l STR] [-A] [-L] [-P] [-C]
-                            &lt;index.dir&gt; &lt;reads1.fq&gt; [&lt;reads2.fq&gt;]
-
-positional arguments:
-  &lt;index.dir&gt;      index directory
-  &lt;reads1.fq&gt;      first file with reads in FASTA/FASTQ (- for standard input)
-  &lt;reads2.fq&gt;      second file with reads in FASTA/FASTQ
-
-optional arguments:
-  -h, --help       show this help message and exit
-  -k INT           k-mer length [detect automatically from the index]
-  -K               use restarted search for matching rather than rolling
-                   window (slower, but k-LCP is not needed)
-  -m {h1,c1}       measure: h1=hit count, c1=coverage [h1]
-  -f {kraken,sam}  output format [sam]
-  -l STR           log file
-  -A               annotate assignments (using tax. information from NHX)
-  -L               use LCA when tie (multiple hits with the same score)
-  -P               incorporate sequences and qualities into SAM records
-  -C               use C++ impl. of the assignment algorithm (experimental)
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="prophyle-analyze">
-<h3><code class="docutils literal"><span class="pre">prophyle</span> <span class="pre">analyze</span></code><a class="headerlink" href="#prophyle-analyze" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle analyze -h
-
-usage: prophyle.py analyze [-h] [-s [&#39;w&#39;, &#39;u&#39;, &#39;wl&#39;, &#39;ul&#39;]]
-                           [-f [&#39;sam&#39;, &#39;bam&#39;, &#39;cram&#39;, &#39;uncompressed_bam&#39;, &#39;kraken&#39;, &#39;histo&#39;]]
-                           {index_dir, tree.nw} &lt;out.pref&gt; &lt;classified.bam&gt;
-                           [&lt;classified.bam&gt; ...]
-
-positional arguments:
-  {index_dir, tree.nw}     index directory or phylogenetic tree
-  &lt;out.pref&gt;               output prefix
-  &lt;classified.bam&gt;         classified reads (use &#39;-&#39; for stdin)
-
-optional arguments:
-  -h, --help               show this help message and exit
-  -s [&#39;w&#39;, &#39;u&#39;, &#39;wl&#39;, &#39;ul&#39;]
-                           statistics to use for the computation of
-                           histograms: w (default) =&gt; weighted assignments; u
-                           =&gt; unique assignments, non-weighted; wl =&gt; weighted
-                           assignments, propagated to leaves; ul =&gt; unique
-                           assignments, propagated to leaves.
-  -f [&#39;sam&#39;, &#39;bam&#39;, &#39;cram&#39;, &#39;uncompressed_bam&#39;, &#39;kraken&#39;, &#39;histo&#39;]
-                           Input format of assignments [auto]
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="prophyle-compress">
-<h3><code class="docutils literal"><span class="pre">prophyle</span> <span class="pre">compress</span></code><a class="headerlink" href="#prophyle-compress" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle compress -h
-
-usage: prophyle.py compress [-h] &lt;index.dir&gt; [&lt;archive.tar.gz&gt;]
-
-positional arguments:
-  &lt;index.dir&gt;       index directory
-  &lt;archive.tar.gz&gt;  output archive [&lt;index.dir&gt;.tar.gz]
-
-optional arguments:
-  -h, --help        show this help message and exit
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="prophyle-decompress">
-<h3><code class="docutils literal"><span class="pre">prophyle</span> <span class="pre">decompress</span></code><a class="headerlink" href="#prophyle-decompress" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle decompress -h
-
-usage: prophyle.py decompress [-h] [-K] archive.tar.gz [output.dir]
-
-positional arguments:
-  archive.tar.gz  output archive
-  output.dir      output directory [./]
-
-optional arguments:
-  -h, --help      show this help message and exit
-  -K              skip k-LCP construction
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-</div>
-<div class="section" id="prophyle-assembler">
-<h2>Prophyle Assembler<a class="headerlink" href="#prophyle-assembler" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id1">
-<h3><code class="docutils literal"><span class="pre">prophyle_assembler</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle_assembler -h
-
-
-Program:  prophyle_assembler (greedy assembler for ProPhyle)
-Contact:  Karel Brinda &lt;karel.brinda@gmail.com&gt;
-
-Usage:    prophyle_assembler [options]
-
-Examples: prophyle_assembler -k 15 -i f1.fa -i f2.fa -x fx.fa
-             - compute intersection of f1 and f2
-          prophyle_assembler -k 15 -i f1.fa -i f2.fa -x fx.fa -o g1.fa -o g2.fa
-             - compute intersection of f1 and f2, and subtract it from them
-          prophyle_assembler -k 15 -i f1.fa -o g1.fa
-             - re-assemble f1 to g1
-
-Command-line parameters:
- -k INT   K-mer size.
- -i FILE  Input FASTA file (can be used multiple times).
- -o FILE  Output FASTA file (if used, must be used as many times as -i).
- -x FILE  Compute intersection, subtract it, save it.
- -s FILE  Output file with k-mer statistics.
- -S       Silent mode.
-
-Note that &#39;-&#39; can be used for standard input/output.
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-</div>
-<div class="section" id="id2">
-<h2>Prophyle Index<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id3">
-<h3><code class="docutils literal"><span class="pre">prophyle_index</span></code><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle_index -h
-
-
-Program: prophyle_index (alignment of k-mers)
-Contact: Kamil Salikhov &lt;kamil.salikhov@univ-mlv.fr&gt;
-
-Usage:   prophyle_index command [options]
-
-Command: build     construct index
-         query     query reads against index
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="prophyle-index-build">
-<h3><code class="docutils literal"><span class="pre">prophyle_index</span> <span class="pre">build</span></code><a class="headerlink" href="#prophyle-index-build" title="Permalink to this headline">¶</a></h3>
-<div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle_index build -h
-
-
-Usage:   prophyle_index build &lt;prefix&gt;
-
-Options: -k INT    length of k-mer
-         -s        construct k-LCP and SA in parallel
-         -i        sampling distance for SA
-</pre></div>
-</div>
-</div>
-<div class="section" id="prophyle-index-query">
-<h3><code class="docutils literal"><span class="pre">prophyle_index</span> <span class="pre">query</span></code><a class="headerlink" href="#prophyle-index-query" title="Permalink to this headline">¶</a></h3>
-<div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle_index query -h
-
-
-Usage:   prophyle_index query [options] &lt;prefix&gt; &lt;in.fq&gt;
-
-Options: -k INT    length of k-mer
-         -u        use k-LCP for querying
-         -v        output set of chromosomes for every k-mer
-         -p        do not check whether k-mer is on border of two contigs, and show such k-mers in output
-         -b        print sequences and base qualities
-         -l STR    log file name to output statistics
-         -t INT    number of threads [1]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="prophyle-assignment">
-<h2>Prophyle Assignment<a class="headerlink" href="#prophyle-assignment" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id4">
-<h3><code class="docutils literal"><span class="pre">prophyle_assignment</span></code><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle_assignment.py -h
-
-usage: prophyle_assignment.py [-h] [-f {kraken,sam}] [-m {h1,c1}] [-A] [-L]
-                              [-X] [-D]
-                              &lt;tree.nhx&gt; &lt;k&gt; &lt;assignments.txt&gt;
-
-Implementation of assignment algorithm
-
-positional arguments:
-  &lt;tree.nhx&gt;         phylogenetic tree (Newick/NHX)
-  &lt;k&gt;                k-mer length
-  &lt;assignments.txt&gt;  assignments in generalized Kraken format
-
-optional arguments:
-  -h, --help         show this help message and exit
-  -f {kraken,sam}    format of output [sam]
-  -m {h1,c1}         measure: h1=hitnumber, c1=coverage [h1]
-  -A                 annotate assignments
-  -L                 use LCA when tie (multiple hits with the same score)
-  -X                 replace k-mer matches by their LCA
-  -D                 do not translate blocks from node to tax IDs
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>Prophyle Analyze<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id6">
-<h3><code class="docutils literal"><span class="pre">prophyle_analyze</span></code><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle_analyze.py -h
-
-usage: prophyle_analyze.py [-h] [-s [&#39;w&#39;, &#39;u&#39;, &#39;wl&#39;, &#39;ul&#39;]]
-                           [-f [&#39;sam&#39;, &#39;bam&#39;, &#39;cram&#39;, &#39;uncompressed_bam&#39;, &#39;kraken&#39;, &#39;histo&#39;]]
-                           {index_dir, tree.nw} &lt;out_prefix&gt; &lt;input_fn&gt;
-                           [&lt;input_fn&gt; ...]
-
-Program: prophyle_analyze.py
-
-Analyze results of ProPhyle&#39;s classification.
-Stats:
-w: weighted assignments
-u: unique assignments (ignore multiple assignments)
-wl: weighted assignments, propagated to leaves
-ul: unique assignments, propagated to leaves
-
-positional arguments:
-  {index_dir, tree.nw}  Index directory or phylogenetic tree
-  &lt;out_prefix&gt;          Prefix for output files (the complete file names will
-                        be &lt;out_prefix&gt;_rawhits.tsv for the raw hit counts
-                        table and &lt;out_prefix&gt;_otu.tsv for the otu table)
-  &lt;input_fn&gt;            ProPhyle output files whose format is chosen with the
-                        -f option. Use &#39;-&#39; for stdin or multiple files with
-                        the same format (one per sample)
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -s [&#39;w&#39;, &#39;u&#39;, &#39;wl&#39;, &#39;ul&#39;]
-                        Statistics to use for the computation of histograms: w
-                        (default) =&gt; weighted assignments; u =&gt; unique
-                        assignments, non-weighted; wl =&gt; weighted assignments,
-                        propagated to leaves; ul =&gt; unique assignments,
-                        propagated to leaves.
-  -f [&#39;sam&#39;, &#39;bam&#39;, &#39;cram&#39;, &#39;uncompressed_bam&#39;, &#39;kraken&#39;, &#39;histo&#39;]
-                        Input format of assignments [auto]. If &#39;histo&#39; is
-                        selected the program expects hit count histograms
-                        (*_rawhits.tsv) previously computed using prophyle
-                        analyze, it merges them and compute OTU table from the
-                        result (assignment files are not required)
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-</div>
+  <div class="section" id="reference">
+<span id="id1"></span><h1>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><a class="reference internal" href="formats.html"><span class="doc">File formats</span></a></li>
+<li><a class="reference internal" href="cli.html"><span class="doc">Command-line parameters</span></a></li>
+</ol>
 </div>
 
 
@@ -492,7 +149,7 @@ optional arguments:
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="formats.html" title="File formats"
+          <a href="cli.html" title="8. Command-line interface"
              >previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
