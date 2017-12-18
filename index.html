@@ -5,23 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  
-  <!-- Licensed under the Apache 2.0 License -->
-  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
-  <!-- Licensed under the SIL Open Font License -->
-  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
-  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title>ProPhyle &#8212; ProPhyle  documentation</title>
-    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <title>Overview &#8212; ProPhyle 0.3.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href=".static/prophyle.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '',
+        VERSION:     '0.3.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -31,136 +21,200 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within ProPhyle 0.3.1.0 documentation"
+          href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Quick example" href="example.html" />
-  
-   
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
+          rel='stylesheet' type='text/css' />
+ 
+    <style type="text/css">
+      table.right { float: right; margin-left: 20px; }
+      table.right td { border: 1px solid #ccc; }
+      
+      .related { display: none; }
+      
+    </style>
+    <script type="text/javascript">
+      // intelligent scrolling of the sidebar content
+      $(window).scroll(function() {
+        var sb = $('.sphinxsidebarwrapper');
+        var win = $(window);
+        var sbh = sb.height();
+        var offset = $('.sphinxsidebar').position()['top'];
+        var wintop = win.scrollTop();
+        var winbot = wintop + win.innerHeight();
+        var curtop = sb.position()['top'];
+        var curbot = curtop + sbh;
+        // does sidebar fit in window?
+        if (sbh < win.innerHeight()) {
+          // yes: easy case -- always keep at the top
+          sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+                                $(document).height() - sbh - 200]));
+        } else {
+          // no: only scroll if top/bottom edge of sidebar is at
+          // top/bottom edge of window
+          if (curtop > wintop && curbot > winbot) {
+            sb.css('top', $u.max([wintop - offset - 10, 0]));
+          } else if (curtop < wintop && curbot < winbot) {
+            sb.css('top', $u.min([winbot - sbh - offset - 20,
+                                  $(document).height() - sbh - 200]));
+          }
+        }
+      });
+    </script>
 
   </head>
   <body>
+<div class="pageheader">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="install.html">Get it</a></li>
+    <li><a href="contents.html">Docs</a></li>
+    <li><a href="http://github.com/prophyle/prophyle">Extend/Develop</a></li>
+  </ul>
+  <div>
+    <a href="#">
+      <!--
+        <img src="_static/sphinxheader.png" alt="SPHINX" />
+      -->
+      <div style="color:white;font-size:240%">ProPhyle</div>
+      <div style="color:white;font-size:140%">a phylogeny-based metagenomic classifier</div>
+    </a>
+  </div>
+</div>
+
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="example.html" title="Quick example"
-             accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">ProPhyle  documentation</a> &#187;</li> 
+        <li><a href="#">ProPhyle home</a>&#160;|</li>
+        <li><a href="contents.html">Documentation</a> &#187;</li>
+ 
       </ul>
     </div>
-    <div class="container-wrapper">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Download</h3>
+<p>Current version: <b><a href="https://github.com/prophyle/prophyle/releases/tag/0.3.1.0">0.3.1.0</a></b></p>
+<p>Get ProPhyle from the <a href="https://pypi.python.org/pypi/prophyle">Python Package
+Index</a>, install it with:</p>
+<pre>pip install -U prophyle</pre>
+<p>or from <a href="http://bioconda.github.io">BioConda</a>, install it with</p>
+<pre>conda install prophyle</pre>
 
-      <div id="mobile-toggle">
-        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
-      </div>
-  <div id="left-column">
-    <div class="sphinxsidebar">
-        <a href="
-    #" class="text-logo">ProPhyle</a>
-        
-<div class="sidebar-block">
-  <div class="sidebar-wrapper">
-    <h2>Table Of Contents</h2>
-  </div>
-  <div class="sidebar-toc">
-    
-    
-      <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ProPhyle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">Quick example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1"><a class="reference internal" href="install.html">Installation and running</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases_predefined.html">Building predefined databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases_custom.html">Building custom databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="classification.html">Read classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="formats.html">File formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">Command-line interface</a></li>
-</ul>
+<h3>Questions? Suggestions?</h3>
 
-    
-  </div>
+<p>Join the <a href="http://groups.google.com/group/prophyle">ProPhyle</a> mailing list on Google Groups:</p>
+<form action="http://groups.google.com/group/sphinx-users/boxsubscribe"
+      style="padding-left: 0.5em">
+  <input type="text" name="email" value="your@email" style="font-size: 90%; width: 120px"
+         onfocus="$(this).val('');"/>
+  <input type="submit" name="sub" value="Subscribe" style="font-size: 90%; width: 70px"/>
+</form>
+<p>You can also open an issue at the
+  <a href="https://github.com/prophyle/prophyle/issues">tracker</a>.</p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
 </div>
-        
-<div class="sidebar-block">
-  <div class="sidebar-wrapper">
-    <div id="main-search">
-      <form class="form-inline" action="search.html" method="GET" role="form">
-        <div class="input-group">
-          <input name="q" type="text" class="form-control" placeholder="Search...">
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
-        <input type="hidden" name="check_keywords" value="yes" />
-        <input type="hidden" name="area" value="default" />
-      </form>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-        <div id="right-column">
-          
-          <div role="navigation" aria-label="breadcrumbs navigation">
-            <ol class="breadcrumb">
-              <li><a href="#">Docs</a></li>
-              
-              <li>ProPhyle</li>
-            </ol>
-          </div>
-          
-          <div class="document clearer body">
-            
-  <div class="section" id="prophyle">
-<h1>ProPhyle<a class="headerlink" href="#prophyle" title="Permalink to this headline">¶</a></h1>
-<p>ProPhyle is a phylogeny-based metagenomic classifier,
-whose indexing strategy is based on the bottom-up propagation of genomes’
-k-mers in the tree, assembling contigs at each node and matching using a
-full-text search.</p>
-<p>Compared to other state-of-the-arts classifiers, ProPhyle provides several unique features:</p>
-<ul class="simple">
-<li><strong>Low memory requirements.</strong> Compared to <a class="reference external" href="https://ccb.jhu.edu/software/kraken/">Kraken</a>, ProPhyle has 9x smaller memory footprint for index construction and 5x smaller footprint for querying.</li>
-<li><strong>Flexibility.</strong> ProPhyle is easy to use with any user-provided phylogenetic trees and reference genomes.</li>
-<li><strong>Standard bioinformatics formats.</strong> <a class="reference external" href="https://sites.google.com/site/cmzmasek/home/software/forester/nhx">Newick/NHX</a> is used for representing phylogenetic trees and <a class="reference external" href="https://samtools.github.io/hts-specs/SAMv1.pdf">SAM</a> for reporting the assignments.</li>
-<li><strong>Lossless k-mer indexing.</strong> ProPhyle stores a list of <em>all</em> genomes containing a <em>k</em>-mer.  It can be, therefore, accurate even with trees containing similar genomes (e.g, phylogenetic trees for a single species).</li>
-<li><strong>Deterministic behavior.</strong> ProPhyle is a fully deterministic classifier with a mathematically well-defined behavior.</li>
-</ul>
-<div class="section" id="issues">
-<h2>Issues<a class="headerlink" href="#issues" title="Permalink to this headline">¶</a></h2>
-<p>Please use <a class="reference external" href="https://github.com/prophyle/prophyle/issues">Github issues</a>.</p>
-</div>
-<div class="section" id="changelog">
-<h2>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h2>
-<p>See <a class="reference external" href="https://github.com/prophyle/prophyle/releases">Releases</a>.</p>
-</div>
-<div class="section" id="licence">
-<h2>Licence<a class="headerlink" href="#licence" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/prophyle/prophyle/blob/master/LICENSE.txt">MIT</a></p>
-</div>
-<div class="section" id="authors">
-<h2>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://brinda.cz">Karel Brinda</a> &lt;<a class="reference external" href="mailto:kbrinda&#37;&#52;&#48;hsph&#46;harvard&#46;edu">kbrinda<span>&#64;</span>hsph<span>&#46;</span>harvard<span>&#46;</span>edu</a>&gt;</p>
-<p>Kamil Salikhov &lt;<a class="reference external" href="mailto:kamil&#46;salikhov&#37;&#52;&#48;univ-mlv&#46;fr">kamil<span>&#46;</span>salikhov<span>&#64;</span>univ-mlv<span>&#46;</span>fr</a>&gt;</p>
-<p>Simone Pignotti &lt;<a class="reference external" href="mailto:pignottisimone&#37;&#52;&#48;gmail&#46;com">pignottisimone<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
-<p><a class="reference external" href="http://www-igm.univ-mlv.fr/~koutcher/">Gregory Kucherov</a> &lt;<a class="reference external" href="mailto:gregory&#46;kucherov&#37;&#52;&#48;univ-mlv&#46;fr">gregory<span>&#46;</span>kucherov<span>&#64;</span>univ-mlv<span>&#46;</span>fr</a>&gt;</p>
-<div class="toctree-wrapper compound" id="mastertoc">
-</div>
-</div>
-</div>
-
-
-          </div>
-            
-  <div class="footer-relations">
-    
-      <div class="pull-right">
-        <a class="btn btn-default" href="example.html" title="next chapter (use the right arrow)">Quick example</a>
       </div>
-    </div>
-    <div class="clearer"></div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Welcome to ProPhyle</h1>
+
+
+  <p>ProPhyle is a phylogeny-based metagenomic classifier, whose indexing strategy is based on the bottom-up propagation of genomes’ k-mers in the tree, assembling contigs at each node and matching using a full-text search.
+  </p>
+
+  <p>
+  Compared to other state-of-the-arts classifiers, ProPhyle provides several unique features:
   
+  <img src="_static/prophyle_overview.jpg"  style="float:right; width:250px" />
+
+  <ul>
+    <li><b>Low memory requirements.</b> Compared to Kraken, ProPhyle has 9x smaller memory footprint for index construction and 5x smaller footprint for querying.</li>
+    <li><b>Flexibility.</b> ProPhyle is easy to use with any user-provided phylogenetic trees and reference genomes.</li>
+    <li><b>Standard bioinformatics formats.</b> Newick/NHX is used for representing phylogenetic trees and SAM for reporting the assignments.</li>
+    <li><b>Lossless k-mer indexing.</b> ProPhyle stores a list of all genomes containing a k-mer. It can be, therefore, accurate even with trees containing similar genomes (e.g, phylogenetic trees for a single species).</li>
+    <li><b>Deterministic behavior.</b> ProPhyle is a fully deterministic classifier with a mathematically well-defined behavior.</li>
+  </ul>
+
+  <h2 style="margin-bottom: 0">Documentation</h2>
+
+  <table class="contentstable">
+    <tr>
+      <td style="width:35%">
+        <p class="biglink"><a class="biglink" href="example.html">Quick example</a><br/>
+           <span class="linkdescr">5 minutes example</span></p>
+      </td><td>
+        <p class="biglink"><a class="biglink" href="tutorial.html">Tutorial</a><br/>
+           <span class="linkdescr">overview of basic tasks</span></p>
+      </td>
+    </tr><tr>
+      <td><p class="biglink"><a class="biglink" href="search.html">Search page</a><br/>
+           <span class="linkdescr">search the documentation</span></p>
+      </td><td>
+        <p class="biglink"><a class="biglink" href="contents.html">Contents</a><br/>
+           <span class="linkdescr">for a complete overview</span></p>
+      </td>
+    </tr><tr>
+      <td>
+        <p class="biglink"><a class="biglink" href="reference.html">Reference</a><br/>
+           <span class="linkdescr">command-line interface and data formats</span></p>
+      </td><td>
+        <p class="biglink"><a class="biglink" href="https://github.com/prophyle/prophyle/releases">
+          Releases
+        </a><br/>
+           <span class="linkdescr">release history</span></p>
+      </td><td>
+      </td>
+    </tr>
+  </table>
+
+
+  <h2 style="margin-bottom: 0">Auxiliary tools</h2>
+
+  <table class="contentstable">
+    <tr>
+      <td style="width:35%">
+        <p class="biglink"><a class="biglink" href="http://github.com/prophyle/prophyle_index">ProPhyle Index</a><br/>
+           <span class="linkdescr">BWT-index for rapid k-mer matching</span></p>
+      </td>
+      <td>
+        <p class="biglink"><a class="biglink" href="http://github.com/prophyle/prophyle_assembler">ProPhyle Assembler</a><br/>
+           <span class="linkdescr">compressing k-mers by assemblying contigs</span></p>
+      </td>
+    </tr>
+  </table>
+
+
+  <h2>Authors</h2>
+
+  <ul>
+  <li><a href="http://brinda.cz">Karel Brinda <<a href="">kbrinda@hsph.harvard.edu</a>></li>
+  <li>Kamil Salikhov <<a href="">kamil.salikhov@univ-mlv.fr</a>></li>
+  <li>Simone Pignotti <<a href="">pignottisimone@gmail.com</a>></li>
+  <li><a href="http://igm.univ-mlv.fr/~koutcher/">Gregory Kucherov <<a href="">gregory.kucherov@univ-mlv.fr</a>></li>
+</ul>
+
+          </div>
         </div>
-        <div class="clearfix"></div>
+      </div>
+      <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -168,20 +222,14 @@ full-text search.</p>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="example.html" title="Quick example"
-             >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">ProPhyle  documentation</a> &#187;</li> 
+        <li><a href="#">ProPhyle home</a>&#160;|</li>
+        <li><a href="contents.html">Documentation</a> &#187;</li>
+ 
       </ul>
     </div>
-<script type="text/javascript">
-  $("#mobile-toggle a").click(function () {
-    $("#left-column").toggle();
-  });
-</script>
-<script type="text/javascript" src="_static/js/bootstrap.js"></script>
-  <div class="footer">
-    &copy; Copyright 2016–2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
-  </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
   </body>
 </html>

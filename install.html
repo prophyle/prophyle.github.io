@@ -5,23 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  
-  <!-- Licensed under the Apache 2.0 License -->
-  <link rel="stylesheet" type="text/css" href="_static/fonts/open-sans/stylesheet.css" />
-  <!-- Licensed under the SIL Open Font License -->
-  <link rel="stylesheet" type="text/css" href="_static/fonts/source-serif-pro/source-serif-pro.css" />
-  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="_static/css/bootstrap-theme.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-    <title>Installation and running &#8212; ProPhyle  documentation</title>
-    <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
+    <title>Installation and running &#8212; ProPhyle 0.3.1.0 documentation</title>
+    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href=".static/prophyle.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '',
+        VERSION:     '0.3.1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -31,15 +21,70 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within ProPhyle 0.3.1.0 documentation"
+          href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Building predefined databases" href="databases_predefined.html" />
     <link rel="prev" title="Requirements" href="requirements.html" />
-  
-   
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
+          rel='stylesheet' type='text/css' />
+ 
+    <style type="text/css">
+      table.right { float: right; margin-left: 20px; }
+      table.right td { border: 1px solid #ccc; }
+      
+    </style>
+    <script type="text/javascript">
+      // intelligent scrolling of the sidebar content
+      $(window).scroll(function() {
+        var sb = $('.sphinxsidebarwrapper');
+        var win = $(window);
+        var sbh = sb.height();
+        var offset = $('.sphinxsidebar').position()['top'];
+        var wintop = win.scrollTop();
+        var winbot = wintop + win.innerHeight();
+        var curtop = sb.position()['top'];
+        var curbot = curtop + sbh;
+        // does sidebar fit in window?
+        if (sbh < win.innerHeight()) {
+          // yes: easy case -- always keep at the top
+          sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
+                                $(document).height() - sbh - 200]));
+        } else {
+          // no: only scroll if top/bottom edge of sidebar is at
+          // top/bottom edge of window
+          if (curtop > wintop && curbot > winbot) {
+            sb.css('top', $u.max([wintop - offset - 10, 0]));
+          } else if (curtop < wintop && curbot < winbot) {
+            sb.css('top', $u.min([winbot - sbh - offset - 20,
+                                  $(document).height() - sbh - 200]));
+          }
+        }
+      });
+    </script>
 
   </head>
   <body>
+<div class="pageheader">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#">Get it</a></li>
+    <li><a href="contents.html">Docs</a></li>
+    <li><a href="http://github.com/prophyle/prophyle">Extend/Develop</a></li>
+  </ul>
+  <div>
+    <a href="index.html">
+      <!--
+        <img src="_static/sphinxheader.png" alt="SPHINX" />
+      -->
+      <div style="color:white;font-size:240%">ProPhyle</div>
+      <div style="color:white;font-size:140%">a phylogeny-based metagenomic classifier</div>
+    </a>
+  </div>
+</div>
+
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
@@ -52,68 +97,48 @@
         <li class="right" >
           <a href="requirements.html" title="Requirements"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
+        <li><a href="index.html">ProPhyle home</a>&#160;|</li>
+        <li><a href="contents.html">Documentation</a> &#187;</li>
+ 
       </ul>
     </div>
-    <div class="container-wrapper">
-
-      <div id="mobile-toggle">
-        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
-      </div>
-  <div id="left-column">
-    <div class="sphinxsidebar">
-        <a href="
-    index.html" class="text-logo">ProPhyle</a>
-        
-<div class="sidebar-block">
-  <div class="sidebar-wrapper">
-    <h2>Table Of Contents</h2>
-  </div>
-  <div class="sidebar-toc">
-    
-    
-      <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index.html">ProPhyle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">Quick example</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation and running</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases_predefined.html">Building predefined databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="databases_custom.html">Building custom databases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="classification.html">Read classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="formats.html">File formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference.html">Command-line interface</a></li>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Installation and running</a></li>
 </ul>
 
-    
-  </div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="requirements.html"
+                        title="previous chapter">Requirements</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="databases_predefined.html"
+                        title="next chapter">Building predefined databases</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/install.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
 </div>
-        
-<div class="sidebar-block">
-  <div class="sidebar-wrapper">
-    <div id="main-search">
-      <form class="form-inline" action="search.html" method="GET" role="form">
-        <div class="input-group">
-          <input name="q" type="text" class="form-control" placeholder="Search...">
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
-        <input type="hidden" name="check_keywords" value="yes" />
-        <input type="hidden" name="area" value="default" />
-      </form>
-    </div>
-  </div>
-</div>
-    </div>
-  </div>
-        <div id="right-column">
-          
-          <div role="navigation" aria-label="breadcrumbs navigation">
-            <ol class="breadcrumb">
-              <li><a href="index.html">Docs</a></li>
-              
-              <li>Installation and running</li>
-            </ol>
-          </div>
-          
-          <div class="document clearer body">
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="installation-and-running">
 <span id="install"></span><h1>Installation and running<a class="headerlink" href="#installation-and-running" title="Permalink to this headline">¶</a></h1>
@@ -196,21 +221,9 @@ create a small index with a small k-mer length:</p>
 
 
           </div>
-            
-  <div class="footer-relations">
-    
-      <div class="pull-left">
-        <a class="btn btn-default" href="requirements.html" title="previous chapter (use the left arrow)">Requirements</a>
-      </div>
-    
-      <div class="pull-right">
-        <a class="btn btn-default" href="databases_predefined.html" title="next chapter (use the right arrow)">Building predefined databases</a>
-      </div>
-    </div>
-    <div class="clearer"></div>
-  
         </div>
-        <div class="clearfix"></div>
+      </div>
+      <div class="clearer"></div>
     </div>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -224,17 +237,14 @@ create a small index with a small k-mer length:</p>
         <li class="right" >
           <a href="requirements.html" title="Requirements"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">ProPhyle  documentation</a> &#187;</li> 
+        <li><a href="index.html">ProPhyle home</a>&#160;|</li>
+        <li><a href="contents.html">Documentation</a> &#187;</li>
+ 
       </ul>
     </div>
-<script type="text/javascript">
-  $("#mobile-toggle a").click(function () {
-    $("#left-column").toggle();
-  });
-</script>
-<script type="text/javascript" src="_static/js/bootstrap.js"></script>
-  <div class="footer">
-    &copy; Copyright 2016–2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
-  </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016-2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+    </div>
   </body>
 </html>
