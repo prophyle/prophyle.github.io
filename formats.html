@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>7. File formats &#8212; ProPhyle 0.3.1.0 documentation</title>
+    <title>File formats &#8212; ProPhyle 0.3.1.0 documentation</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -26,8 +26,8 @@
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="8. Command-line interface" href="cli.html" />
-    <link rel="prev" title="6. Read classification" href="classification.html" />
+    <link rel="next" title="Command-line interface" href="cli.html" />
+    <link rel="prev" title="Read classification" href="classification.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -71,7 +71,7 @@
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="install.html">Get it</a></li>
-    <li><a href="tutorial.html">Docs</a></li>
+    <li><a href="contents.html">Docs</a></li>
     <li><a href="http://github.com/prophyle/prophyle">Extend/Develop</a></li>
   </ul>
   <div>
@@ -92,30 +92,49 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="cli.html" title="8. Command-line interface"
+          <a href="cli.html" title="Command-line interface"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="classification.html" title="6. Read classification"
+          <a href="classification.html" title="Read classification"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
-
-          <li class="nav-item nav-item-1"><a href="tutorial.html" accesskey="U">Tutorial</a> &#187;</li> 
+ 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
+  <h3><a href="contents.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">7. File formats</a></li>
+<li><a class="reference internal" href="#">File formats</a><ul>
+<li><a class="reference internal" href="#input-data-formats">Input data formats</a><ul>
+<li><a class="reference internal" href="#newick-trees">Newick trees</a></li>
+<li><a class="reference internal" href="#nhx-trees">NHX trees</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#output-data-formats">Output data formats</a><ul>
+<li><a class="reference internal" href="#read-assignments-in-sam-bam">Read assignments in SAM/BAM</a></li>
+<li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format">Read assignments in a Kraken-like format</a></li>
+<li><a class="reference internal" href="#abundances-in-a-kraken-report">Abundances in a Kraken report</a></li>
+<li><a class="reference internal" href="#abundances-in-a-metaphlan2-report">Abundances in a Metaphlan2 report</a></li>
+<li><a class="reference internal" href="#abundances-in-a-centrifuge-report">Abundances in a Centrifuge report</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#internal-prophyle-formats">Internal ProPhyle formats</a><ul>
+<li><a class="reference internal" href="#prophyle-index">ProPhyle Index</a></li>
+<li><a class="reference internal" href="#compressed-index-for-transmission">Compressed index for transmission</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="classification.html"
-                        title="previous chapter">6. Read classification</a></p>
+                        title="previous chapter">Read classification</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="cli.html"
-                        title="next chapter">8. Command-line interface</a></p>
+                        title="next chapter">Command-line interface</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -142,31 +161,53 @@
           <div class="body" role="main">
             
   <div class="section" id="file-formats">
-<span id="formats"></span><h1>7. File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="input-trees">
-<h2>7.1. Input trees<a class="headerlink" href="#input-trees" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="newick">
-<h3>7.1.1. Newick<a class="headerlink" href="#newick" title="Permalink to this headline">¶</a></h3>
+<span id="formats"></span><h1>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#input-data-formats" id="id1">Input data formats</a><ul>
+<li><a class="reference internal" href="#newick-trees" id="id2">Newick trees</a></li>
+<li><a class="reference internal" href="#nhx-trees" id="id3">NHX trees</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#output-data-formats" id="id4">Output data formats</a><ul>
+<li><a class="reference internal" href="#read-assignments-in-sam-bam" id="id5">Read assignments in SAM/BAM</a></li>
+<li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format" id="id6">Read assignments in a Kraken-like format</a></li>
+<li><a class="reference internal" href="#abundances-in-a-kraken-report" id="id7">Abundances in a Kraken report</a></li>
+<li><a class="reference internal" href="#abundances-in-a-metaphlan2-report" id="id8">Abundances in a Metaphlan2 report</a></li>
+<li><a class="reference internal" href="#abundances-in-a-centrifuge-report" id="id9">Abundances in a Centrifuge report</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#internal-prophyle-formats" id="id10">Internal ProPhyle formats</a><ul>
+<li><a class="reference internal" href="#prophyle-index" id="id11">ProPhyle Index</a></li>
+<li><a class="reference internal" href="#compressed-index-for-transmission" id="id12">Compressed index for transmission</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="input-data-formats">
+<h2>Input data formats<a class="headerlink" href="#input-data-formats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="newick-trees">
+<h3>Newick trees<a class="headerlink" href="#newick-trees" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://evolution.genetics.washington.edu/phylip/newicktree.html">Newick</a> trees are eventually transformed to NHX.</p>
 </div>
-<div class="section" id="new-hampshire-x-format-nhx">
-<h3>7.1.2. New Hampshire X Format (NHX)<a class="headerlink" href="#new-hampshire-x-format-nhx" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://sites.google.com/site/cmzmasek/home/software/forester/nhx">NHX format</a>
+<div class="section" id="nhx-trees">
+<h3>NHX trees<a class="headerlink" href="#nhx-trees" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://sites.google.com/site/cmzmasek/home/software/forester/nhx">New Hampshire X Format</a>
 is parsed using the <a class="reference external" href="http://etetoolkit.org/">ETE3 library</a>  (see specification of <a class="reference external" href="http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#reading-and-writing-newick-trees">format 1</a>).</p>
 </div>
 </div>
-<div class="section" id="classification-output">
-<h2>7.2. Classification output<a class="headerlink" href="#classification-output" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="output-data-formats">
+<h2>Output data formats<a class="headerlink" href="#output-data-formats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="read-assignments-in-sam-bam">
+<h3>Read assignments in SAM/BAM<a class="headerlink" href="#read-assignments-in-sam-bam" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://samtools.github.io/hts-specs/">SAM format</a></p>
-<div class="section" id="kraken-like-format">
-<h3>7.2.1. Kraken-like format<a class="headerlink" href="#kraken-like-format" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="read-assignments-in-a-kraken-like-format">
+<h3>Read assignments in a Kraken-like format<a class="headerlink" href="#read-assignments-in-a-kraken-like-format" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#output-format">Kraken</a></p>
 </div>
-</div>
-<div class="section" id="abundences">
-<h2>7.3. Abundences<a class="headerlink" href="#abundences" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="kraken-report-format">
-<h3>7.3.1. Kraken-report format<a class="headerlink" href="#kraken-report-format" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="abundances-in-a-kraken-report">
+<h3>Abundances in a Kraken report<a class="headerlink" href="#abundances-in-a-kraken-report" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#sample-reports">kraken-report</a> format:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -179,8 +220,8 @@ is parsed using the <a class="reference external" href="http://etetoolkit.org/">
 </ol>
 </div></blockquote>
 </div>
-<div class="section" id="metaphlan2-format">
-<h3>7.3.2. Metaphlan2 format<a class="headerlink" href="#metaphlan2-format" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="abundances-in-a-metaphlan2-report">
+<h3>Abundances in a Metaphlan2 report<a class="headerlink" href="#abundances-in-a-metaphlan2-report" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
 <dt><a class="reference external" href="https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-files">MetaPhlAn2</a> format:</dt>
 <dd><ol class="first arabic simple">
@@ -195,8 +236,8 @@ OTU equivalents can be extracted by using only the species-level <code class="do
 </dd>
 </dl>
 </div>
-<div class="section" id="centrifuge-format">
-<h3>7.3.3. Centrifuge format<a class="headerlink" href="#centrifuge-format" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="abundances-in-a-centrifuge-report">
+<h3>Abundances in a Centrifuge report<a class="headerlink" href="#abundances-in-a-centrifuge-report" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/centrifuge/manual.shtml#centrifuge-summary-output-the-default-filename-is-centrifuge_report.tsv">Centrifuge</a> format:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#name                                                           taxID   taxRank    kmerCount   numReads   numUniqueReads   abundance</span>
 <span class="n">Wigglesworthia</span> <span class="n">glossinidia</span> <span class="n">endosymbiont</span> <span class="n">of</span> <span class="n">Glossina</span> <span class="n">brevipalpis</span> <span class="mi">36870</span>   <span class="n">leaf</span>       <span class="mi">703004</span>      <span class="mf">5981.37</span>    <span class="mi">5964</span>             <span class="mi">0</span>
@@ -213,10 +254,10 @@ OTU equivalents can be extracted by using only the species-level <code class="do
 </ol>
 </div>
 </div>
-<div class="section" id="index">
-<h2>7.4. Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="standard">
-<h3>7.4.1. Standard<a class="headerlink" href="#standard" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="internal-prophyle-formats">
+<h2>Internal ProPhyle formats<a class="headerlink" href="#internal-prophyle-formats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="prophyle-index">
+<h3>ProPhyle Index<a class="headerlink" href="#prophyle-index" title="Permalink to this headline">¶</a></h3>
 <p>Directory with the following files:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">index.fa</span></code> – assembled contigs, name of sequences are of the following format: <code class="docutils literal"><span class="pre">[node_name]&#64;c[contig_number]</span></code></li>
@@ -233,8 +274,8 @@ OTU equivalents can be extracted by using only the species-level <code class="do
 <li><code class="docutils literal"><span class="pre">tree.preliminary.nw</span></code> – phylogenetic tree before adjusting</li>
 </ul>
 </div>
-<div class="section" id="compressed-for-transmission-only">
-<h3>7.4.2. Compressed (for transmission only)<a class="headerlink" href="#compressed-for-transmission-only" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="compressed-index-for-transmission">
+<h3>Compressed index for transmission<a class="headerlink" href="#compressed-index-for-transmission" title="Permalink to this headline">¶</a></h3>
 <p>Archive <code class="docutils literal"><span class="pre">[name].tar.gz</span></code> with the following subset of index files:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">index.fa.amb</span></code></li>
@@ -262,15 +303,14 @@ OTU equivalents can be extracted by using only the species-level <code class="do
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="cli.html" title="8. Command-line interface"
+          <a href="cli.html" title="Command-line interface"
              >next</a> |</li>
         <li class="right" >
-          <a href="classification.html" title="6. Read classification"
+          <a href="classification.html" title="Read classification"
              >previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
-
-          <li class="nav-item nav-item-1"><a href="tutorial.html" >Tutorial</a> &#187;</li> 
+ 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
