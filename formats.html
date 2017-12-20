@@ -224,16 +224,16 @@ is parsed using the <a class="reference external" href="http://etetoolkit.org/">
 <h3>Abundances in a Metaphlan2 report<a class="headerlink" href="#abundances-in-a-metaphlan2-report" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
 <dt><a class="reference external" href="https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-files">MetaPhlAn2</a> format:</dt>
-<dd><ol class="first arabic simple">
+<dd><ol class="first last arabic simple">
 <li>clades, ranging from taxonomic kingdoms (Bacteria, Archaea, etc.) through species.</li>
+<li>The taxonomic level of each clade is prefixed to indicate its level: Kingdom: <code class="docutils literal"><span class="pre">k__</span></code>, Phylum: <code class="docutils literal"><span class="pre">p__</span></code>, Class: <code class="docutils literal"><span class="pre">c__</span></code>, Order: <code class="docutils literal"><span class="pre">o__</span></code>, Family: <code class="docutils literal"><span class="pre">f__</span></code>, Genus: <code class="docutils literal"><span class="pre">g__</span></code>, Species: <code class="docutils literal"><span class="pre">s__</span></code>.</li>
 </ol>
-<p class="last">2. The taxonomic level of each clade is prefixed to indicate its level: Kingdom: <code class="docutils literal"><span class="pre">k__</span></code>, Phylum: <code class="docutils literal"><span class="pre">p__</span></code>, Class: <code class="docutils literal"><span class="pre">c__</span></code>, Order: <code class="docutils literal"><span class="pre">o__</span></code>, Family: <code class="docutils literal"><span class="pre">f__</span></code>, Genus: <code class="docutils literal"><span class="pre">g__</span></code>, Species: <code class="docutils literal"><span class="pre">s__</span></code>.
-Since sequence-based profiling is relative and does not provide absolute cellular abundance measures,
-clades are hierarchically summed. Each level will sum to 100%; that is, the sum of all kindom-level
+</dd>
+<dt>Since sequence-based profiling is relative and does not provide absolute cellular abundance measures,</dt>
+<dd>clades are hierarchically summed. Each level will sum to 100%; that is, the sum of all kindom-level
 clades is 100%, the sum of all genus-level clades (including unclassified) is also 100%, and so forth.
 OTU equivalents can be extracted by using only the species-level <code class="docutils literal"><span class="pre">s__</span></code> clades from this file
-(again, making sure to include clades unclassified at this level).</p>
-</dd>
+(again, making sure to include clades unclassified at this level).</dd>
 </dl>
 </div>
 <div class="section" id="abundances-in-a-centrifuge-report">
