@@ -2,9 +2,16 @@
     User-defined styles
 */
 
+@import url("basic.css");
+
 .cit {
     margin-left:40px;
     text-indent:-20px;
+}
+
+
+.body h1, .body h2, .body h3, .body h4, .body h5, .body h6 {
+    font-weight: normal!important;
 }
 
 
@@ -18,8 +25,6 @@
  * :license: BSD, see LICENSE for details.
  *
  */
-
-@import url("basic.css");
 
 /* -- page layout ----------------------------------------------------------- */
 
