@@ -1,7 +1,7 @@
-.. _ncbi_db:
+.. _custom_db:
 
-Custom NCBI indexes
-===================
+Building a custom database with the NCBI taxonomy
+=================================================
 
 
 Download sequences from NCBI
@@ -57,3 +57,5 @@ Build the index
 Run the standard command to build ProPhyle index::
 
 	prophyle index -k <kmer_length> <tree_1.nw> [<tree_2.nw> ...] <index_dir>
+
+

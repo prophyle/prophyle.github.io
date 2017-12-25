@@ -26,7 +26,7 @@
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Building standard databases" href="standard_db.html" />
+    <link rel="next" title="Building a standard database" href="standard_db.html" />
     <link rel="prev" title="Requirements" href="requirements.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
@@ -92,7 +92,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="standard_db.html" title="Building standard databases"
+          <a href="standard_db.html" title="Building a standard database"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="requirements.html" title="Requirements"
@@ -123,7 +123,7 @@
                         title="previous chapter">Requirements</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="standard_db.html"
-                        title="next chapter">Building standard databases</a></p>
+                        title="next chapter">Building a standard database</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -172,68 +172,74 @@ of the main program. ProPhyle requires a Unix operating system and the following
 <p>To set-up Bioconda, install
 <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a>
 or another Conda distribution, and
-add <a class="reference external" href="https://bioconda.github.io/">Bioconda channels</a>:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ conda config --add channels defaults
-$ conda config --add channels conda-forge
-$ conda config --add channels bioconda
+add <a class="reference external" href="https://bioconda.github.io/">Bioconda channels</a></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>conda config --add channels defaults
+conda config --add channels conda-forge
+conda config --add channels bioconda
 </pre></div>
 </div>
 <p>You may either create a separate Conda environment
-(which is the recommended approach):</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ conda create -n prophyle prophyle
-$ source activate prophyle
+(which is the recommended approach)</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>conda create -n prophyle prophyle
+<span class="nb">source</span> activate prophyle
 </pre></div>
 </div>
-<p>or install ProPhyle directly to your main environment:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ conda install prophyle
+<p>or install ProPhyle directly to your main environment</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>conda install prophyle
 </pre></div>
 </div>
 </div>
 <div class="section" id="installing-prophyle-using-pip">
 <h2>Installing ProPhyle using PIP<a class="headerlink" href="#installing-prophyle-using-pip" title="Permalink to this headline">¶</a></h2>
-<p>There three options of installing ProPhyle using PIP.</p>
+<p>There are three options of installing ProPhyle using PIP.</p>
 <ol class="arabic">
-<li><p class="first">From PyPI:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ pip install -U prophyle
+<li><p class="first">From PyPI</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>pip install -U prophyle
 </pre></div>
 </div>
+</div></blockquote>
 </li>
-<li><p class="first">From Git:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ pip install -U git+https://github.com/prophyle/prophyle
+<li><p class="first">From Git</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>pip install -U git+https://github.com/prophyle/prophyle
 </pre></div>
 </div>
+</div></blockquote>
 </li>
-<li><p class="first">From PyPI to the current directory:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ pip install --user prophyle
-$ export PYTHONUSERBASE=`pwd`
-$ export PATH=$PATH:`pwd`/bin
+<li><p class="first">From PyPI to the current directory</p>
+<blockquote>
+<div><div class="highlight-bash"><div class="highlight"><pre><span></span>pip install --user prophyle
+<span class="nb">export</span> <span class="nv">PYTHONUSERBASE</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/bin
 </pre></div>
 </div>
+</div></blockquote>
 </li>
 </ol>
 </div>
 <div class="section" id="running-prophyle-directly-from-the-repository">
 <h2>Running ProPhyle directly from the repository<a class="headerlink" href="#running-prophyle-directly-from-the-repository" title="Permalink to this headline">¶</a></h2>
 <p>It also is possible to run ProPhyle directly from the repository, by calling
-the main script:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ prophyle/prophyle/prophyle.py
+the main script</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle/prophyle/prophyle.py
 </pre></div>
 </div>
-<p>or its alias:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ prophyle/prophyle/prophyle
+<p>or its alias</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle/prophyle/prophyle
 </pre></div>
 </div>
 <p>ProPhyle will then automatically adjust all paths of the auxiliary programs.</p>
 <p>Note that ProPhyle uses submodules, therefore the repository needs to
-be clonned with the <cite>–recursive</cite> option:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ git clone --recursive http://github.com/prophyle/prophyle
+be clonned with the <cite>–recursive</cite> option</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>git clone --recursive http://github.com/prophyle/prophyle
 </pre></div>
 </div>
 <div class="section" id="adjusting-path">
 <h3>Adjusting path<a class="headerlink" href="#adjusting-path" title="Permalink to this headline">¶</a></h3>
 <p>The ProPhyle path can be prepended to the <cite>$PATH</cite> variable so that ProPhyle
-can be executed in the same way as if it was installed using PIP:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ export PATH=$(pwd)/prophyle/prophyle:$PATH
+can be executed in the same way as if it was installed using PIP</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/prophyle/prophyle:<span class="nv">$PATH</span>
 </pre></div>
 </div>
 </div>
@@ -242,12 +248,12 @@ can be executed in the same way as if it was installed using PIP:</p>
 <p>When run from the repository,
 some of the ProPhyle dependencies, listed in <cite>requirements.txt</cite>, might
 be missing in the system.
-It is possible to install them either using BioConda:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ cat prophyle/requirements.txt | perl -pe &#39;s/==.*//g&#39; | xargs conda install
+It is possible to install them either using BioConda</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>cat prophyle/requirements.txt <span class="p">|</span> perl -pe <span class="s1">&#39;s/==.*//g&#39;</span> <span class="p">|</span> xargs conda install
 </pre></div>
 </div>
-<p>or using PIP:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ cat prophyle/requirements.txt | xargs pip install
+<p>or using PIP</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>cat prophyle/requirements.txt <span class="p">|</span> xargs pip install
 </pre></div>
 </div>
 </div>
@@ -267,7 +273,7 @@ It is possible to install them either using BioConda:</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="standard_db.html" title="Building standard databases"
+          <a href="standard_db.html" title="Building a standard database"
              >next</a> |</li>
         <li class="right" >
           <a href="requirements.html" title="Requirements"

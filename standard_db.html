@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Building standard databases &#8212; ProPhyle 0.3.1.0 documentation</title>
+    <title>Building a standard database &#8212; ProPhyle 0.3.1.0 documentation</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -26,7 +26,7 @@
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Building custom databases" href="custom_db.html" />
+    <link rel="next" title="Building a custom database" href="custom_db.html" />
     <link rel="prev" title="Installing ProPhyle" href="install.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
@@ -92,7 +92,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="custom_db.html" title="Building custom databases"
+          <a href="custom_db.html" title="Building a custom database"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="install.html" title="Installing ProPhyle"
@@ -106,7 +106,7 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="contents.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Building standard databases</a><ul>
+<li><a class="reference internal" href="#">Building a standard database</a><ul>
 <li><a class="reference internal" href="#downloading-genomes">Downloading genomes</a></li>
 <li><a class="reference internal" href="#index-construction">Index construction</a></li>
 </ul>
@@ -118,7 +118,7 @@
                         title="previous chapter">Installing ProPhyle</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="custom_db.html"
-                        title="next chapter">Building custom databases</a></p>
+                        title="next chapter">Building a custom database</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -144,8 +144,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="building-standard-databases">
-<span id="standard-db"></span><h1>Building standard databases<a class="headerlink" href="#building-standard-databases" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="building-a-standard-database">
+<span id="standard-db"></span><h1>Building a standard database<a class="headerlink" href="#building-a-standard-database" title="Permalink to this headline">¶</a></h1>
 <p>ProPhyle comes with several genome libraries containing
 RefSeq genomes, augmented with the NCBI taxonomy.</p>
 <div class="section" id="downloading-genomes">
@@ -154,15 +154,15 @@ RefSeq genomes, augmented with the NCBI taxonomy.</p>
 where <code class="docutils literal"><span class="pre">&lt;library&gt;</span></code> should be replaced by <code class="docutils literal"><span class="pre">bacteria</span></code>, <code class="docutils literal"><span class="pre">viruses</span></code>, or <code class="docutils literal"><span class="pre">plasmids</span></code>.
 The command also copies a prebuild Newick/NHX tree for the specified library.
 If the <cite>-d</cite> parameter is not specified, all files are placed to <cite>~/prophyle</cite>.</p>
-<p>To download all viral and bacterial genomes from RefSeq, execute:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">download</span> <span class="n">bacteria</span> <span class="n">viruses</span>
+<p>To download all viral and bacterial genomes from RefSeq, execute</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle download bacteria viruses
 </pre></div>
 </div>
 </div>
 <div class="section" id="index-construction">
 <h2>Index construction<a class="headerlink" href="#index-construction" title="Permalink to this headline">¶</a></h2>
-<p>Once a library is downloaded, a ProPhyle index can be constructed using:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">index</span> <span class="p">[</span><span class="o">-</span><span class="n">g</span> <span class="n">DIR</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">j</span> <span class="n">INT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">k</span> <span class="n">INT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">M</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">P</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">K</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">tree</span><span class="o">.</span><span class="n">nw</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">tree</span><span class="o">.</span><span class="n">nw</span><span class="o">&gt;</span> <span class="o">...</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">index</span><span class="o">.</span><span class="n">dir</span><span class="o">&gt;</span>
+<p>Once a library is downloaded, a ProPhyle index can be constructed using</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle index <span class="o">[</span>-g DIR<span class="o">]</span> <span class="o">[</span>-j INT<span class="o">]</span> <span class="o">[</span>-k INT<span class="o">]</span> <span class="o">[</span>-M<span class="o">]</span> <span class="o">[</span>-P<span class="o">]</span> <span class="o">[</span>-K<span class="o">]</span> &lt;tree.nw&gt; <span class="o">[</span>&lt;tree.nw&gt; ...<span class="o">]</span> &lt;index.dir&gt;
 </pre></div>
 </div>
 <p><cite>&lt;tree.nw&gt;</cite> is a Newick/NHX for the index. The trees from the previous command
@@ -180,7 +180,7 @@ The <cite>-K</cite> parameter can be used to deactivate <em>k</em>-LCP array con
 would be slightly smaller, but querying would become much slower.</p>
 <p>So the entire command for index construction can look, for instance,
 like this:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">prophyle</span> <span class="n">index</span> <span class="o">-</span><span class="n">k</span> <span class="mi">25</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">bacteria</span><span class="o">.</span><span class="n">nw</span> <span class="o">~/</span><span class="n">prophyle</span><span class="o">/</span><span class="n">viruses</span><span class="o">.</span><span class="n">nw</span> <span class="n">my_BV_index</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle index -k <span class="m">25</span> ~/prophyle/bacteria.nw ~/prophyle/viruses.nw my_BV_index
 </pre></div>
 </div>
 <p>Index construction might take several hours, based on the database size, <em>k</em> and the number
@@ -201,7 +201,7 @@ of used cores.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="custom_db.html" title="Building custom databases"
+          <a href="custom_db.html" title="Building a custom database"
              >next</a> |</li>
         <li class="right" >
           <a href="install.html" title="Installing ProPhyle"

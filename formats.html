@@ -110,11 +110,15 @@
 <li><a class="reference internal" href="#input-data-formats">Input data formats</a><ul>
 <li><a class="reference internal" href="#newick-trees">Newick trees</a></li>
 <li><a class="reference internal" href="#nhx-trees">NHX trees</a></li>
+<li><a class="reference internal" href="#sequences">Sequences</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#output-data-formats">Output data formats</a><ul>
+<li><a class="reference internal" href="#assignments">Assignments</a><ul>
 <li><a class="reference internal" href="#read-assignments-in-sam-bam">Read assignments in SAM/BAM</a></li>
 <li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format">Read assignments in a Kraken-like format</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#abundances">Abundances</a><ul>
 <li><a class="reference internal" href="#abundances-in-a-kraken-report">Abundances in a Kraken report</a></li>
 <li><a class="reference internal" href="#abundances-in-a-metaphlan2-report">Abundances in a Metaphlan2 report</a></li>
 <li><a class="reference internal" href="#abundances-in-a-centrifuge-report">Abundances in a Centrifuge report</a></li>
@@ -167,19 +171,23 @@
 <li><a class="reference internal" href="#input-data-formats" id="id1">Input data formats</a><ul>
 <li><a class="reference internal" href="#newick-trees" id="id2">Newick trees</a></li>
 <li><a class="reference internal" href="#nhx-trees" id="id3">NHX trees</a></li>
+<li><a class="reference internal" href="#sequences" id="id4">Sequences</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#output-data-formats" id="id4">Output data formats</a><ul>
-<li><a class="reference internal" href="#read-assignments-in-sam-bam" id="id5">Read assignments in SAM/BAM</a></li>
-<li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format" id="id6">Read assignments in a Kraken-like format</a></li>
-<li><a class="reference internal" href="#abundances-in-a-kraken-report" id="id7">Abundances in a Kraken report</a></li>
-<li><a class="reference internal" href="#abundances-in-a-metaphlan2-report" id="id8">Abundances in a Metaphlan2 report</a></li>
-<li><a class="reference internal" href="#abundances-in-a-centrifuge-report" id="id9">Abundances in a Centrifuge report</a></li>
+<li><a class="reference internal" href="#assignments" id="id5">Assignments</a><ul>
+<li><a class="reference internal" href="#read-assignments-in-sam-bam" id="id6">Read assignments in SAM/BAM</a></li>
+<li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format" id="id7">Read assignments in a Kraken-like format</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#internal-prophyle-formats" id="id10">Internal ProPhyle formats</a><ul>
-<li><a class="reference internal" href="#prophyle-index" id="id11">ProPhyle Index</a></li>
-<li><a class="reference internal" href="#compressed-index-for-transmission" id="id12">Compressed index for transmission</a></li>
+<li><a class="reference internal" href="#abundances" id="id8">Abundances</a><ul>
+<li><a class="reference internal" href="#abundances-in-a-kraken-report" id="id9">Abundances in a Kraken report</a></li>
+<li><a class="reference internal" href="#abundances-in-a-metaphlan2-report" id="id10">Abundances in a Metaphlan2 report</a></li>
+<li><a class="reference internal" href="#abundances-in-a-centrifuge-report" id="id11">Abundances in a Centrifuge report</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#internal-prophyle-formats" id="id12">Internal ProPhyle formats</a><ul>
+<li><a class="reference internal" href="#prophyle-index" id="id13">ProPhyle Index</a></li>
+<li><a class="reference internal" href="#compressed-index-for-transmission" id="id14">Compressed index for transmission</a></li>
 </ul>
 </li>
 </ul>
@@ -195,9 +203,14 @@
 <p><a class="reference external" href="https://sites.google.com/site/cmzmasek/home/software/forester/nhx">New Hampshire X Format</a>
 is parsed using the <a class="reference external" href="http://etetoolkit.org/">ETE3 library</a>  (see specification of <a class="reference external" href="http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#reading-and-writing-newick-trees">format 1</a>).</p>
 </div>
+<div class="section" id="sequences">
+<h3>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h3>
+<p>Input sequences can be provided in the FASTA or FASTQ formats. Any non-ACGT characters are treated as
+unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.</p>
 </div>
-<div class="section" id="output-data-formats">
-<h2>Output data formats<a class="headerlink" href="#output-data-formats" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="assignments">
+<h2>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="read-assignments-in-sam-bam">
 <h3>Read assignments in SAM/BAM<a class="headerlink" href="#read-assignments-in-sam-bam" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://samtools.github.io/hts-specs/">SAM format</a></p>
@@ -206,6 +219,9 @@ is parsed using the <a class="reference external" href="http://etetoolkit.org/">
 <h3>Read assignments in a Kraken-like format<a class="headerlink" href="#read-assignments-in-a-kraken-like-format" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#output-format">Kraken</a></p>
 </div>
+</div>
+<div class="section" id="abundances">
+<h2>Abundances<a class="headerlink" href="#abundances" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="abundances-in-a-kraken-report">
 <h3>Abundances in a Kraken report<a class="headerlink" href="#abundances-in-a-kraken-report" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#sample-reports">kraken-report</a> format:</p>
