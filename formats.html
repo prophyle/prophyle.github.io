@@ -27,7 +27,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Command-line interface" href="cli.html" />
-    <link rel="prev" title="Analyzing read assignments" href="analyze.html" />
+    <link rel="prev" title="Compressing indexes for transmission" href="compress.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -95,7 +95,7 @@
           <a href="cli.html" title="Command-line interface"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="analyze.html" title="Analyzing read assignments"
+          <a href="compress.html" title="Compressing indexes for transmission"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
@@ -118,10 +118,10 @@
 <li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format">Read assignments in a Kraken-like format</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#abundances">Abundances</a><ul>
-<li><a class="reference internal" href="#abundances-in-a-kraken-report">Abundances in a Kraken report</a></li>
-<li><a class="reference internal" href="#abundances-in-a-metaphlan2-report">Abundances in a Metaphlan2 report</a></li>
-<li><a class="reference internal" href="#abundances-in-a-centrifuge-report">Abundances in a Centrifuge report</a></li>
+<li><a class="reference internal" href="#abundances-estimates-experimental">Abundances estimates (experimental)</a><ul>
+<li><a class="reference internal" href="#abundances-as-a-kraken-report">Abundances as a Kraken report</a></li>
+<li><a class="reference internal" href="#abundances-as-a-metaphlan2-report">Abundances as a Metaphlan2 report</a></li>
+<li><a class="reference internal" href="#abundances-as-a-centrifuge-report">Abundances as a Centrifuge report</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#internal-prophyle-formats">Internal ProPhyle formats</a><ul>
@@ -134,8 +134,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="analyze.html"
-                        title="previous chapter">Analyzing read assignments</a></p>
+  <p class="topless"><a href="compress.html"
+                        title="previous chapter">Compressing indexes for transmission</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="cli.html"
                         title="next chapter">Command-line interface</a></p>
@@ -179,10 +179,10 @@
 <li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format" id="id7">Read assignments in a Kraken-like format</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#abundances" id="id8">Abundances</a><ul>
-<li><a class="reference internal" href="#abundances-in-a-kraken-report" id="id9">Abundances in a Kraken report</a></li>
-<li><a class="reference internal" href="#abundances-in-a-metaphlan2-report" id="id10">Abundances in a Metaphlan2 report</a></li>
-<li><a class="reference internal" href="#abundances-in-a-centrifuge-report" id="id11">Abundances in a Centrifuge report</a></li>
+<li><a class="reference internal" href="#abundances-estimates-experimental" id="id8">Abundances estimates (experimental)</a><ul>
+<li><a class="reference internal" href="#abundances-as-a-kraken-report" id="id9">Abundances as a Kraken report</a></li>
+<li><a class="reference internal" href="#abundances-as-a-metaphlan2-report" id="id10">Abundances as a Metaphlan2 report</a></li>
+<li><a class="reference internal" href="#abundances-as-a-centrifuge-report" id="id11">Abundances as a Centrifuge report</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#internal-prophyle-formats" id="id12">Internal ProPhyle formats</a><ul>
@@ -220,10 +220,10 @@ unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.<
 <p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#output-format">Kraken</a></p>
 </div>
 </div>
-<div class="section" id="abundances">
-<h2>Abundances<a class="headerlink" href="#abundances" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="abundances-in-a-kraken-report">
-<h3>Abundances in a Kraken report<a class="headerlink" href="#abundances-in-a-kraken-report" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="abundances-estimates-experimental">
+<h2>Abundances estimates (experimental)<a class="headerlink" href="#abundances-estimates-experimental" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="abundances-as-a-kraken-report">
+<h3>Abundances as a Kraken report<a class="headerlink" href="#abundances-as-a-kraken-report" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#sample-reports">kraken-report</a> format:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -236,8 +236,8 @@ unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.<
 </ol>
 </div></blockquote>
 </div>
-<div class="section" id="abundances-in-a-metaphlan2-report">
-<h3>Abundances in a Metaphlan2 report<a class="headerlink" href="#abundances-in-a-metaphlan2-report" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="abundances-as-a-metaphlan2-report">
+<h3>Abundances as a Metaphlan2 report<a class="headerlink" href="#abundances-as-a-metaphlan2-report" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
 <dt><a class="reference external" href="https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-files">MetaPhlAn2</a> format:</dt>
 <dd><ol class="first last arabic simple">
@@ -252,8 +252,8 @@ OTU equivalents can be extracted by using only the species-level <code class="do
 (again, making sure to include clades unclassified at this level).</dd>
 </dl>
 </div>
-<div class="section" id="abundances-in-a-centrifuge-report">
-<h3>Abundances in a Centrifuge report<a class="headerlink" href="#abundances-in-a-centrifuge-report" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="abundances-as-a-centrifuge-report">
+<h3>Abundances as a Centrifuge report<a class="headerlink" href="#abundances-as-a-centrifuge-report" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/centrifuge/manual.shtml#centrifuge-summary-output-the-default-filename-is-centrifuge_report.tsv">Centrifuge</a> format:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#name                                                           taxID   taxRank    kmerCount   numReads   numUniqueReads   abundance</span>
 <span class="n">Wigglesworthia</span> <span class="n">glossinidia</span> <span class="n">endosymbiont</span> <span class="n">of</span> <span class="n">Glossina</span> <span class="n">brevipalpis</span> <span class="mi">36870</span>   <span class="n">leaf</span>       <span class="mi">703004</span>      <span class="mf">5981.37</span>    <span class="mi">5964</span>             <span class="mi">0</span>
@@ -322,7 +322,7 @@ OTU equivalents can be extracted by using only the species-level <code class="do
           <a href="cli.html" title="Command-line interface"
              >next</a> |</li>
         <li class="right" >
-          <a href="analyze.html" title="Analyzing read assignments"
+          <a href="compress.html" title="Compressing indexes for transmission"
              >previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>

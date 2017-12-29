@@ -1,7 +1,7 @@
-.. _install:
+.. _compression:
 
-Installing ProPhyle
-===================
+Index compression and decompression
+===================================
 
 
 ProPhyle is written in Python, C and C++. It is distributed as a Python package
@@ -102,8 +102,8 @@ be clonned with the `--recursive` option
     git clone --recursive http://github.com/prophyle/prophyle
 
 
-Adjusting the PATH variable
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Adjusting path
+~~~~~~~~~~~~~~
 
 The ProPhyle path can be prepended to the `$PATH` variable so that ProPhyle
 can be executed in the same way as if it was installed using PIP

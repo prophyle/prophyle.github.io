@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Installing ProPhyle &#8212; ProPhyle 0.3.1.0 documentation</title>
+    <title>Index compression and decompression &#8212; ProPhyle 0.3.1.0 documentation</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -26,8 +26,6 @@
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Building a standard database" href="standard_db.html" />
-    <link rel="prev" title="Requirements" href="requirements.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -70,7 +68,7 @@
 <div class="pageheader">
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="#">Get it</a></li>
+    <li><a href="install.html">Get it</a></li>
     <li><a href="contents.html">Docs</a></li>
     <li><a href="http://github.com/prophyle/prophyle">Extend/Develop</a></li>
   </ul>
@@ -91,12 +89,6 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="standard_db.html" title="Building a standard database"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="requirements.html" title="Requirements"
-             accesskey="P">previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
  
@@ -106,11 +98,11 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="contents.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Installing ProPhyle</a><ul>
+<li><a class="reference internal" href="#">Index compression and decompression</a><ul>
 <li><a class="reference internal" href="#installing-prophyle-using-bioconda">Installing ProPhyle using Bioconda</a></li>
 <li><a class="reference internal" href="#installing-prophyle-using-pip">Installing ProPhyle using PIP</a></li>
 <li><a class="reference internal" href="#running-prophyle-directly-from-the-repository">Running ProPhyle directly from the repository</a><ul>
-<li><a class="reference internal" href="#adjusting-the-path-variable">Adjusting the PATH variable</a></li>
+<li><a class="reference internal" href="#adjusting-path">Adjusting path</a></li>
 <li><a class="reference internal" href="#installing-dependencies">Installing dependencies</a></li>
 </ul>
 </li>
@@ -118,16 +110,10 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="requirements.html"
-                        title="previous chapter">Requirements</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="standard_db.html"
-                        title="next chapter">Building a standard database</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/install.rst.txt"
+      <li><a href="_sources/compression.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -149,8 +135,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="installing-prophyle">
-<span id="install"></span><h1>Installing ProPhyle<a class="headerlink" href="#installing-prophyle" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="index-compression-and-decompression">
+<span id="compression"></span><h1>Index compression and decompression<a class="headerlink" href="#index-compression-and-decompression" title="Permalink to this headline">¶</a></h1>
 <p>ProPhyle is written in Python, C and C++. It is distributed as a Python package
 and all C/C++ programs are compiled upon the first execution
 of the main program. ProPhyle requires a Unix operating system and the following dependencies:</p>
@@ -235,8 +221,8 @@ be clonned with the <cite>–recursive</cite> option</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>git clone --recursive http://github.com/prophyle/prophyle
 </pre></div>
 </div>
-<div class="section" id="adjusting-the-path-variable">
-<h3>Adjusting the PATH variable<a class="headerlink" href="#adjusting-the-path-variable" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="adjusting-path">
+<h3>Adjusting path<a class="headerlink" href="#adjusting-path" title="Permalink to this headline">¶</a></h3>
 <p>The ProPhyle path can be prepended to the <cite>$PATH</cite> variable so that ProPhyle
 can be executed in the same way as if it was installed using PIP</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/prophyle/prophyle:<span class="nv">$PATH</span>
@@ -272,12 +258,6 @@ It is possible to install them either using BioConda</p>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="standard_db.html" title="Building a standard database"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="requirements.html" title="Requirements"
-             >previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
  
