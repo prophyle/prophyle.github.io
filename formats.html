@@ -109,10 +109,14 @@
 <li><a class="reference internal" href="#">File formats</a><ul>
 <li><a class="reference internal" href="#input-data-formats">Input data formats</a><ul>
 <li><a class="reference internal" href="#newick-trees">Newick trees</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#specification">Specification</a></li>
 <li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#nhx-trees">NHX trees</a><ul>
+<li><a class="reference internal" href="#id1">Introduction</a></li>
+<li><a class="reference internal" href="#id2">Specification</a></li>
 <li><a class="reference internal" href="#example">Example</a></li>
 </ul>
 </li>
@@ -120,23 +124,49 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#assignments">Assignments</a><ul>
-<li><a class="reference internal" href="#read-assignments-in-sam-bam">Read assignments in SAM/BAM</a></li>
-<li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format">Read assignments in a Kraken-like format</a></li>
+<li><a class="reference internal" href="#read-assignments-in-sam-bam">Read assignments in SAM/BAM</a><ul>
+<li><a class="reference internal" href="#id3">Introduction</a></li>
+<li><a class="reference internal" href="#id4">Specification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format">Read assignments in a Kraken-like format</a><ul>
+<li><a class="reference internal" href="#id5">Introduction</a></li>
+<li><a class="reference internal" href="#id6">Specification</a></li>
+<li><a class="reference internal" href="#id7">Examples</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#abundances-estimates-experimental">Abundances estimates (experimental)</a><ul>
-<li><a class="reference internal" href="#abundances-in-the-kraken-report-format">Abundances in the Kraken report format</a></li>
-<li><a class="reference internal" href="#abundances-in-the-metaphlan2-report-format">Abundances in the Metaphlan2 report format</a></li>
+<li><a class="reference internal" href="#abundances-in-the-kraken-report-format">Abundances in the Kraken report format</a><ul>
+<li><a class="reference internal" href="#id8">Introduction</a></li>
+<li><a class="reference internal" href="#id9">Specification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#abundances-in-the-metaphlan2-report-format">Abundances in the Metaphlan2 report format</a><ul>
+<li><a class="reference internal" href="#id10">Introduction</a></li>
+<li><a class="reference internal" href="#id11">Specification</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#abundances-in-the-centrifuge-report-format">Abundances in the Centrifuge report format</a><ul>
-<li><a class="reference internal" href="#specification">Specification</a></li>
-<li><a class="reference internal" href="#id1">Example</a></li>
+<li><a class="reference internal" href="#id12">Introduction</a></li>
+<li><a class="reference internal" href="#id13">Specification</a></li>
+<li><a class="reference internal" href="#id14">Example</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a class="reference internal" href="#internal-prophyle-formats">Internal ProPhyle formats</a><ul>
-<li><a class="reference internal" href="#prophyle-index">ProPhyle Index</a></li>
-<li><a class="reference internal" href="#compressed-prophyle-index-for-transmission">Compressed ProPhyle index for transmission</a></li>
+<li><a class="reference internal" href="#id15">ProPhyle Index</a><ul>
+<li><a class="reference internal" href="#id16">Introduction</a></li>
+<li><a class="reference internal" href="#id17">Specification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compressed-prophyle-index-for-transmission">Compressed ProPhyle index for transmission</a><ul>
+<li><a class="reference internal" href="#id18">Introduction</a></li>
+<li><a class="reference internal" href="#id19">Specification</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -178,36 +208,66 @@
 <span id="formats"></span><h1>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#input-data-formats" id="id10">Input data formats</a><ul>
-<li><a class="reference internal" href="#newick-trees" id="id11">Newick trees</a><ul>
-<li><a class="reference internal" href="#examples" id="id12">Examples</a></li>
+<li><a class="reference internal" href="#input-data-formats" id="id29">Input data formats</a><ul>
+<li><a class="reference internal" href="#newick-trees" id="id30">Newick trees</a><ul>
+<li><a class="reference internal" href="#introduction" id="id31">Introduction</a></li>
+<li><a class="reference internal" href="#specification" id="id32">Specification</a></li>
+<li><a class="reference internal" href="#examples" id="id33">Examples</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#nhx-trees" id="id13">NHX trees</a><ul>
-<li><a class="reference internal" href="#example" id="id14">Example</a></li>
+<li><a class="reference internal" href="#nhx-trees" id="id34">NHX trees</a><ul>
+<li><a class="reference internal" href="#id1" id="id35">Introduction</a></li>
+<li><a class="reference internal" href="#id2" id="id36">Specification</a></li>
+<li><a class="reference internal" href="#example" id="id37">Example</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#sequences" id="id15">Sequences</a></li>
+<li><a class="reference internal" href="#sequences" id="id38">Sequences</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#assignments" id="id16">Assignments</a><ul>
-<li><a class="reference internal" href="#read-assignments-in-sam-bam" id="id17">Read assignments in SAM/BAM</a></li>
-<li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format" id="id18">Read assignments in a Kraken-like format</a></li>
+<li><a class="reference internal" href="#assignments" id="id39">Assignments</a><ul>
+<li><a class="reference internal" href="#read-assignments-in-sam-bam" id="id40">Read assignments in SAM/BAM</a><ul>
+<li><a class="reference internal" href="#id3" id="id41">Introduction</a></li>
+<li><a class="reference internal" href="#id4" id="id42">Specification</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#abundances-estimates-experimental" id="id19">Abundances estimates (experimental)</a><ul>
-<li><a class="reference internal" href="#abundances-in-the-kraken-report-format" id="id20">Abundances in the Kraken report format</a></li>
-<li><a class="reference internal" href="#abundances-in-the-metaphlan2-report-format" id="id21">Abundances in the Metaphlan2 report format</a></li>
-<li><a class="reference internal" href="#abundances-in-the-centrifuge-report-format" id="id22">Abundances in the Centrifuge report format</a><ul>
-<li><a class="reference internal" href="#specification" id="id23">Specification</a></li>
-<li><a class="reference internal" href="#id1" id="id24">Example</a></li>
+<li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format" id="id43">Read assignments in a Kraken-like format</a><ul>
+<li><a class="reference internal" href="#id5" id="id44">Introduction</a></li>
+<li><a class="reference internal" href="#id6" id="id45">Specification</a></li>
+<li><a class="reference internal" href="#id7" id="id46">Examples</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#internal-prophyle-formats" id="id25">Internal ProPhyle formats</a><ul>
-<li><a class="reference internal" href="#prophyle-index" id="id26">ProPhyle Index</a></li>
-<li><a class="reference internal" href="#compressed-prophyle-index-for-transmission" id="id27">Compressed ProPhyle index for transmission</a></li>
+<li><a class="reference internal" href="#abundances-estimates-experimental" id="id47">Abundances estimates (experimental)</a><ul>
+<li><a class="reference internal" href="#abundances-in-the-kraken-report-format" id="id48">Abundances in the Kraken report format</a><ul>
+<li><a class="reference internal" href="#id8" id="id49">Introduction</a></li>
+<li><a class="reference internal" href="#id9" id="id50">Specification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#abundances-in-the-metaphlan2-report-format" id="id51">Abundances in the Metaphlan2 report format</a><ul>
+<li><a class="reference internal" href="#id10" id="id52">Introduction</a></li>
+<li><a class="reference internal" href="#id11" id="id53">Specification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#abundances-in-the-centrifuge-report-format" id="id54">Abundances in the Centrifuge report format</a><ul>
+<li><a class="reference internal" href="#id12" id="id55">Introduction</a></li>
+<li><a class="reference internal" href="#id13" id="id56">Specification</a></li>
+<li><a class="reference internal" href="#id14" id="id57">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#internal-prophyle-formats" id="id58">Internal ProPhyle formats</a><ul>
+<li><a class="reference internal" href="#id15" id="id59">ProPhyle Index</a><ul>
+<li><a class="reference internal" href="#id16" id="id60">Introduction</a></li>
+<li><a class="reference internal" href="#id17" id="id61">Specification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compressed-prophyle-index-for-transmission" id="id62">Compressed ProPhyle index for transmission</a><ul>
+<li><a class="reference internal" href="#id18" id="id63">Introduction</a></li>
+<li><a class="reference internal" href="#id19" id="id64">Specification</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -216,28 +276,51 @@
 <h2>Input data formats<a class="headerlink" href="#input-data-formats" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="newick-trees">
 <h3>Newick trees<a class="headerlink" href="#newick-trees" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://evolution.genetics.washington.edu/phylip/newicktree.html">Newick</a> trees are eventually transformed to NHX.</p>
+<div class="section" id="introduction">
+<h4>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h4>
+<p>The Newick format can be used for index construction
+in combination with the <code class="docutils literal"><span class="pre">-A</span></code> parameter.
+Names of files with sequences will be inferred from the names of leaves
+as <code class="docutils literal"><span class="pre">[node_name].fa</span></code>.
+If names of internal nodes are not specified in the original tree, they will be assigned automatically
+as the lexigraphically minimal name of children’s names with incremented ID.
+Branch lenghts are ignored.</p>
+</div>
+<div class="section" id="specification">
+<h4>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">¶</a></h4>
+<p>See specifications of Newick on the
+<a class="reference external" href="http://evolution.genetics.washington.edu/phylip/newicktree.html">Phylip website</a>
+or on
+<a class="reference external" href="https://en.wikipedia.org/wiki/Newick_format">Wikipedia</a>.</p>
+</div>
 <div class="section" id="examples">
 <h4>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>A Newick tree with named leaves:</p>
+<p>A Newick tree with named leaves:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">((</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">,</span><span class="n">n3</span><span class="p">),(</span><span class="n">n5</span><span class="p">,</span><span class="n">n6</span><span class="p">));</span>
 </pre></div>
 </div>
-<p>A Newick tree with nameds nodes:</p>
+<p>A Newick tree with named nodes:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">((</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">)</span><span class="n">o1</span><span class="p">,(</span><span class="n">n3</span><span class="p">,</span><span class="n">n4</span><span class="p">,</span><span class="n">n5</span><span class="p">)</span><span class="n">o2</span><span class="p">)</span><span class="n">p1</span><span class="p">;</span>
 </pre></div>
 </div>
-</div></blockquote>
+<p>A Newick tree with automatically assigned names of internal node names:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">((</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">,</span><span class="n">n3</span><span class="p">)</span><span class="n">n1</span><span class="o">-</span><span class="n">up1</span><span class="p">,(</span><span class="n">n4</span><span class="p">,</span><span class="n">n5</span><span class="p">)</span><span class="n">n4</span><span class="o">-</span><span class="n">up1</span><span class="p">)</span><span class="n">n1</span><span class="o">-</span><span class="n">up2</span><span class="p">;</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="nhx-trees">
 <h3>NHX trees<a class="headerlink" href="#nhx-trees" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>Introduction<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://sites.google.com/site/cmzmasek/home/software/forester/nhx">New Hampshire X Format</a>
-is parsed using the <a class="reference external" href="http://etetoolkit.org/">ETE3 library</a>  (see specification of <a class="reference external" href="http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#reading-and-writing-newick-trees">format 1</a>).</p>
+is parsed using the <a class="reference external" href="http://etetoolkit.org/">ETE3 library</a>  (see specification of <a class="reference external" href="http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#reading-and-writing-newick-trees">Format 1</a>).</p>
+</div>
+<div class="section" id="id2">
+<h4>Specification<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id2">
-<caption><span class="caption-text">NHX attributes</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id20">
+<caption><span class="caption-text">NHX attributes</span><a class="headerlink" href="#id20" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="21%" />
 <col width="21%" />
@@ -250,53 +333,69 @@ is parsed using the <a class="reference external" href="http://etetoolkit.org/">
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>name</td>
+<tr class="row-even"><td>(name)</td>
 <td>string</td>
-<td>unique node name (ideally the TaxID of the node)</td>
-</tr>
-<tr class="row-odd"><td>taxid</td>
-<td>&#160;</td>
-<td>unique taxonomic identifier</td>
-</tr>
-<tr class="row-even"><td>seqname</td>
-<td>&#160;</td>
-<td>names of the sequences sharing the same taxid, separated by &#64;</td>
+<td>Node name (typically the TaxID of the node). The names should be unique and must not contain <code class="docutils literal"><span class="pre">&#64;</span></code>.</td>
 </tr>
 <tr class="row-odd"><td>fastapath</td>
-<td>&#160;</td>
-<td>paths of the sequences’ fasta files, separated by &#64; (relative paths from ProPhyle’s home directory)</td>
+<td>string</td>
+<td>Files with genomic sequences, separated by <code class="docutils literal"><span class="pre">&#64;</span></code> (relative paths from the directory of the tree). Only for leaves.</td>
 </tr>
-<tr class="row-even"><td>base_len</td>
-<td>&#160;</td>
-<td>length of each sequence, separated by &#64;</td>
+<tr class="row-even"><td>rank</td>
+<td>string/int</td>
+<td>Taxonomic rank.</td>
+</tr>
+<tr class="row-odd"><td>dist</td>
+<td>float</td>
+<td>To be ignored (an internal parameter of ETE3).</td>
+</tr>
+<tr class="row-even"><td>support</td>
+<td>float</td>
+<td>To be ignored (an internal parameter of ETE3).</td>
+</tr>
+<tr class="row-odd"><td>kmers_full</td>
+<td>integer</td>
+<td>Number of k-mers associated with this node. Added automatically during index construction.</td>
+</tr>
+<tr class="row-even"><td>kmers_reduced</td>
+<td>integer</td>
+<td>Number of k-mers represented by this node. Added automatically during index construction.</td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
+</div>
 <div class="section" id="example">
 <h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
-<blockquote>
-<div><p>Previous tree after autocomplete:</p>
+<p>Previous tree after autocompleting to NHX:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(((</span><span class="n">n1</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">fastapath</span><span class="o">=</span><span class="n">n1</span><span class="o">.</span><span class="n">fa</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">],</span><span class="n">n2</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">fastapath</span><span class="o">=</span><span class="n">n2</span><span class="o">.</span><span class="n">fa</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">])</span><span class="n">o1</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">],(</span><span class="n">n3</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">fastapath</span><span class="o">=</span><span class="n">n3</span><span class="o">.</span><span class="n">fa</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">],</span><span class="n">n4</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">fastapath</span><span class="o">=</span><span class="n">n4</span><span class="o">.</span><span class="n">fa</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">],</span><span class="n">n5</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">fastapath</span><span class="o">=</span><span class="n">n5</span><span class="o">.</span><span class="n">fa</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">])</span><span class="n">o2</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">])</span><span class="n">p1</span><span class="p">:</span><span class="mi">0</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">0.0</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">])</span><span class="n">merge_root</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">];</span>
 </pre></div>
 </div>
-</div></blockquote>
 </div>
 </div>
 <div class="section" id="sequences">
 <h3>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h3>
-<p>Input sequences can be provided in the FASTA or FASTQ formats. Any non-ACGT characters are treated as
-unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.</p>
+<p>Input sequences can be provided in the FASTA or FASTQ formats. Any non-<code class="docutils literal"><span class="pre">ACGT</span></code> characters are treated as
+unknown nucleotides.
+All k-mers containing an unknown nucleotide are discarded.
+Sequence names are ignored.</p>
 </div>
 </div>
 <div class="section" id="assignments">
 <h2>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="read-assignments-in-sam-bam">
 <h3>Read assignments in SAM/BAM<a class="headerlink" href="#read-assignments-in-sam-bam" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://samtools.github.io/hts-specs/">SAM format</a></p>
+<div class="section" id="id3">
+<h4>Introduction<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>ProPhyle uses <a class="reference external" href="http://samtools.github.io/hts-specs/">SAM/BAM</a> as
+the main format for reporting the final assignments, i.e.,
+the output of classification.</p>
+</div>
+<div class="section" id="id4">
+<h4>Specification<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id3">
-<caption><span class="caption-text">SAM fields</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id21">
+<caption><span class="caption-text">ProPhyle SAM fields</span><a class="headerlink" href="#id21" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="12%" />
 <col width="12%" />
@@ -331,7 +430,7 @@ unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.<
 </tr>
 <tr class="row-odd"><td>6</td>
 <td>CIGAR</td>
-<td>Coverage bit-mask (e.g., <cite>7=3X3=</cite> means <cite>1111111000111</cite>) if assigned, unused (<code class="docutils literal"><span class="pre">*</span></code>) otherwise</td>
+<td>Coverage bit-mask encoded as a CIGAR string if assigned, unused (<code class="docutils literal"><span class="pre">*</span></code>) otherwise. For instance, <cite>7=3X3=</cite> means <cite>1111111000111</cite>.</td>
 </tr>
 <tr class="row-even"><td>7</td>
 <td>RNEXT</td>
@@ -355,12 +454,17 @@ unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.<
 </tr>
 </tbody>
 </table>
-<table border="1" class="colwidths-given docutils" id="id4">
-<caption><span class="caption-text">SAM tags</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><table border="1" class="colwidths-given docutils" id="id22">
+<caption><span class="caption-text">ProPhyle SAM tags</span><a class="headerlink" href="#id22" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="17%" />
-<col width="17%" />
-<col width="67%" />
+<col width="12%" />
+<col width="12%" />
+<col width="77%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Tag</th>
@@ -403,25 +507,83 @@ unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.<
 </tr>
 <tr class="row-even"><td>hc</td>
 <td>string</td>
-<td>Hit bit-mask  (e.g., <cite>7=1X3=</cite> means <cite>11111110111</cite>)</td>
+<td>Hit bit-mask encoded as a CIGAR string. For instance, <cite>7=1X3=</cite> means <cite>11111110111</cite>.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="read-assignments-in-a-kraken-like-format">
+<h3>Read assignments in a Kraken-like format<a class="headerlink" href="#read-assignments-in-a-kraken-like-format" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h4>Introduction<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>ProPhyle uses a format similar to the <a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#output-format">Kraken output</a> for reporting k-mer matches by <a class="reference external" href="https://github.com/prophyle/prophyle_index">ProPhyle Index</a>. It can also use this format
+for reporting the final assignments.</p>
+</div>
+<div class="section" id="id6">
+<h4>Specification<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><table border="1" class="colwidths-given docutils" id="id23">
+<caption><span class="caption-text">Kraken-like format</span><a class="headerlink" href="#id23" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="11%" />
+<col width="89%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Column</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>C / U (classified / unclassified)</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>Query name</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>Final assignments –&nbsp;a comma separated list of node names</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>Query length</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>K-mer mappings: a space-delimited lists of mappings. A single mapping is of the form <code class="docutils literal"><span class="pre">comma_delimited_list_of_nodes:length</span></code>. Pseudo-nodes <code class="docutils literal"><span class="pre">A</span></code> and <code class="docutils literal"><span class="pre">0</span></code> are used for k-mers with a non-<code class="docutils literal"><span class="pre">ACGT</span></code> nucleotide and without any mapping, respectively.</td>
 </tr>
 </tbody>
 </table>
 </div></blockquote>
 </div>
-<div class="section" id="read-assignments-in-a-kraken-like-format">
-<h3>Read assignments in a Kraken-like format<a class="headerlink" href="#read-assignments-in-a-kraken-like-format" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#output-format">Kraken</a></p>
+<div class="section" id="id7">
+<h4>Examples<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<p>Assigned k-mers, no sequences:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">U</span>       <span class="n">read3</span>   <span class="mi">0</span>       <span class="mi">8</span>       <span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="p">:</span><span class="mi">1</span> <span class="n">A</span><span class="p">:</span><span class="mi">3</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span> <span class="n">right</span><span class="p">:</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Assigned k-mers, version with sequences and base qualities:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">U</span>       <span class="n">read3</span>   <span class="mi">0</span>       <span class="mi">8</span>       <span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="p">:</span><span class="mi">1</span> <span class="n">A</span><span class="p">:</span><span class="mi">3</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span> <span class="n">right</span><span class="p">:</span><span class="mi">1</span>    <span class="n">CTTNGTTT</span>        <span class="n">IGIIIIHI</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="abundances-estimates-experimental">
 <h2>Abundances estimates (experimental)<a class="headerlink" href="#abundances-estimates-experimental" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="abundances-in-the-kraken-report-format">
 <h3>Abundances in the Kraken report format<a class="headerlink" href="#abundances-in-the-kraken-report-format" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h4>Introduction<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id9">
+<h4>Specification<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#sample-reports">kraken-report</a> format:</p>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id5">
-<caption><span class="caption-text">Kraken report format</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id24">
+<caption><span class="caption-text">Kraken report format</span><a class="headerlink" href="#id24" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="80%" />
@@ -454,12 +616,19 @@ unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.<
 </table>
 </div></blockquote>
 </div>
+</div>
 <div class="section" id="abundances-in-the-metaphlan2-report-format">
 <h3>Abundances in the Metaphlan2 report format<a class="headerlink" href="#abundances-in-the-metaphlan2-report-format" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-files">MetaPhlAn2</a> format</p>
+<div class="section" id="id10">
+<h4>Introduction<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="http://huttenhower.sph.harvard.edu/metaphlan2">MetaPhlAn2</a> is a computational tool for profiling the composition of microbial communities from metagenomic sequencing data.</p>
+</div>
+<div class="section" id="id11">
+<h4>Specification<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<p><a class="reference external" href="https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-files">MetaPhlAn2 report format</a></p>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id6">
-<caption><span class="caption-text">Metaphlan 2 report format</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id25">
+<caption><span class="caption-text">Metaphlan 2 report format</span><a class="headerlink" href="#id25" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="80%" />
@@ -481,14 +650,18 @@ unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.<
 </div></blockquote>
 <p>Since sequence-based profiling is relative and does not provide absolute cellular abundance measures, clades are hierarchically summed. Each level will sum to 100%; that is, the sum of all kindom-level clades is 100%, the sum of all genus-level clades (including unclassified) is also 100%, and so forth. OTU equivalents can be extracted by using only the species-level <code class="docutils literal"><span class="pre">s__</span></code> clades from this file (again, making sure to include clades unclassified at this level).</p>
 </div>
+</div>
 <div class="section" id="abundances-in-the-centrifuge-report-format">
 <h3>Abundances in the Centrifuge report format<a class="headerlink" href="#abundances-in-the-centrifuge-report-format" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id12">
+<h4>Introduction<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/centrifuge/manual.shtml#centrifuge-summary-output-the-default-filename-is-centrifuge_report.tsv">Centrifuge</a> format.</p>
-<div class="section" id="specification">
-<h4>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="id13">
+<h4>Specification<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id7">
-<caption><span class="caption-text">Centrifuge format</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id26">
+<caption><span class="caption-text">Centrifuge format</span><a class="headerlink" href="#id26" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="80%" />
@@ -524,8 +697,8 @@ unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.<
 </table>
 </div></blockquote>
 </div>
-<div class="section" id="id1">
-<h4>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id14">
+<h4>Example<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1">#name                                                           taxID   taxRank    kmerCount   numReads   numUniqueReads   abundance</span>
 <span class="n">Wigglesworthia</span> <span class="n">glossinidia</span> <span class="n">endosymbiont</span> <span class="n">of</span> <span class="n">Glossina</span> <span class="n">brevipalpis</span> <span class="mi">36870</span>   <span class="n">leaf</span>       <span class="mi">703004</span>      <span class="mf">5981.37</span>    <span class="mi">5964</span>             <span class="mi">0</span>
 </pre></div>
@@ -535,12 +708,18 @@ unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.<
 </div>
 <div class="section" id="internal-prophyle-formats">
 <h2>Internal ProPhyle formats<a class="headerlink" href="#internal-prophyle-formats" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="prophyle-index">
-<h3>ProPhyle Index<a class="headerlink" href="#prophyle-index" title="Permalink to this headline">¶</a></h3>
-<p>Directory with the following files:</p>
+<div class="section" id="id15">
+<h3>ProPhyle Index<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id16">
+<h4>Introduction<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<p>ProPhyle index directory contains a BWA index,
+a k-LCP array and several small auxiliary files.</p>
+</div>
+<div class="section" id="id17">
+<h4>Specification<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id8">
-<caption><span class="caption-text">ProPhyle index</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id27">
+<caption><span class="caption-text">ProPhyle index</span><a class="headerlink" href="#id27" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="80%" />
@@ -591,12 +770,20 @@ unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.<
 </table>
 </div></blockquote>
 </div>
+</div>
 <div class="section" id="compressed-prophyle-index-for-transmission">
 <h3>Compressed ProPhyle index for transmission<a class="headerlink" href="#compressed-prophyle-index-for-transmission" title="Permalink to this headline">¶</a></h3>
-<p>A <code class="docutils literal"><span class="pre">.tar.gz</span></code> archive with the following subset of the index files:</p>
+<div class="section" id="id18">
+<h4>Introduction<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<p>ProPhyle can create a <code class="docutils literal"><span class="pre">.tar.gz</span></code> archive with the a subset of the index files so
+that the original index can be derived.</p>
+</div>
+<div class="section" id="id19">
+<h4>Specification<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<p>The archive contains the following subset of the original index files:</p>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id9">
-<caption><span class="caption-text">Compressed ProPhyle index</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id28">
+<caption><span class="caption-text">Compressed ProPhyle index</span><a class="headerlink" href="#id28" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="80%" />
@@ -631,6 +818,7 @@ unknown nucleotides. All k-mers containing an unknown nucleotide are discarded.<
 </tbody>
 </table>
 </div></blockquote>
+</div>
 </div>
 </div>
 </div>

@@ -418,6 +418,30 @@ Command: build     construct index
          query     query reads against index
 </pre></div>
 </div>
+<div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle_index build -h
+
+
+Usage:   prophyle_index build &lt;prefix&gt;
+
+Options: -k INT    length of k-mer
+         -s        construct k-LCP and SA in parallel
+         -i        sampling distance for SA
+</pre></div>
+</div>
+<div class="code text highlight-default"><div class="highlight"><pre><span></span>$ prophyle_index query -h
+
+
+Usage:   prophyle_index query [options] &lt;prefix&gt; &lt;in.fq&gt;
+
+Options: -k INT    length of k-mer
+         -u        use k-LCP for querying
+         -v        output set of chromosomes for every k-mer
+         -p        do not check whether k-mer is on border of two contigs, and show such k-mers in output
+         -b        print sequences and base qualities
+         -l STR    log file name to output statistics
+         -t INT    number of threads [1]
+</pre></div>
+</div>
 </div></blockquote>
 </div>
 <div class="section" id="prophyle-assignment">
