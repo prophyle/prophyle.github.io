@@ -208,64 +208,64 @@
 <span id="formats"></span><h1>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#input-data-formats" id="id29">Input data formats</a><ul>
-<li><a class="reference internal" href="#newick-trees" id="id30">Newick trees</a><ul>
-<li><a class="reference internal" href="#introduction" id="id31">Introduction</a></li>
-<li><a class="reference internal" href="#specification" id="id32">Specification</a></li>
-<li><a class="reference internal" href="#examples" id="id33">Examples</a></li>
+<li><a class="reference internal" href="#input-data-formats" id="id30">Input data formats</a><ul>
+<li><a class="reference internal" href="#newick-trees" id="id31">Newick trees</a><ul>
+<li><a class="reference internal" href="#introduction" id="id32">Introduction</a></li>
+<li><a class="reference internal" href="#specification" id="id33">Specification</a></li>
+<li><a class="reference internal" href="#examples" id="id34">Examples</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#nhx-trees" id="id34">NHX trees</a><ul>
-<li><a class="reference internal" href="#id1" id="id35">Introduction</a></li>
-<li><a class="reference internal" href="#id2" id="id36">Specification</a></li>
-<li><a class="reference internal" href="#example" id="id37">Example</a></li>
+<li><a class="reference internal" href="#nhx-trees" id="id35">NHX trees</a><ul>
+<li><a class="reference internal" href="#id1" id="id36">Introduction</a></li>
+<li><a class="reference internal" href="#id2" id="id37">Specification</a></li>
+<li><a class="reference internal" href="#example" id="id38">Example</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#sequences" id="id38">Sequences</a></li>
+<li><a class="reference internal" href="#sequences" id="id39">Sequences</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#assignments" id="id39">Assignments</a><ul>
-<li><a class="reference internal" href="#read-assignments-in-sam-bam" id="id40">Read assignments in SAM/BAM</a><ul>
-<li><a class="reference internal" href="#id3" id="id41">Introduction</a></li>
-<li><a class="reference internal" href="#id4" id="id42">Specification</a></li>
+<li><a class="reference internal" href="#assignments" id="id40">Assignments</a><ul>
+<li><a class="reference internal" href="#read-assignments-in-sam-bam" id="id41">Read assignments in SAM/BAM</a><ul>
+<li><a class="reference internal" href="#id3" id="id42">Introduction</a></li>
+<li><a class="reference internal" href="#id4" id="id43">Specification</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format" id="id43">Read assignments in a Kraken-like format</a><ul>
-<li><a class="reference internal" href="#id5" id="id44">Introduction</a></li>
-<li><a class="reference internal" href="#id6" id="id45">Specification</a></li>
-<li><a class="reference internal" href="#id7" id="id46">Examples</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#abundances-estimates-experimental" id="id47">Abundances estimates (experimental)</a><ul>
-<li><a class="reference internal" href="#abundances-in-the-kraken-report-format" id="id48">Abundances in the Kraken report format</a><ul>
-<li><a class="reference internal" href="#id8" id="id49">Introduction</a></li>
-<li><a class="reference internal" href="#id9" id="id50">Specification</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#abundances-in-the-metaphlan2-report-format" id="id51">Abundances in the MetaPhlAn2 report format</a><ul>
-<li><a class="reference internal" href="#id10" id="id52">Introduction</a></li>
-<li><a class="reference internal" href="#id11" id="id53">Specification</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#abundances-in-the-centrifuge-report-format" id="id54">Abundances in the Centrifuge report format</a><ul>
-<li><a class="reference internal" href="#id12" id="id55">Introduction</a></li>
-<li><a class="reference internal" href="#id13" id="id56">Specification</a></li>
-<li><a class="reference internal" href="#id14" id="id57">Example</a></li>
+<li><a class="reference internal" href="#read-assignments-in-a-kraken-like-format" id="id44">Read assignments in a Kraken-like format</a><ul>
+<li><a class="reference internal" href="#id5" id="id45">Introduction</a></li>
+<li><a class="reference internal" href="#id6" id="id46">Specification</a></li>
+<li><a class="reference internal" href="#id7" id="id47">Examples</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#internal-prophyle-formats" id="id58">Internal ProPhyle formats</a><ul>
-<li><a class="reference internal" href="#index-6" id="id59">ProPhyle Index</a><ul>
-<li><a class="reference internal" href="#id16" id="id60">Introduction</a></li>
-<li><a class="reference internal" href="#id17" id="id61">Specification</a></li>
+<li><a class="reference internal" href="#abundances-estimates-experimental" id="id48">Abundances estimates (experimental)</a><ul>
+<li><a class="reference internal" href="#abundances-in-the-kraken-report-format" id="id49">Abundances in the Kraken report format</a><ul>
+<li><a class="reference internal" href="#id8" id="id50">Introduction</a></li>
+<li><a class="reference internal" href="#id9" id="id51">Specification</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#compressed-prophyle-index-for-transmission" id="id62">Compressed ProPhyle index for transmission</a><ul>
-<li><a class="reference internal" href="#id18" id="id63">Introduction</a></li>
-<li><a class="reference internal" href="#id19" id="id64">Specification</a></li>
+<li><a class="reference internal" href="#abundances-in-the-metaphlan2-report-format" id="id52">Abundances in the MetaPhlAn2 report format</a><ul>
+<li><a class="reference internal" href="#id10" id="id53">Introduction</a></li>
+<li><a class="reference internal" href="#id11" id="id54">Specification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#abundances-in-the-centrifuge-report-format" id="id55">Abundances in the Centrifuge report format</a><ul>
+<li><a class="reference internal" href="#id12" id="id56">Introduction</a></li>
+<li><a class="reference internal" href="#id13" id="id57">Specification</a></li>
+<li><a class="reference internal" href="#id14" id="id58">Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#internal-prophyle-formats" id="id59">Internal ProPhyle formats</a><ul>
+<li><a class="reference internal" href="#index-6" id="id60">ProPhyle Index</a><ul>
+<li><a class="reference internal" href="#id16" id="id61">Introduction</a></li>
+<li><a class="reference internal" href="#id17" id="id62">Specification</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#compressed-prophyle-index-for-transmission" id="id63">Compressed ProPhyle index for transmission</a><ul>
+<li><a class="reference internal" href="#id18" id="id64">Introduction</a></li>
+<li><a class="reference internal" href="#id19" id="id65">Specification</a></li>
 </ul>
 </li>
 </ul>
@@ -376,8 +376,7 @@ is parsed using the <a class="reference external" href="http://etetoolkit.org/">
 <div class="section" id="sequences">
 <h3>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h3>
 <p>Input sequences can be provided in the FASTA or FASTQ formats. Any non-<code class="docutils literal"><span class="pre">ACGT</span></code> characters are treated as
-unknown nucleotides.
-All k-mers containing an unknown nucleotide are discarded.
+unknown nucleotides and k-mers containing them thus discarded.
 Sequence names are ignored.</p>
 </div>
 </div>
@@ -395,7 +394,35 @@ the output of classification.</p>
 <h4>Specification<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <blockquote>
 <div><table border="1" class="colwidths-given docutils" id="id21">
-<caption><span class="caption-text">ProPhyle SAM fields</span><a class="headerlink" href="#id21" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-text">ProPhyle SAM headers</span><a class="headerlink" href="#id21" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Tag</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>HD</td>
+<td>Version of SAM.</td>
+</tr>
+<tr class="row-odd"><td>PG</td>
+<td>Version of ProPhyle.</td>
+</tr>
+<tr class="row-even"><td>SQ</td>
+<td>Description of a leaf. <em>SN:</em> Name of the node. <em>LN:</em> a fake length. <em>UR:</em> Name of the original FASTA file. <em>SP:</em> Name of the species (if present in the tree).</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><table border="1" class="colwidths-given docutils" id="id22">
+<caption><span class="caption-text">ProPhyle SAM fields</span><a class="headerlink" href="#id22" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="12%" />
 <col width="12%" />
@@ -410,23 +437,23 @@ the output of classification.</p>
 <tbody valign="top">
 <tr class="row-even"><td>1</td>
 <td>QNAME</td>
-<td>Query name</td>
+<td>Query name.</td>
 </tr>
 <tr class="row-odd"><td>2</td>
 <td>FLAG</td>
-<td><code class="docutils literal"><span class="pre">0</span></code> if assigned, <code class="docutils literal"><span class="pre">4</span></code> otherwise</td>
+<td><code class="docutils literal"><span class="pre">0</span></code> if assigned, <code class="docutils literal"><span class="pre">4</span></code> otherwise.</td>
 </tr>
 <tr class="row-even"><td>3</td>
 <td>RNAME</td>
-<td>Node name</td>
+<td>Node name.</td>
 </tr>
 <tr class="row-odd"><td>4</td>
 <td>POS</td>
-<td><code class="docutils literal"><span class="pre">1</span></code> if assigned, unused (<code class="docutils literal"><span class="pre">0</span></code>) otherwise</td>
+<td><code class="docutils literal"><span class="pre">1</span></code> if assigned, unused (<code class="docutils literal"><span class="pre">0</span></code>) otherwise.</td>
 </tr>
 <tr class="row-even"><td>5</td>
 <td>MAPQ</td>
-<td><code class="docutils literal"><span class="pre">60</span></code> if assigned, unused (<code class="docutils literal"><span class="pre">0</span></code>) otherwise</td>
+<td><code class="docutils literal"><span class="pre">60</span></code> if assigned, unused (<code class="docutils literal"><span class="pre">0</span></code>) otherwise.</td>
 </tr>
 <tr class="row-odd"><td>6</td>
 <td>CIGAR</td>
@@ -434,23 +461,23 @@ the output of classification.</p>
 </tr>
 <tr class="row-even"><td>7</td>
 <td>RNEXT</td>
-<td>Unused (<code class="docutils literal"><span class="pre">*</span></code>)</td>
+<td>Unused (<code class="docutils literal"><span class="pre">*</span></code>).</td>
 </tr>
 <tr class="row-odd"><td>8</td>
 <td>PNEXT</td>
-<td>Unused (<code class="docutils literal"><span class="pre">0</span></code>)</td>
+<td>Unused (<code class="docutils literal"><span class="pre">0</span></code>).</td>
 </tr>
 <tr class="row-even"><td>9</td>
 <td>TLEN</td>
-<td>Unused (<code class="docutils literal"><span class="pre">0</span></code>)</td>
+<td>Unused (<code class="docutils literal"><span class="pre">0</span></code>).</td>
 </tr>
 <tr class="row-odd"><td>10</td>
 <td>SEQ</td>
-<td>Sequence of bases if <code class="docutils literal"><span class="pre">-P</span></code>, unused (<code class="docutils literal"><span class="pre">*</span></code>) otherwise</td>
+<td>Sequence of bases if <code class="docutils literal"><span class="pre">-P</span></code>, unused (<code class="docutils literal"><span class="pre">*</span></code>) otherwise.</td>
 </tr>
 <tr class="row-even"><td>11</td>
 <td>QUAL</td>
-<td>Base qualities if <code class="docutils literal"><span class="pre">-P</span></code>, unused (<code class="docutils literal"><span class="pre">*</span></code>) otherwise</td>
+<td>Base qualities if <code class="docutils literal"><span class="pre">-P</span></code>, unused (<code class="docutils literal"><span class="pre">*</span></code>) otherwise.</td>
 </tr>
 </tbody>
 </table>
@@ -459,55 +486,66 @@ the output of classification.</p>
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id22">
-<caption><span class="caption-text">ProPhyle SAM tags</span><a class="headerlink" href="#id22" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id23">
+<caption><span class="caption-text">ProPhyle SAM tags</span><a class="headerlink" href="#id23" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col width="12%" />
-<col width="12%" />
-<col width="77%" />
+<col width="11%" />
+<col width="11%" />
+<col width="54%" />
+<col width="25%" />
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Tag</th>
 <th class="head">Type</th>
 <th class="head">Description</th>
+<th class="head">Range</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>h1</td>
 <td>integer</td>
-<td>Number of shared k-mers</td>
+<td>Number of shared k-mers.</td>
+<td><img class="math" src="_images/math/b5ffc6b58e063ab1bf611f4732367e8833a62c40.svg" alt="\{1, \ldots, |query|-k+1\}"/></td>
 </tr>
 <tr class="row-odd"><td>h2</td>
 <td>float</td>
-<td>Normalized number of shared k-mers</td>
+<td>Proportion of hits in the reference.</td>
+<td><img class="math" src="_images/math/62f34fae2b08036cedb90a3ebf47f74a61dcb1be.svg" alt="[0,1]"/></td>
 </tr>
 <tr class="row-even"><td>hf</td>
 <td>float</td>
-<td>Proportion of hits</td>
+<td>Proportion of hits in the query.</td>
+<td><img class="math" src="_images/math/62f34fae2b08036cedb90a3ebf47f74a61dcb1be.svg" alt="[0,1]"/></td>
 </tr>
 <tr class="row-odd"><td>c1</td>
 <td>integer</td>
-<td>Number of covered positions in the query</td>
+<td>Number of covered positions in the query.</td>
+<td><img class="math" src="_images/math/3e622247c41026b122762fcc898084f20ef7d6d9.svg" alt="\{0, ..., |query|\}"/></td>
 </tr>
 <tr class="row-even"><td>c2</td>
 <td>float</td>
-<td>Normalized number of covered positions in the query</td>
+<td>Normalized number of covered positions in the query.</td>
+<td><img class="math" src="_images/math/62f34fae2b08036cedb90a3ebf47f74a61dcb1be.svg" alt="[0,1]"/></td>
 </tr>
 <tr class="row-odd"><td>cf</td>
 <td>float</td>
-<td>Proportion of coverage</td>
+<td>Proportion of covered positions in the query.</td>
+<td><img class="math" src="_images/math/62f34fae2b08036cedb90a3ebf47f74a61dcb1be.svg" alt="[0,1]"/></td>
 </tr>
 <tr class="row-even"><td>is</td>
 <td>int</td>
-<td>Number of reported assignments for the query</td>
+<td>Number of reported assignments (nodes) for the query.</td>
+<td><img class="math" src="_images/math/09d53271cc605d43637fdb4c87ab28e899d581b2.svg" alt="\{1, \ldots, |leaves|\}"/></td>
 </tr>
 <tr class="row-odd"><td>ii</td>
 <td>int</td>
-<td>ID of the curent assignment</td>
+<td>ID of the curent assignment.</td>
+<td><img class="math" src="_images/math/c8a12666e879d38c3c190fbeb879dacc71547c23.svg" alt="\{1, \ldots, is\}"/></td>
 </tr>
 <tr class="row-even"><td>hc</td>
 <td>string</td>
 <td>Hit bit-mask encoded as a CIGAR string. For instance, <cite>7=1X3=</cite> means <cite>11111110111</cite>.</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -527,8 +565,8 @@ for reporting the final assignments.</p>
 <div class="section" id="id6">
 <h4>Specification<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id23">
-<caption><span class="caption-text">Kraken-like format</span><a class="headerlink" href="#id23" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id24">
+<caption><span class="caption-text">Kraken-like format</span><a class="headerlink" href="#id24" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="11%" />
 <col width="89%" />
@@ -582,8 +620,8 @@ for reporting the final assignments.</p>
 <h4>Specification<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#sample-reports">kraken-report</a> format:</p>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id24">
-<caption><span class="caption-text">Kraken report format</span><a class="headerlink" href="#id24" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id25">
+<caption><span class="caption-text">Kraken report format</span><a class="headerlink" href="#id25" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="80%" />
@@ -627,8 +665,8 @@ for reporting the final assignments.</p>
 <h4>Specification<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <p><a class="reference external" href="https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-files">MetaPhlAn2 report format</a></p>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id25">
-<caption><span class="caption-text">Metaphlan 2 report format</span><a class="headerlink" href="#id25" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id26">
+<caption><span class="caption-text">Metaphlan 2 report format</span><a class="headerlink" href="#id26" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="80%" />
@@ -660,8 +698,8 @@ for reporting the final assignments.</p>
 <div class="section" id="id13">
 <h4>Specification<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id26">
-<caption><span class="caption-text">Centrifuge format</span><a class="headerlink" href="#id26" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id27">
+<caption><span class="caption-text">Centrifuge format</span><a class="headerlink" href="#id27" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="80%" />
@@ -713,13 +751,13 @@ for reporting the final assignments.</p>
 <div class="section" id="id16">
 <h4>Introduction<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
 <p>ProPhyle index directory contains a BWA index,
-a k-LCP array and several small auxiliary files.</p>
+a k-LCP array and several auxiliary files.</p>
 </div>
 <div class="section" id="id17">
 <h4>Specification<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id27">
-<caption><span class="caption-text">ProPhyle index</span><a class="headerlink" href="#id27" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id28">
+<caption><span class="caption-text">ProPhyle index</span><a class="headerlink" href="#id28" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="80%" />
@@ -782,8 +820,8 @@ that the original index can be derived.</p>
 <h4>Specification<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
 <p>The archive contains the following subset of the original index files:</p>
 <blockquote>
-<div><table border="1" class="colwidths-given docutils" id="id28">
-<caption><span class="caption-text">Compressed ProPhyle index</span><a class="headerlink" href="#id28" title="Permalink to this table">¶</a></caption>
+<div><table border="1" class="colwidths-given docutils" id="id29">
+<caption><span class="caption-text">Compressed ProPhyle index</span><a class="headerlink" href="#id29" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col width="20%" />
 <col width="80%" />
@@ -847,7 +885,7 @@ that the original index can be derived.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2017, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+        &#169; Copyright 2015-2018, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
     </div>
   </body>
