@@ -274,6 +274,7 @@
 </div>
 <div class="section" id="input-data-formats">
 <h2>Input data formats<a class="headerlink" href="#input-data-formats" title="Permalink to this headline">¶</a></h2>
+<p>Node names should not contain the <code class="docutils literal"><span class="pre">&#64;</span></code> character, and they should not be equal to <code class="docutils literal"><span class="pre">A</span></code>, <code class="docutils literal"><span class="pre">0</span></code>, and <code class="docutils literal"><span class="pre">root</span></code> (reserved names).</p>
 <div class="section" id="newick-trees">
 <span id="index-0"></span><h3>Newick trees<a class="headerlink" href="#newick-trees" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="introduction">
@@ -520,7 +521,7 @@ the output of classification.</p>
 <tr class="row-odd"><td>c1</td>
 <td>integer</td>
 <td>Number of covered positions in the query.</td>
-<td><img class="math" src="_images/math/3e622247c41026b122762fcc898084f20ef7d6d9.svg" alt="\{0, ..., |query|\}"/></td>
+<td><img class="math" src="_images/math/01f7f4f79830755fb37d7a3e6460b77f02fa9642.svg" alt="\{k, \ldots, |query|\}"/></td>
 </tr>
 <tr class="row-even"><td>c2</td>
 <td>float</td>
@@ -884,9 +885,23 @@ that the original index can be derived.</p>
  
       </ul>
     </div>
+
+
     <div class="footer" role="contentinfo">
         &#169; Copyright 2015-2018, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.5.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.6.
     </div>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112241191-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112241191-1');
+</script>
+
+
   </body>
 </html>
