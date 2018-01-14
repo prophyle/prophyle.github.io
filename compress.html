@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Compressing indexes for transmission &#8212; ProPhyle 0.3.1.0 documentation</title>
+    <title>8. Compressing indexes for transmission &#8212; ProPhyle 0.3.1.0 documentation</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -26,8 +26,8 @@
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="File formats" href="formats.html" />
-    <link rel="prev" title="Analyzing read assignments" href="analyze.html" />
+    <link rel="next" title="9. File formats" href="formats.html" />
+    <link rel="prev" title="7. Analyzing read assignments" href="analyze.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -92,10 +92,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="formats.html" title="File formats"
+          <a href="formats.html" title="9. File formats"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="analyze.html" title="Analyzing read assignments"
+          <a href="analyze.html" title="7. Analyzing read assignments"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
@@ -106,19 +106,19 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="contents.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Compressing indexes for transmission</a><ul>
-<li><a class="reference internal" href="#compression">Compression</a></li>
-<li><a class="reference internal" href="#decompression">Decompression</a></li>
+<li><a class="reference internal" href="#">8. Compressing indexes for transmission</a><ul>
+<li><a class="reference internal" href="#compression">8.1. Compression</a></li>
+<li><a class="reference internal" href="#decompression">8.2. Decompression</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="analyze.html"
-                        title="previous chapter">Analyzing read assignments</a></p>
+                        title="previous chapter">7. Analyzing read assignments</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="formats.html"
-                        title="next chapter">File formats</a></p>
+                        title="next chapter">9. File formats</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -145,14 +145,14 @@
           <div class="body" role="main">
             
   <span class="target" id="compress"></span><div class="section" id="compressing-indexes-for-transmission">
-<span id="index-0"></span><h1>Compressing indexes for transmission<a class="headerlink" href="#compressing-indexes-for-transmission" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><h1>8. Compressing indexes for transmission<a class="headerlink" href="#compressing-indexes-for-transmission" title="Permalink to this headline">¶</a></h1>
 <p>To simplify archiving indexes and their transmission over the Internet, ProPhyle
 provides a compression feature. This compression is based
 on creating a <code class="docutils literal"><span class="pre">.tar.gz</span></code> archive containing all information necessary to
 reconstruct the entire index.
 For a specification of the format, see Section <a class="reference internal" href="formats.html"><span class="doc">File formats</span></a>.</p>
 <div class="section" id="compression">
-<h2>Compression<a class="headerlink" href="#compression" title="Permalink to this headline">¶</a></h2>
+<h2>8.1. Compression<a class="headerlink" href="#compression" title="Permalink to this headline">¶</a></h2>
 <p>An index can be compressed by</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle compress &lt;index.dir&gt; <span class="o">[</span>&lt;archive.tar.gz&gt;<span class="o">]</span>
 </pre></div>
@@ -160,7 +160,7 @@ For a specification of the format, see Section <a class="reference internal" hre
 <p>If <code class="docutils literal"><span class="pre">&lt;archive.tar.gz&gt;</span></code> is not provided, ProPhyle will derive the filename from the name of the index.</p>
 </div>
 <div class="section" id="decompression">
-<h2>Decompression<a class="headerlink" href="#decompression" title="Permalink to this headline">¶</a></h2>
+<h2>8.2. Decompression<a class="headerlink" href="#decompression" title="Permalink to this headline">¶</a></h2>
 <p>A compressed index can then be decompressed by</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle decompress <span class="o">[</span>-K<span class="o">]</span> &lt;archive.tar.gz&gt; <span class="o">[</span>&lt;output.dir&gt;<span class="o">]</span>
 </pre></div>
@@ -183,10 +183,10 @@ If the option <code class="docutils literal"><span class="pre">-K</span></code> 
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="formats.html" title="File formats"
+          <a href="formats.html" title="9. File formats"
              >next</a> |</li>
         <li class="right" >
-          <a href="analyze.html" title="Analyzing read assignments"
+          <a href="analyze.html" title="7. Analyzing read assignments"
              >previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>

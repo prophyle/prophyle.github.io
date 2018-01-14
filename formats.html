@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>File formats &#8212; ProPhyle 0.3.1.0 documentation</title>
+    <title>9. File formats &#8212; ProPhyle 0.3.1.0 documentation</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -26,8 +26,8 @@
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Command-line interface" href="cli.html" />
-    <link rel="prev" title="Compressing indexes for transmission" href="compress.html" />
+    <link rel="next" title="10. Command-line interface" href="cli.html" />
+    <link rel="prev" title="8. Compressing indexes for transmission" href="compress.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
  
@@ -92,10 +92,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="cli.html" title="Command-line interface"
+          <a href="cli.html" title="10. Command-line interface"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="compress.html" title="Compressing indexes for transmission"
+          <a href="compress.html" title="8. Compressing indexes for transmission"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
@@ -106,8 +106,8 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="contents.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">File formats</a><ul>
-<li><a class="reference internal" href="#input-data-formats">Input data formats</a><ul>
+<li><a class="reference internal" href="#">9. File formats</a><ul>
+<li><a class="reference internal" href="#input-data-formats">9.1. Input data formats</a><ul>
 <li><a class="reference internal" href="#newick-trees">Newick trees</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
 <li><a class="reference internal" href="#specification">Specification</a></li>
@@ -123,7 +123,7 @@
 <li><a class="reference internal" href="#sequences">Sequences</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#assignments">Assignments</a><ul>
+<li><a class="reference internal" href="#assignments">9.2. Assignments</a><ul>
 <li><a class="reference internal" href="#read-assignments-in-sam-bam">Read assignments in SAM/BAM</a><ul>
 <li><a class="reference internal" href="#id3">Introduction</a></li>
 <li><a class="reference internal" href="#id4">Specification</a></li>
@@ -137,7 +137,7 @@
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#abundances-estimates-experimental">Abundances estimates (experimental)</a><ul>
+<li><a class="reference internal" href="#abundances-estimates-experimental">9.3. Abundances estimates (experimental)</a><ul>
 <li><a class="reference internal" href="#abundances-in-the-kraken-report-format">Abundances in the Kraken report format</a><ul>
 <li><a class="reference internal" href="#id8">Introduction</a></li>
 <li><a class="reference internal" href="#id9">Specification</a></li>
@@ -156,7 +156,7 @@
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#internal-prophyle-formats">Internal ProPhyle formats</a><ul>
+<li><a class="reference internal" href="#internal-prophyle-formats">9.4. Internal ProPhyle formats</a><ul>
 <li><a class="reference internal" href="#index-6">ProPhyle Index</a><ul>
 <li><a class="reference internal" href="#id16">Introduction</a></li>
 <li><a class="reference internal" href="#id17">Specification</a></li>
@@ -175,10 +175,10 @@
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="compress.html"
-                        title="previous chapter">Compressing indexes for transmission</a></p>
+                        title="previous chapter">8. Compressing indexes for transmission</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="cli.html"
-                        title="next chapter">Command-line interface</a></p>
+                        title="next chapter">10. Command-line interface</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -205,7 +205,7 @@
           <div class="body" role="main">
             
   <div class="section" id="file-formats">
-<span id="formats"></span><h1>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h1>
+<span id="formats"></span><h1>9. File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
 <li><a class="reference internal" href="#input-data-formats" id="id30">Input data formats</a><ul>
@@ -273,7 +273,7 @@
 </ul>
 </div>
 <div class="section" id="input-data-formats">
-<h2>Input data formats<a class="headerlink" href="#input-data-formats" title="Permalink to this headline">¶</a></h2>
+<h2>9.1. Input data formats<a class="headerlink" href="#input-data-formats" title="Permalink to this headline">¶</a></h2>
 <p>Node names should not contain the <code class="docutils literal"><span class="pre">&#64;</span></code> character, and they should not be equal to <code class="docutils literal"><span class="pre">A</span></code>, <code class="docutils literal"><span class="pre">0</span></code>, and <code class="docutils literal"><span class="pre">root</span></code> (reserved names).</p>
 <div class="section" id="newick-trees">
 <span id="index-0"></span><h3>Newick trees<a class="headerlink" href="#newick-trees" title="Permalink to this headline">¶</a></h3>
@@ -382,7 +382,7 @@ Sequence names are ignored.</p>
 </div>
 </div>
 <div class="section" id="assignments">
-<h2>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
+<h2>9.2. Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="read-assignments-in-sam-bam">
 <span id="index-2"></span><h3>Read assignments in SAM/BAM<a class="headerlink" href="#read-assignments-in-sam-bam" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id3">
@@ -611,7 +611,7 @@ for reporting the final assignments.</p>
 </div>
 </div>
 <div class="section" id="abundances-estimates-experimental">
-<h2>Abundances estimates (experimental)<a class="headerlink" href="#abundances-estimates-experimental" title="Permalink to this headline">¶</a></h2>
+<h2>9.3. Abundances estimates (experimental)<a class="headerlink" href="#abundances-estimates-experimental" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="abundances-in-the-kraken-report-format">
 <span id="index-3"></span><h3>Abundances in the Kraken report format<a class="headerlink" href="#abundances-in-the-kraken-report-format" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id8">
@@ -746,7 +746,7 @@ for reporting the final assignments.</p>
 </div>
 </div>
 <div class="section" id="internal-prophyle-formats">
-<h2>Internal ProPhyle formats<a class="headerlink" href="#internal-prophyle-formats" title="Permalink to this headline">¶</a></h2>
+<h2>9.4. Internal ProPhyle formats<a class="headerlink" href="#internal-prophyle-formats" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="index-6">
 <span id="id15"></span><h3>ProPhyle Index<a class="headerlink" href="#index-6" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="id16">
@@ -875,10 +875,10 @@ that the original index can be derived.</p>
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="cli.html" title="Command-line interface"
+          <a href="cli.html" title="10. Command-line interface"
              >next</a> |</li>
         <li class="right" >
-          <a href="compress.html" title="Compressing indexes for transmission"
+          <a href="compress.html" title="8. Compressing indexes for transmission"
              >previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
