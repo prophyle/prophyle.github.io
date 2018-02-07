@@ -144,18 +144,15 @@
 <dt id="term-operating-system">Operating system</dt>
 <dd>ProPhyle requires a Unix-like system with Python 3.3+ and GCC 4.8+.</dd>
 <dt id="term-memory">Memory</dt>
-<dd>Memory consumption is slightly lower for index construction than classification
-and depends on the source data. It can be estimated as ….
-For an existing index, the memory footprint can be estimated as the sum
-of …. If k-LCP array is not used, the footprint will be smaller by its size.</dd>
+<dd>Memory consumption can be roughly estimated as the total length of all
+contigs obtained from propagation multiplied by two. Such length approximately
+corresponds to the size of the index.fa file. For instance, the RefSeq bacterial
+database requires 14.2 GB.</dd>
 <dt id="term-cpu">CPU</dt>
-<dd>ProPhyle does not have any particular requirements on the number of CPU cores.
-In the current version, it cannot efficiently use multiple cores.</dd>
+<dd>ProPhyle does not have any particular requirements on the number of CPU cores.</dd>
 <dt id="term-disk-space">Disk space</dt>
-<dd>ProPhyle requires approximately … for index construction.
-The resulting index usually occupies approximately ….</dd>
-<dt id="term-time">Time</dt>
-<dd>…</dd>
+<dd>The required disk space can be roughly estimated as the size of the original FASTA
+files multiplied by five.</dd>
 </dl>
 </div>
 
