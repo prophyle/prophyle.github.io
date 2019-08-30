@@ -98,7 +98,6 @@
 <li><a class="reference internal" href="#prophyle-download"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">download</span></code></a></li>
 <li><a class="reference internal" href="#prophyle-index"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">index</span></code></a></li>
 <li><a class="reference internal" href="#prophyle-classify"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">classify</span></code></a></li>
-<li><a class="reference internal" href="#prophyle-analyze"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">analyze</span></code></a></li>
 <li><a class="reference internal" href="#prophyle-compress"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">compress</span></code></a></li>
 <li><a class="reference internal" href="#prophyle-decompress"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">decompress</span></code></a></li>
 </ul>
@@ -152,18 +151,17 @@
 <li><p><a class="reference internal" href="#prophyle-download" id="id4"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">download</span></code></a></p></li>
 <li><p><a class="reference internal" href="#prophyle-index" id="id5"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">index</span></code></a></p></li>
 <li><p><a class="reference internal" href="#prophyle-classify" id="id6"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">classify</span></code></a></p></li>
-<li><p><a class="reference internal" href="#prophyle-analyze" id="id7"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">analyze</span></code></a></p></li>
-<li><p><a class="reference internal" href="#prophyle-compress" id="id8"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">compress</span></code></a></p></li>
-<li><p><a class="reference internal" href="#prophyle-decompress" id="id9"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">decompress</span></code></a></p></li>
+<li><p><a class="reference internal" href="#prophyle-compress" id="id7"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">compress</span></code></a></p></li>
+<li><p><a class="reference internal" href="#prophyle-decompress" id="id8"><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">decompress</span></code></a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#prophyle-assembler" id="id10"><code class="docutils literal notranslate"><span class="pre">prophyle_assembler</span></code></a></p></li>
-<li><p><a class="reference internal" href="#id1" id="id11"><code class="docutils literal notranslate"><span class="pre">prophyle_index</span></code></a></p></li>
-<li><p><a class="reference internal" href="#prophyle-assignment" id="id12"><code class="docutils literal notranslate"><span class="pre">prophyle_assignment</span></code></a></p></li>
-<li><p><a class="reference internal" href="#prophyle-propagation-makefile-py" id="id13"><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_makefile.py</span></code></a></p></li>
-<li><p><a class="reference internal" href="#prophyle-propagation-preprocessing-py" id="id14"><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_preprocessing.py</span></code></a></p></li>
-<li><p><a class="reference internal" href="#prophyle-propagation-postprocessing-py" id="id15"><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_postprocessing.py</span></code></a></p></li>
-<li><p><a class="reference internal" href="#prophyle-validate-tree-py" id="id16"><code class="docutils literal notranslate"><span class="pre">prophyle_validate_tree.py</span></code></a></p></li>
+<li><p><a class="reference internal" href="#prophyle-assembler" id="id9"><code class="docutils literal notranslate"><span class="pre">prophyle_assembler</span></code></a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id10"><code class="docutils literal notranslate"><span class="pre">prophyle_index</span></code></a></p></li>
+<li><p><a class="reference internal" href="#prophyle-assignment" id="id11"><code class="docutils literal notranslate"><span class="pre">prophyle_assignment</span></code></a></p></li>
+<li><p><a class="reference internal" href="#prophyle-propagation-makefile-py" id="id12"><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_makefile.py</span></code></a></p></li>
+<li><p><a class="reference internal" href="#prophyle-propagation-preprocessing-py" id="id13"><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_preprocessing.py</span></code></a></p></li>
+<li><p><a class="reference internal" href="#prophyle-propagation-postprocessing-py" id="id14"><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_postprocessing.py</span></code></a></p></li>
+<li><p><a class="reference internal" href="#prophyle-validate-tree-py" id="id15"><code class="docutils literal notranslate"><span class="pre">prophyle_validate_tree.py</span></code></a></p></li>
 </ul>
 </div>
 <div class="section" id="prophyle-the-main-program">
@@ -286,37 +284,6 @@ optional arguments:
   -C                  use C++ impl. of the assignment algorithm (experimental)
   -K                  force restarted search mode
   -c [STR [STR ...]]  advanced configuration (a JSON dictionary)
-</pre></div>
-</div>
-</div></blockquote>
-</div>
-<div class="section" id="prophyle-analyze">
-<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">analyze</span></code><a class="headerlink" href="#prophyle-analyze" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle analyze -h
-
-usage: prophyle.py analyze [-h] [-s [&#39;w&#39;, &#39;u&#39;, &#39;wl&#39;, &#39;ul&#39;]]
-                           [-f [&#39;sam&#39;, &#39;bam&#39;, &#39;cram&#39;, &#39;uncompressed_bam&#39;, &#39;kraken&#39;, &#39;histo&#39;]]
-                           [-c [STR [STR ...]]]
-                           {index_dir, tree.nw} &lt;out.pref&gt; &lt;classified.bam&gt;
-                           [&lt;classified.bam&gt; ...]
-
-positional arguments:
-  {index_dir, tree.nw}     index directory or phylogenetic tree
-  &lt;out.pref&gt;               output prefix
-  &lt;classified.bam&gt;         classified reads (use &#39;-&#39; for stdin)
-
-optional arguments:
-  -h, --help               show this help message and exit
-  -s [&#39;w&#39;, &#39;u&#39;, &#39;wl&#39;, &#39;ul&#39;]
-                           statistics to use for the computation of
-                           histograms: w (default) =&gt; weighted assignments; u
-                           =&gt; unique assignments, non-weighted; wl =&gt; weighted
-                           assignments, propagated to leaves; ul =&gt; unique
-                           assignments, propagated to leaves.
-  -f [&#39;sam&#39;, &#39;bam&#39;, &#39;cram&#39;, &#39;uncompressed_bam&#39;, &#39;kraken&#39;, &#39;histo&#39;]
-                           Input format of assignments [auto]
-  -c [STR [STR ...]]       advanced configuration (a JSON dictionary)
 </pre></div>
 </div>
 </div></blockquote>
