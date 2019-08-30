@@ -1,31 +1,19 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>4. Building a standard database &#8212; ProPhyle 0.3.1.0 documentation</title>
-    
+    <meta charset="utf-8" />
+    <title>4. Building a standard database &#8212; ProPhyle 0.3.2.0 documentation</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within ProPhyle 0.3.1.0 documentation"
+          title="Search within ProPhyle 0.3.2.0 documentation"
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -68,8 +56,7 @@
       });
     </script>
 
-  </head>
-  <body>
+  </head><body>
 <div class="pageheader">
   <ul>
     <li><a href="index.html">Home</a></li>
@@ -107,7 +94,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html">Table Of Contents</a></h3>
+  <h3><a href="contents.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">4. Building a standard database</a><ul>
 <li><a class="reference internal" href="#downloading-genomes">4.1. Downloading genomes</a></li>
@@ -130,13 +117,13 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -153,19 +140,19 @@
 RefSeq genomes, augmented with the NCBI taxonomy.</p>
 <div class="section" id="downloading-genomes">
 <h2>4.1. Downloading genomes<a class="headerlink" href="#downloading-genomes" title="Permalink to this headline">¶</a></h2>
-<p>These libraries can be downloaded using <code class="docutils literal"><span class="pre">prophyle</span> <span class="pre">download</span> <span class="pre">&lt;library&gt;</span> <span class="pre">[&lt;library&gt;</span> <span class="pre">...]</span></code>,
-where <code class="docutils literal"><span class="pre">&lt;library&gt;</span></code> should be replaced by <code class="docutils literal"><span class="pre">bacteria</span></code>, <code class="docutils literal"><span class="pre">viruses</span></code>, or <code class="docutils literal"><span class="pre">plasmids</span></code>.
+<p>These libraries can be downloaded using <code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">download</span> <span class="pre">&lt;library&gt;</span> <span class="pre">[&lt;library&gt;</span> <span class="pre">...]</span></code>,
+where <code class="docutils literal notranslate"><span class="pre">&lt;library&gt;</span></code> should be replaced by <code class="docutils literal notranslate"><span class="pre">bacteria</span></code>, <code class="docutils literal notranslate"><span class="pre">viruses</span></code>, or <code class="docutils literal notranslate"><span class="pre">plasmids</span></code>.
 The command also copies a prebuild Newick/NHX tree for the specified library.
 If the <cite>-d</cite> parameter is not specified, all files are placed to <cite>~/prophyle</cite>.</p>
 <p>To download all viral and bacterial genomes from RefSeq, execute</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle download bacteria viruses
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle download bacteria viruses
 </pre></div>
 </div>
 </div>
 <div class="section" id="index-construction">
 <h2>4.2. Index construction<a class="headerlink" href="#index-construction" title="Permalink to this headline">¶</a></h2>
 <p>Once a library is downloaded, a ProPhyle index can be constructed using</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle index <span class="o">[</span>-g DIR<span class="o">]</span> <span class="o">[</span>-j INT<span class="o">]</span> <span class="o">[</span>-k INT<span class="o">]</span> <span class="o">[</span>-M<span class="o">]</span> <span class="o">[</span>-P<span class="o">]</span> <span class="o">[</span>-K<span class="o">]</span> &lt;tree.nw&gt; <span class="o">[</span>&lt;tree.nw&gt; ...<span class="o">]</span> &lt;index.dir&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle index <span class="o">[</span>-g DIR<span class="o">]</span> <span class="o">[</span>-j INT<span class="o">]</span> <span class="o">[</span>-k INT<span class="o">]</span> <span class="o">[</span>-M<span class="o">]</span> <span class="o">[</span>-P<span class="o">]</span> <span class="o">[</span>-K<span class="o">]</span> &lt;tree.nw&gt; <span class="o">[</span>&lt;tree.nw&gt; ...<span class="o">]</span> &lt;index.dir&gt;
 </pre></div>
 </div>
 <p><cite>&lt;tree.nw&gt;</cite> is a Newick/NHX for the index. The trees from the previous command
@@ -183,7 +170,7 @@ The <cite>-K</cite> parameter can be used to deactivate <em>k</em>-LCP array con
 would be slightly smaller, but querying would become much slower.</p>
 <p>So the entire command for index construction can look, for instance,
 like this:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle index -k <span class="m">25</span> ~/prophyle/bacteria.nw ~/prophyle/viruses.nw my_BV_index
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle index -k <span class="m">25</span> ~/prophyle/bacteria.nw ~/prophyle/viruses.nw my_BV_index
 </pre></div>
 </div>
 <p>Index construction might take several hours, based on the database size, <em>k</em> and the number
@@ -217,8 +204,8 @@ of used cores.</p>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2018, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+        &#169; Copyright 2015-2019, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

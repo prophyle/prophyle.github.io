@@ -1,31 +1,19 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>3. Installing ProPhyle &#8212; ProPhyle 0.3.1.0 documentation</title>
-    
+    <meta charset="utf-8" />
+    <title>3. Installing ProPhyle &#8212; ProPhyle 0.3.2.0 documentation</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within ProPhyle 0.3.1.0 documentation"
+          title="Search within ProPhyle 0.3.2.0 documentation"
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -68,8 +56,7 @@
       });
     </script>
 
-  </head>
-  <body>
+  </head><body>
 <div class="pageheader">
   <ul>
     <li><a href="index.html">Home</a></li>
@@ -107,7 +94,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html">Table Of Contents</a></h3>
+  <h3><a href="contents.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">3. Installing ProPhyle</a><ul>
 <li><a class="reference internal" href="#installing-prophyle-using-bioconda">3.1. Installing ProPhyle using Bioconda</a></li>
@@ -135,13 +122,13 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -158,16 +145,16 @@
 and all C/C++ programs are compiled upon the first execution
 of the main program. ProPhyle requires a Unix operating system and the following dependencies:</p>
 <ul class="simple">
-<li>Python 3.3+ with the <a class="reference external" href="http://etetoolkit.org/">ETE3 library</a></li>
-<li>GCC 4.8+</li>
-<li>ZLib</li>
+<li><p>Python 3.3+ with the <a class="reference external" href="http://etetoolkit.org/">ETE3 library</a></p></li>
+<li><p>GCC 4.8+</p></li>
+<li><p>ZLib</p></li>
 </ul>
 <p>There are multiple ways of installation:</p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#installing-prophyle-using-bioconda" id="id1">Installing ProPhyle using Bioconda</a></li>
-<li><a class="reference internal" href="#installing-prophyle-using-pip" id="id2">Installing ProPhyle using PIP</a></li>
-<li><a class="reference internal" href="#running-prophyle-directly-from-the-repository" id="id3">Running ProPhyle directly from the repository</a></li>
+<li><p><a class="reference internal" href="#installing-prophyle-using-bioconda" id="id1">Installing ProPhyle using Bioconda</a></p></li>
+<li><p><a class="reference internal" href="#installing-prophyle-using-pip" id="id2">Installing ProPhyle using PIP</a></p></li>
+<li><p><a class="reference internal" href="#running-prophyle-directly-from-the-repository" id="id3">Running ProPhyle directly from the repository</a></p></li>
 </ul>
 </div>
 <div class="section" id="installing-prophyle-using-bioconda">
@@ -176,19 +163,19 @@ of the main program. ProPhyle requires a Unix operating system and the following
 <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a>
 or another Conda distribution, and
 add <a class="reference external" href="https://bioconda.github.io/">Bioconda channels</a></p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>conda config --add channels defaults
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels defaults
 conda config --add channels conda-forge
 conda config --add channels bioconda
 </pre></div>
 </div>
 <p>You may either create a separate Conda environment
 (which is the recommended approach)</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>conda create -n prophyle prophyle
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n prophyle prophyle
 <span class="nb">source</span> activate prophyle
 </pre></div>
 </div>
 <p>or install ProPhyle directly to your main environment</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>conda install prophyle
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install prophyle
 </pre></div>
 </div>
 </div>
@@ -196,23 +183,23 @@ conda config --add channels bioconda
 <h2>3.2. Installing ProPhyle using PIP<a class="headerlink" href="#installing-prophyle-using-pip" title="Permalink to this headline">¶</a></h2>
 <p>There are three options of installing ProPhyle using PIP.</p>
 <ol class="arabic">
-<li><p class="first">From PyPI</p>
+<li><p>From PyPI</p>
 <blockquote>
-<div><div class="highlight-bash"><div class="highlight"><pre><span></span>pip install -U prophyle
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U prophyle
 </pre></div>
 </div>
 </div></blockquote>
 </li>
-<li><p class="first">From Git</p>
+<li><p>From Git</p>
 <blockquote>
-<div><div class="highlight-bash"><div class="highlight"><pre><span></span>pip install -U git+https://github.com/prophyle/prophyle
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U git+https://github.com/prophyle/prophyle
 </pre></div>
 </div>
 </div></blockquote>
 </li>
-<li><p class="first">From PyPI to the current directory</p>
+<li><p>From PyPI to the current directory</p>
 <blockquote>
-<div><div class="highlight-bash"><div class="highlight"><pre><span></span>pip install --user prophyle
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install --user prophyle
 <span class="nb">export</span> <span class="nv">PYTHONUSERBASE</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/bin
 </pre></div>
@@ -225,24 +212,24 @@ conda config --add channels bioconda
 <h2>3.3. Running ProPhyle directly from the repository<a class="headerlink" href="#running-prophyle-directly-from-the-repository" title="Permalink to this headline">¶</a></h2>
 <p>It also is possible to run ProPhyle directly from the repository, by calling
 the main script</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle/prophyle/prophyle.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle/prophyle/prophyle.py
 </pre></div>
 </div>
 <p>or its alias</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle/prophyle/prophyle
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle/prophyle/prophyle
 </pre></div>
 </div>
 <p>ProPhyle will then automatically adjust all paths of the auxiliary programs.</p>
 <p>Note that ProPhyle uses submodules, therefore the repository needs to
 be clonned with the <cite>–recursive</cite> option</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>git clone --recursive http://github.com/prophyle/prophyle
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone --recursive http://github.com/prophyle/prophyle
 </pre></div>
 </div>
 <div class="section" id="adjusting-the-path-variable">
 <h3>Adjusting the PATH variable<a class="headerlink" href="#adjusting-the-path-variable" title="Permalink to this headline">¶</a></h3>
 <p>The ProPhyle path can be prepended to the <cite>$PATH</cite> variable so that ProPhyle
 can be executed in the same way as if it was installed using PIP</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/prophyle/prophyle:<span class="nv">$PATH</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/prophyle/prophyle:<span class="nv">$PATH</span>
 </pre></div>
 </div>
 </div>
@@ -252,11 +239,11 @@ can be executed in the same way as if it was installed using PIP</p>
 some of the ProPhyle dependencies, listed in <cite>requirements.txt</cite>, might
 be missing in the system.
 It is possible to install them either using BioConda</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>cat prophyle/requirements.txt <span class="p">|</span> perl -pe <span class="s1">&#39;s/==.*//g&#39;</span> <span class="p">|</span> xargs conda install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat prophyle/requirements.txt <span class="p">|</span> perl -pe <span class="s1">&#39;s/==.*//g&#39;</span> <span class="p">|</span> xargs conda install
 </pre></div>
 </div>
 <p>or using PIP</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>cat prophyle/requirements.txt <span class="p">|</span> xargs pip install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat prophyle/requirements.txt <span class="p">|</span> xargs pip install
 </pre></div>
 </div>
 </div>
@@ -289,8 +276,8 @@ It is possible to install them either using BioConda</p>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2018, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+        &#169; Copyright 2015-2019, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

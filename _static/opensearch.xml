@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
   <ShortName>ProPhyle</ShortName>
-  <Description>Search ProPhyle 0.3.1.0 documentation</Description>
+  <Description>Search ProPhyle 0.3.2.0 documentation</Description>
   <InputEncoding>utf-8</InputEncoding>
   <Url type="text/html" method="get"
-       template="http://sphinx-doc.org/search.html?q={searchTerms}&amp;check_keywords=yes&amp;area=default"/>
-  <LongName>ProPhyle 0.3.1.0 documentation</LongName>
+       template="http://sphinx-doc.org/search.html?q={searchTerms}"/>
+  <LongName>ProPhyle 0.3.2.0 documentation</LongName>
   
 </OpenSearchDescription>

@@ -1,31 +1,19 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>5. Building a custom database &#8212; ProPhyle 0.3.1.0 documentation</title>
-    
+    <meta charset="utf-8" />
+    <title>5. Building a custom database &#8212; ProPhyle 0.3.2.0 documentation</title>
     <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.3.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within ProPhyle 0.3.1.0 documentation"
+          title="Search within ProPhyle 0.3.2.0 documentation"
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -68,8 +56,7 @@
       });
     </script>
 
-  </head>
-  <body>
+  </head><body>
 <div class="pageheader">
   <ul>
     <li><a href="index.html">Home</a></li>
@@ -107,7 +94,7 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html">Table Of Contents</a></h3>
+  <h3><a href="contents.html">Table of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">5. Building a custom database</a><ul>
 <li><a class="reference internal" href="#building-a-custom-database-with-user-provided-data">5.1. Building a custom database with user-provided data</a></li>
@@ -135,13 +122,13 @@
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -156,11 +143,12 @@
 <span id="custom-db"></span><h1>5. Building a custom database<a class="headerlink" href="#building-a-custom-database" title="Permalink to this headline">¶</a></h1>
 <div class="contents local topic" id="contents">
 <ul class="simple">
-<li><a class="reference internal" href="#building-a-custom-database-with-user-provided-data" id="id3">Building a custom database with user-provided data</a></li>
-<li><a class="reference internal" href="#building-a-custom-database-with-refseq-genomes-and-the-ncbi-taxonomy" id="id4">Building a custom database with RefSeq genomes and the NCBI taxonomy</a><ul>
-<li><a class="reference internal" href="#download-sequences-from-ncbi" id="id5">Download sequences from NCBI</a></li>
-<li><a class="reference internal" href="#build-a-tree" id="id6">Build a tree</a></li>
-<li><a class="reference internal" href="#build-the-index" id="id7">Build the index</a></li>
+<li><p><a class="reference internal" href="#building-a-custom-database-with-user-provided-data" id="id2">Building a custom database with user-provided data</a></p></li>
+<li><p><a class="reference internal" href="#building-a-custom-database-with-refseq-genomes-and-the-ncbi-taxonomy" id="id3">Building a custom database with RefSeq genomes and the NCBI taxonomy</a></p>
+<ul>
+<li><p><a class="reference internal" href="#download-sequences-from-ncbi" id="id4">Download sequences from NCBI</a></p></li>
+<li><p><a class="reference internal" href="#build-a-tree" id="id5">Build a tree</a></p></li>
+<li><p><a class="reference internal" href="#build-the-index" id="id6">Build the index</a></p></li>
 </ul>
 </li>
 </ul>
@@ -173,53 +161,47 @@
 <div class="section" id="download-sequences-from-ncbi">
 <h3>Download sequences from NCBI<a class="headerlink" href="#download-sequences-from-ncbi" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>Create a subdirectory in ProPhyle’s main directory, and change the working directory to the newly created one</li>
-<li>Download an <code class="docutils literal"><span class="pre">assembly_summary.txt</span></code> file from NCBI’s FTP server. For RefSeq’s bacterial genomes, follow this <a class="reference external" href="ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt">link</a>. More information about these files can be found <a class="reference external" href="ftp://ftp.ncbi.nlm.nih.gov/genomes/README_assembly_summary.txt">here</a></li>
-<li>Select genomes of interest; the following command will select all complete genomes, but it is sufficient to add more conditions to <code class="docutils literal"><span class="pre">awk</span></code> to select a subset. Fields 1, 6 and 20 contain respectively the accession number, taxonomic identifier and ftp directory of each genome. <code class="docutils literal"><span class="pre">acc2taxid.tsv</span></code> will therefore be a tab separated file containing the taxid corresponding to each sequence’s accession number. Please refer to <a class="reference external" href="https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq">NCBI’s genomes download FAQ</a> for further information)</li>
+<li><p>Create a subdirectory in ProPhyle’s main directory, and change the working directory to the newly created one</p></li>
+<li><p>Download an <code class="docutils literal notranslate"><span class="pre">assembly_summary.txt</span></code> file from NCBI’s FTP server. For RefSeq’s bacterial genomes, follow this <a class="reference external" href="ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt">link</a>. More information about these files can be found <a class="reference external" href="ftp://ftp.ncbi.nlm.nih.gov/genomes/README_assembly_summary.txt">here</a></p></li>
+<li><p>Select genomes of interest; the following command will select all complete genomes, but it is sufficient to add more conditions to <code class="docutils literal notranslate"><span class="pre">awk</span></code> to select a subset. Fields 1, 6 and 20 contain respectively the accession number, taxonomic identifier and ftp directory of each genome. <code class="docutils literal notranslate"><span class="pre">acc2taxid.tsv</span></code> will therefore be a tab separated file containing the taxid corresponding to each sequence’s accession number. Please refer to <a class="reference external" href="https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq">NCBI’s genomes download FAQ</a> for further information). Since strain taxids are deprecated, we are working on a solution to create artificial nodes for each genome. For the moment, you can associate the sequences to the species node, by selecting field 7 instead of 6 in the assembly summary, which corresponds to the species taxid.</p></li>
 </ul>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>awk -F <span class="s2">&quot;\t&quot;</span> -v <span class="nv">OFS</span><span class="o">=</span><span class="s2">&quot;\t&quot;</span> <span class="s1">&#39;$12==&quot;Complete Genome&quot; &amp;&amp; $11==&quot;latest&quot;\</span>
-<span class="s1">        {print $1, $6, $20}&#39;</span> assembly_summary.txt &gt;ftpselection.tsv
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk -F <span class="s2">&quot;\t&quot;</span> -v <span class="nv">OFS</span><span class="o">=</span><span class="s2">&quot;\t&quot;</span> <span class="s1">&#39;$12==&quot;Complete Genome&quot; &amp;&amp; $11==&quot;latest&quot;\</span>
+<span class="s1">        {split($1, a, &quot;.&quot;); print a[1], $7, $20}&#39;</span> assembly_summary.txt &gt;ftpselection.tsv
 cut -f <span class="m">3</span> ftpselection.tsv <span class="p">|</span> awk <span class="s1">&#39;BEGIN{FS=OFS=&quot;/&quot;;filesuffix=&quot;genomic.fna.gz&quot;}\</span>
 <span class="s1">        {ftpdir=$0;asm=$10;file=asm&quot;_&quot;filesuffix;print ftpdir,file}&#39;</span> &gt;ftpfilepaths.tsv
 cut -f <span class="m">1</span>,2 ftpselection.tsv &gt;acc2taxid.tsv
 </pre></div>
 </div>
 <ul class="simple">
-<li>Download selected sequences using <code class="docutils literal"><span class="pre">parallel</span> <span class="pre">--gnu</span> <span class="pre">-j</span> <span class="pre">24</span> <span class="pre">-a</span> <span class="pre">ftpfilepaths.tsv</span> <span class="pre">wget</span></code>. Number of jobs (<code class="docutils literal"><span class="pre">-j</span></code> option) should be changed according to the number of      available cores and bandwidth.</li>
-<li>Extract them using <code class="docutils literal"><span class="pre">parallel</span> <span class="pre">--gnu</span> <span class="pre">-j</span> <span class="pre">24</span> <span class="pre">-a</span> <span class="pre">ftpfilepaths.tsv</span> <span class="pre">gunzip</span> <span class="pre">{/}</span></code></li>
-<li>Create a <a class="reference external" href="http://www.htslib.org/doc/faidx.html">fasta index</a> for each file using <code class="docutils literal"><span class="pre">find</span> <span class="pre">.</span> <span class="pre">-name</span> <span class="pre">'*.fna'</span> <span class="pre">|</span> <span class="pre">parallel</span> <span class="pre">--no-notice</span> <span class="pre">--verbose</span> <span class="pre">samtools</span> <span class="pre">faidx</span> <span class="pre">{}</span></code></li>
+<li><p>Download selected sequences using <code class="docutils literal notranslate"><span class="pre">parallel</span> <span class="pre">--gnu</span> <span class="pre">-j</span> <span class="pre">32</span> <span class="pre">-a</span> <span class="pre">ftpfilepaths.tsv</span> <span class="pre">wget</span></code>. Number of jobs (<code class="docutils literal notranslate"><span class="pre">-j</span></code> option) should be changed according to the number of available cores and bandwidth.</p></li>
+<li><p>Extract them using <code class="docutils literal notranslate"><span class="pre">parallel</span> <span class="pre">--gnu</span> <span class="pre">-j</span> <span class="pre">32</span> <span class="pre">-a</span> <span class="pre">ftpfilepaths.tsv</span> <span class="pre">gunzip</span> <span class="pre">{/}</span></code></p></li>
+<li><p>Create a <a class="reference external" href="http://www.htslib.org/doc/faidx.html">fasta index</a> for each file using <code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">.</span> <span class="pre">-name</span> <span class="pre">'*.fna'</span> <span class="pre">|</span> <span class="pre">parallel</span> <span class="pre">-j</span> <span class="pre">32</span> <span class="pre">samtools</span> <span class="pre">faidx</span> <span class="pre">{}</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="build-a-tree">
 <h3>Build a tree<a class="headerlink" href="#build-a-tree" title="Permalink to this headline">¶</a></h3>
 <p>Build a taxonomic tree for the downloaded sequences using</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle_homedir/prophyle/prophyle_ncbitree.py &lt;library_name&gt; &lt;library_main_dir&gt;<span class="se">\</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle_ncbi_tree.py &lt;library_name&gt; &lt;library_main_dir&gt;<span class="se">\</span>
         &lt;output_file&gt; acc2taxid.tsv -l &lt;log_file&gt;
 </pre></div>
 </div>
-<p>Taxonomic identifiers are assigned to the sequences first, and then the tree is
+<p><code class="docutils literal notranslate"><span class="pre">library_name</span></code> is the name of the subdirectory where the sequences are downloaded (e.g. bacteria, archaea, viral for the standard DBs, or any name of your choice), which will be prepended to the filenames in the tree. <code class="docutils literal notranslate"><span class="pre">library_main_dir</span></code> is the directory where all the sequences are downloaded, which usually is the parent of library_name. This should be used at indexing time (the -g parameter of prophyle index), unless the tree is placed in the very same directory.
+Taxonomic identifiers are assigned to the sequences first, and then the tree is
 built using <a class="reference external" href="http://etetoolkit.org/">ETE Toolkit</a> and saved with newick format
 1. Necessary node attributes are:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">name</span></code>: unique node name (ideally the TaxID of the node)</li>
-<li><code class="docutils literal"><span class="pre">taxid</span></code>: unique taxonomic identifier</li>
-<li><code class="docutils literal"><span class="pre">seqname</span></code>: names of the sequences sharing the same taxid, separated by &#64;</li>
-<li><code class="docutils literal"><span class="pre">fastapath</span></code>: paths of the sequences’ fasta files, separated by &#64; (relative paths from ProPhyle’s home directory)</li>
-<li><code class="docutils literal"><span class="pre">infasta_offset</span></code>: positions where each sequence starts inside the corresponding fasta files, separated by &#64;</li>
-<li><code class="docutils literal"><span class="pre">base_len</span></code>: length of each sequence, separated by &#64;</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code>: unique node name (for RefSeq DB: the taxid of the node)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code>: paths of the sequences’ fasta files, separated by &#64; (relative paths from ProPhyle’s home directory)</p></li>
 </ul>
-<p><code class="docutils literal"><span class="pre">seqname</span></code>, <code class="docutils literal"><span class="pre">infasta_offset</span></code> and <code class="docutils literal"><span class="pre">base_len</span></code> can be found in samtools’
-<a class="reference external" href="http://www.htslib.org/doc/faidx.html">fasta index</a>. Other optional attributes
-are <code class="docutils literal"><span class="pre">sci_name</span></code>, <code class="docutils literal"><span class="pre">named_lineage</span></code>, <code class="docutils literal"><span class="pre">lineage</span></code>, <code class="docutils literal"><span class="pre">rank</span></code> (more info
+<p>Other optional attributes are <code class="docutils literal notranslate"><span class="pre">taxid</span></code>, <code class="docutils literal notranslate"><span class="pre">sci_name</span></code>, <code class="docutils literal notranslate"><span class="pre">named_lineage</span></code>, <code class="docutils literal notranslate"><span class="pre">lineage</span></code>, <code class="docutils literal notranslate"><span class="pre">rank</span></code> (more info
 <a class="reference external" href="http://etetoolkit.org/docs/latest/tutorial/tutorial_ncbitaxonomy.html#automatic-tree-annotation-using-ncbi-taxonomy">here</a>
-). Using ETE library or modifying the <code class="docutils literal"><span class="pre">prophyle_ncbitree.py</span></code> script it is
+). Using ETE library or modifying the <code class="docutils literal notranslate"><span class="pre">prophyle_ncbi_tree.py</span></code> script it is
 easy to adapt any tree to match the requirements above.</p>
-<p>If taxonomic information is not available, <code class="docutils literal"><span class="pre">taxid</span></code> attribute can be replaced by the node name. This could be useful to perform classification over custom phylogenetic trees.</p>
 </div>
 <div class="section" id="build-the-index">
 <h3>Build the index<a class="headerlink" href="#build-the-index" title="Permalink to this headline">¶</a></h3>
 <p>Run the standard command to build ProPhyle index</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>prophyle index -k &lt;kmer_length&gt; &lt;tree_1.nw&gt; <span class="o">[</span>&lt;tree_2.nw&gt; ...<span class="o">]</span> &lt;index_dir&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle index -k &lt;kmer_length&gt; <span class="o">[</span>-g &lt;library_main_dir&gt;<span class="o">]</span> &lt;tree_1.nw&gt; <span class="o">[</span>&lt;tree_2.nw&gt; ...<span class="o">]</span> &lt;index_dir&gt;
 </pre></div>
 </div>
 </div>
@@ -252,8 +234,8 @@ easy to adapt any tree to match the requirements above.</p>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2018, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.2.
+        &#169; Copyright 2015-2019, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
