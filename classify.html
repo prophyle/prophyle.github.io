@@ -1,23 +1,24 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>6. Classifying reads &#8212; ProPhyle 0.3.2.0 documentation</title>
-    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx13.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="Search within ProPhyle 0.3.2.0 documentation"
           href="_static/opensearch.xml"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="7. Compressing indexes for transmission" href="compress.html" />
+    <link rel="next" title="7. Analyzing read assignments" href="analyze.html" />
     <link rel="prev" title="5. Building a custom database" href="custom_db.html" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700'
           rel='stylesheet' type='text/css' />
@@ -82,24 +83,25 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="compress.html" title="7. Compressing indexes for transmission"
+          <a href="analyze.html" title="7. Analyzing read assignments"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="custom_db.html" title="5. Building a custom database"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">6. </span>Classifying reads</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="custom_db.html"
-                        title="previous chapter">5. Building a custom database</a></p>
+                        title="previous chapter"><span class="section-number">5. </span>Building a custom database</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="compress.html"
-                        title="next chapter">7. Compressing indexes for transmission</a></p>
+  <p class="topless"><a href="analyze.html"
+                        title="next chapter"><span class="section-number">7. </span>Analyzing read assignments</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -111,12 +113,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -125,8 +127,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="classifying-reads">
-<span id="classify"></span><h1>6. Classifying reads<a class="headerlink" href="#classifying-reads" title="Permalink to this headline">¶</a></h1>
+  <section id="classifying-reads">
+<span id="classify"></span><h1><span class="section-number">6. </span>Classifying reads<a class="headerlink" href="#classifying-reads" title="Permalink to this headline">¶</a></h1>
 <p>When the index construction is finished, you can classify your reads using</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle classify &lt;index_dir&gt; &lt;reads.fq&gt;
 </pre></div>
@@ -137,9 +139,10 @@
 </div>
 <p>The assignments are reported in the SAM format.
 Unless specified otherwise, the <em>k</em>-mer length is deduced from the index.</p>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -152,21 +155,22 @@ Unless specified otherwise, the <em>k</em>-mer length is deduced from the index.
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="compress.html" title="7. Compressing indexes for transmission"
+          <a href="analyze.html" title="7. Analyzing read assignments"
              >next</a> |</li>
         <li class="right" >
           <a href="custom_db.html" title="5. Building a custom database"
              >previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">6. </span>Classifying reads</a></li> 
       </ul>
     </div>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2019, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+        &#169; Copyright 2015-2021, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

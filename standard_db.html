@@ -1,17 +1,18 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>4. Building a standard database &#8212; ProPhyle 0.3.2.0 documentation</title>
-    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx13.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="Search within ProPhyle 0.3.2.0 documentation"
           href="_static/opensearch.xml"/>
@@ -89,7 +90,8 @@
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">4. </span>Building a standard database</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -105,10 +107,10 @@
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="install.html"
-                        title="previous chapter">3. Installing ProPhyle</a></p>
+                        title="previous chapter"><span class="section-number">3. </span>Installing ProPhyle</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="custom_db.html"
-                        title="next chapter">5. Building a custom database</a></p>
+                        title="next chapter"><span class="section-number">5. </span>Building a custom database</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -120,12 +122,12 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -134,12 +136,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="standard-db"></span><div class="section" id="building-a-standard-database">
-<span id="index-0"></span><h1>4. Building a standard database<a class="headerlink" href="#building-a-standard-database" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="standard-db"></span><section id="building-a-standard-database">
+<span id="index-0"></span><h1><span class="section-number">4. </span>Building a standard database<a class="headerlink" href="#building-a-standard-database" title="Permalink to this headline">¶</a></h1>
 <p>ProPhyle comes with several genome libraries containing
 RefSeq genomes, augmented with the NCBI taxonomy.</p>
-<div class="section" id="downloading-genomes">
-<h2>4.1. Downloading genomes<a class="headerlink" href="#downloading-genomes" title="Permalink to this headline">¶</a></h2>
+<section id="downloading-genomes">
+<h2><span class="section-number">4.1. </span>Downloading genomes<a class="headerlink" href="#downloading-genomes" title="Permalink to this headline">¶</a></h2>
 <p>These libraries can be downloaded using <code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">download</span> <span class="pre">&lt;library&gt;</span> <span class="pre">[&lt;library&gt;</span> <span class="pre">...]</span></code>,
 where <code class="docutils literal notranslate"><span class="pre">&lt;library&gt;</span></code> should be replaced by <code class="docutils literal notranslate"><span class="pre">bacteria</span></code>, <code class="docutils literal notranslate"><span class="pre">viruses</span></code>, or <code class="docutils literal notranslate"><span class="pre">plasmids</span></code>.
 The command also copies a prebuild Newick/NHX tree for the specified library.
@@ -148,9 +150,9 @@ If the <cite>-d</cite> parameter is not specified, all files are placed to <cite
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle download bacteria viruses
 </pre></div>
 </div>
-</div>
-<div class="section" id="index-construction">
-<h2>4.2. Index construction<a class="headerlink" href="#index-construction" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="index-construction">
+<h2><span class="section-number">4.2. </span>Index construction<a class="headerlink" href="#index-construction" title="Permalink to this headline">¶</a></h2>
 <p>Once a library is downloaded, a ProPhyle index can be constructed using</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle index <span class="o">[</span>-g DIR<span class="o">]</span> <span class="o">[</span>-j INT<span class="o">]</span> <span class="o">[</span>-k INT<span class="o">]</span> <span class="o">[</span>-M<span class="o">]</span> <span class="o">[</span>-P<span class="o">]</span> <span class="o">[</span>-K<span class="o">]</span> &lt;tree.nw&gt; <span class="o">[</span>&lt;tree.nw&gt; ...<span class="o">]</span> &lt;index.dir&gt;
 </pre></div>
@@ -175,10 +177,11 @@ like this:</p>
 </div>
 <p>Index construction might take several hours, based on the database size, <em>k</em> and the number
 of used cores.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -198,14 +201,15 @@ of used cores.</p>
              >previous</a> |</li>
         <li><a href="index.html">ProPhyle home</a>&#160;|</li>
         <li><a href="contents.html">Documentation</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">4. </span>Building a standard database</a></li> 
       </ul>
     </div>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2019, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+        &#169; Copyright 2015-2021, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
