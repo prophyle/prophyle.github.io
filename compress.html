@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>7. Compressing indexes for transmission &#8212; ProPhyle 0.3.3.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -12,6 +12,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="Search within ProPhyle 0.3.3.1 documentation"
@@ -96,8 +97,9 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="contents.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">7. Compressing indexes for transmission</a><ul>
 <li><a class="reference internal" href="#compression">7.1. Compression</a></li>
 <li><a class="reference internal" href="#decompression">7.2. Decompression</a></li>
@@ -105,12 +107,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="classify.html"
-                        title="previous chapter"><span class="section-number">6. </span>Classifying reads</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="formats.html"
-                        title="next chapter"><span class="section-number">8. </span>File formats</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="classify.html"
+                          title="previous chapter"><span class="section-number">6. </span>Classifying reads</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="formats.html"
+                          title="next chapter"><span class="section-number">8. </span>File formats</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -127,7 +134,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
 
@@ -137,14 +144,14 @@
           <div class="body" role="main">
             
   <span class="target" id="compress"></span><section id="compressing-indexes-for-transmission">
-<span id="index-0"></span><h1><span class="section-number">7. </span>Compressing indexes for transmission<a class="headerlink" href="#compressing-indexes-for-transmission" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><h1><span class="section-number">7. </span>Compressing indexes for transmission<a class="headerlink" href="#compressing-indexes-for-transmission" title="Permalink to this heading">¶</a></h1>
 <p>To simplify archiving indexes and their transmission over the Internet, ProPhyle
 provides a compression feature. This compression is based
 on creating a <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> archive containing all information necessary to
 reconstruct the entire index.
 For a specification of the format, see Section <a class="reference internal" href="formats.html"><span class="doc">File formats</span></a>.</p>
 <section id="compression">
-<h2><span class="section-number">7.1. </span>Compression<a class="headerlink" href="#compression" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.1. </span>Compression<a class="headerlink" href="#compression" title="Permalink to this heading">¶</a></h2>
 <p>An index can be compressed by</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle compress &lt;index.dir&gt; <span class="o">[</span>&lt;archive.tar.gz&gt;<span class="o">]</span>
 </pre></div>
@@ -152,7 +159,7 @@ For a specification of the format, see Section <a class="reference internal" hre
 <p>If <code class="docutils literal notranslate"><span class="pre">&lt;archive.tar.gz&gt;</span></code> is not provided, ProPhyle will derive the filename from the name of the index.</p>
 </section>
 <section id="decompression">
-<h2><span class="section-number">7.2. </span>Decompression<a class="headerlink" href="#decompression" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">7.2. </span>Decompression<a class="headerlink" href="#decompression" title="Permalink to this heading">¶</a></h2>
 <p>A compressed index can then be decompressed by</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle decompress <span class="o">[</span>-K<span class="o">]</span> &lt;archive.tar.gz&gt; <span class="o">[</span>&lt;output.dir&gt;<span class="o">]</span>
 </pre></div>
@@ -190,8 +197,8 @@ If the option <code class="docutils literal notranslate"><span class="pre">-K</s
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2021, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+        &#169; Copyright 2015-2022, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

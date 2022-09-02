@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>5. Building a custom database &#8212; ProPhyle 0.3.3.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -12,6 +12,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="Search within ProPhyle 0.3.3.1 documentation"
@@ -96,8 +97,9 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="contents.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">5. Building a custom database</a><ul>
 <li><a class="reference internal" href="#building-a-custom-database-with-user-provided-data">5.1. Building a custom database with user-provided data</a></li>
 <li><a class="reference internal" href="#building-a-custom-database-with-refseq-genomes-and-the-ncbi-taxonomy">5.2. Building a custom database with RefSeq genomes and the NCBI taxonomy</a><ul>
@@ -110,12 +112,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="standard_db.html"
-                        title="previous chapter"><span class="section-number">4. </span>Building a standard database</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="classify.html"
-                        title="next chapter"><span class="section-number">6. </span>Classifying reads</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="standard_db.html"
+                          title="previous chapter"><span class="section-number">4. </span>Building a standard database</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="classify.html"
+                          title="next chapter"><span class="section-number">6. </span>Classifying reads</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -132,7 +139,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
 
@@ -142,8 +149,8 @@
           <div class="body" role="main">
             
   <section id="building-a-custom-database">
-<span id="custom-db"></span><h1><span class="section-number">5. </span>Building a custom database<a class="headerlink" href="#building-a-custom-database" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="contents">
+<span id="custom-db"></span><h1><span class="section-number">5. </span>Building a custom database<a class="headerlink" href="#building-a-custom-database" title="Permalink to this heading">¶</a></h1>
+<nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#building-a-custom-database-with-user-provided-data" id="id2">Building a custom database with user-provided data</a></p></li>
 <li><p><a class="reference internal" href="#building-a-custom-database-with-refseq-genomes-and-the-ncbi-taxonomy" id="id3">Building a custom database with RefSeq genomes and the NCBI taxonomy</a></p>
@@ -154,14 +161,14 @@
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 <section id="building-a-custom-database-with-user-provided-data">
-<h2><span class="section-number">5.1. </span>Building a custom database with user-provided data<a class="headerlink" href="#building-a-custom-database-with-user-provided-data" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>Building a custom database with user-provided data<a class="headerlink" href="#building-a-custom-database-with-user-provided-data" title="Permalink to this heading">¶</a></h2>
 </section>
 <section id="building-a-custom-database-with-refseq-genomes-and-the-ncbi-taxonomy">
-<h2><span class="section-number">5.2. </span>Building a custom database with RefSeq genomes and the NCBI taxonomy<a class="headerlink" href="#building-a-custom-database-with-refseq-genomes-and-the-ncbi-taxonomy" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>Building a custom database with RefSeq genomes and the NCBI taxonomy<a class="headerlink" href="#building-a-custom-database-with-refseq-genomes-and-the-ncbi-taxonomy" title="Permalink to this heading">¶</a></h2>
 <section id="download-sequences-from-ncbi">
-<h3>Download sequences from NCBI<a class="headerlink" href="#download-sequences-from-ncbi" title="Permalink to this headline">¶</a></h3>
+<h3>Download sequences from NCBI<a class="headerlink" href="#download-sequences-from-ncbi" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Create a subdirectory in ProPhyle’s main directory, and change the working directory to the newly created one</p></li>
 <li><p>Download an <code class="docutils literal notranslate"><span class="pre">assembly_summary.txt</span></code> file from NCBI’s FTP server. For RefSeq’s bacterial genomes, follow this <a class="reference external" href="ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt">link</a>. More information about these files can be found <a class="reference external" href="ftp://ftp.ncbi.nlm.nih.gov/genomes/README_assembly_summary.txt">here</a></p></li>
@@ -181,7 +188,7 @@ cut -f <span class="m">1</span>,2 ftpselection.tsv &gt;acc2taxid.tsv
 </ul>
 </section>
 <section id="build-a-tree">
-<h3>Build a tree<a class="headerlink" href="#build-a-tree" title="Permalink to this headline">¶</a></h3>
+<h3>Build a tree<a class="headerlink" href="#build-a-tree" title="Permalink to this heading">¶</a></h3>
 <p>Build a taxonomic tree for the downloaded sequences using</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle_ncbi_tree.py &lt;library_name&gt; &lt;library_main_dir&gt;<span class="se">\</span>
         &lt;output_file&gt; acc2taxid.tsv -l &lt;log_file&gt;
@@ -201,7 +208,7 @@ built using <a class="reference external" href="http://etetoolkit.org/">ETE Tool
 easy to adapt any tree to match the requirements above.</p>
 </section>
 <section id="build-the-index">
-<h3>Build the index<a class="headerlink" href="#build-the-index" title="Permalink to this headline">¶</a></h3>
+<h3>Build the index<a class="headerlink" href="#build-the-index" title="Permalink to this heading">¶</a></h3>
 <p>Run the standard command to build ProPhyle index</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle index -k &lt;kmer_length&gt; <span class="o">[</span>-g &lt;library_main_dir&gt;<span class="o">]</span> &lt;tree_1.nw&gt; <span class="o">[</span>&lt;tree_2.nw&gt; ...<span class="o">]</span> &lt;index_dir&gt;
 </pre></div>
@@ -238,8 +245,8 @@ easy to adapt any tree to match the requirements above.</p>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2021, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+        &#169; Copyright 2015-2022, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

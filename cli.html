@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>9. Command-line interface &#8212; ProPhyle 0.3.3.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -12,6 +12,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="Search within ProPhyle 0.3.3.1 documentation"
@@ -92,8 +93,9 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="contents.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">9. Command-line interface</a><ul>
 <li><a class="reference internal" href="#prophyle-the-main-program">9.1. ProPhyle – the main program</a><ul>
 <li><a class="reference internal" href="#prophyle"><code class="docutils literal notranslate"><span class="pre">prophyle</span></code></a></li>
@@ -115,9 +117,12 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="formats.html"
-                        title="previous chapter"><span class="section-number">8. </span>File formats</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="formats.html"
+                          title="previous chapter"><span class="section-number">8. </span>File formats</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -134,7 +139,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
 
@@ -144,8 +149,8 @@
           <div class="body" role="main">
             
   <section id="command-line-interface">
-<span id="cli"></span><h1><span class="section-number">9. </span>Command-line interface<a class="headerlink" href="#command-line-interface" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="contents">
+<span id="cli"></span><h1><span class="section-number">9. </span>Command-line interface<a class="headerlink" href="#command-line-interface" title="Permalink to this heading">¶</a></h1>
+<nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#prophyle-the-main-program" id="id2">ProPhyle – the main program</a></p>
 <ul>
@@ -165,11 +170,11 @@
 <li><p><a class="reference internal" href="#prophyle-propagation-postprocessing-py" id="id14"><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_postprocessing.py</span></code></a></p></li>
 <li><p><a class="reference internal" href="#prophyle-validate-tree-py" id="id15"><code class="docutils literal notranslate"><span class="pre">prophyle_validate_tree.py</span></code></a></p></li>
 </ul>
-</div>
+</nav>
 <section id="prophyle-the-main-program">
-<h2><span class="section-number">9.1. </span>ProPhyle – the main program<a class="headerlink" href="#prophyle-the-main-program" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>ProPhyle – the main program<a class="headerlink" href="#prophyle-the-main-program" title="Permalink to this heading">¶</a></h2>
 <section id="prophyle">
-<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span></code><a class="headerlink" href="#prophyle" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span></code><a class="headerlink" href="#prophyle" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle  -h
 
@@ -200,7 +205,7 @@ subcommands:
 </div></blockquote>
 </section>
 <section id="prophyle-download">
-<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">download</span></code><a class="headerlink" href="#prophyle-download" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">download</span></code><a class="headerlink" href="#prophyle-download" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle download -h
 
@@ -222,7 +227,7 @@ optional arguments:
 </div></blockquote>
 </section>
 <section id="prophyle-index">
-<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">index</span></code><a class="headerlink" href="#prophyle-index" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">index</span></code><a class="headerlink" href="#prophyle-index" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle index -h
 
@@ -256,7 +261,7 @@ optional arguments:
 </div></blockquote>
 </section>
 <section id="prophyle-classify">
-<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">classify</span></code><a class="headerlink" href="#prophyle-classify" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">classify</span></code><a class="headerlink" href="#prophyle-classify" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle classify -h
 
@@ -291,7 +296,7 @@ optional arguments:
 </div></blockquote>
 </section>
 <section id="prophyle-compress">
-<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">compress</span></code><a class="headerlink" href="#prophyle-compress" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">compress</span></code><a class="headerlink" href="#prophyle-compress" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle compress -h
 
@@ -310,7 +315,7 @@ optional arguments:
 </div></blockquote>
 </section>
 <section id="prophyle-decompress">
-<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">decompress</span></code><a class="headerlink" href="#prophyle-decompress" title="Permalink to this headline">¶</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">decompress</span></code><a class="headerlink" href="#prophyle-decompress" title="Permalink to this heading">¶</a></h3>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle decompress -h
 
@@ -331,7 +336,7 @@ optional arguments:
 </section>
 </section>
 <section id="prophyle-assembler">
-<h2><span class="section-number">9.2. </span><code class="docutils literal notranslate"><span class="pre">prophyle_assembler</span></code><a class="headerlink" href="#prophyle-assembler" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span><code class="docutils literal notranslate"><span class="pre">prophyle_assembler</span></code><a class="headerlink" href="#prophyle-assembler" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle_assembler -h
 
@@ -362,7 +367,7 @@ Note that &#39;-&#39; can be used for standard input/output.
 </div></blockquote>
 </section>
 <section id="id1">
-<h2><span class="section-number">9.3. </span><code class="docutils literal notranslate"><span class="pre">prophyle_index</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.3. </span><code class="docutils literal notranslate"><span class="pre">prophyle_index</span></code><a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle_index -h
 
@@ -403,7 +408,7 @@ Options: -k INT    length of k-mer
 </div></blockquote>
 </section>
 <section id="prophyle-assignment">
-<h2><span class="section-number">9.4. </span><code class="docutils literal notranslate"><span class="pre">prophyle_assignment</span></code><a class="headerlink" href="#prophyle-assignment" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.4. </span><code class="docutils literal notranslate"><span class="pre">prophyle_assignment</span></code><a class="headerlink" href="#prophyle-assignment" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle_assignment.py -h
 
@@ -433,7 +438,7 @@ optional arguments:
 </div></blockquote>
 </section>
 <section id="prophyle-propagation-makefile-py">
-<h2><span class="section-number">9.5. </span><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_makefile.py</span></code><a class="headerlink" href="#prophyle-propagation-makefile-py" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.5. </span><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_makefile.py</span></code><a class="headerlink" href="#prophyle-propagation-makefile-py" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle_propagation_makefile.py -h
 
@@ -457,7 +462,7 @@ optional arguments:
 </div></blockquote>
 </section>
 <section id="prophyle-propagation-preprocessing-py">
-<h2><span class="section-number">9.6. </span><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_preprocessing.py</span></code><a class="headerlink" href="#prophyle-propagation-preprocessing-py" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.6. </span><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_preprocessing.py</span></code><a class="headerlink" href="#prophyle-propagation-preprocessing-py" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle_propagation_preprocessing.py -h
 
@@ -486,7 +491,7 @@ optional arguments:
 </div></blockquote>
 </section>
 <section id="prophyle-propagation-postprocessing-py">
-<h2><span class="section-number">9.7. </span><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_postprocessing.py</span></code><a class="headerlink" href="#prophyle-propagation-postprocessing-py" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.7. </span><code class="docutils literal notranslate"><span class="pre">prophyle_propagation_postprocessing.py</span></code><a class="headerlink" href="#prophyle-propagation-postprocessing-py" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle_propagation_postprocessing.py -h
 
@@ -511,7 +516,7 @@ optional arguments:
 </div></blockquote>
 </section>
 <section id="prophyle-validate-tree-py">
-<h2><span class="section-number">9.8. </span><code class="docutils literal notranslate"><span class="pre">prophyle_validate_tree.py</span></code><a class="headerlink" href="#prophyle-validate-tree-py" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.8. </span><code class="docutils literal notranslate"><span class="pre">prophyle_validate_tree.py</span></code><a class="headerlink" href="#prophyle-validate-tree-py" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><div class="code text highlight-default notranslate"><div class="highlight"><pre><span></span>$ prophyle_validate_tree.py -h
 
@@ -555,8 +560,8 @@ optional arguments:
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2021, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+        &#169; Copyright 2015-2022, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

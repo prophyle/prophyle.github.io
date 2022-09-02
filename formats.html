@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>8. File formats &#8212; ProPhyle 0.3.3.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -12,6 +12,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="Search within ProPhyle 0.3.3.1 documentation"
@@ -96,8 +97,9 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="contents.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">8. File formats</a><ul>
 <li><a class="reference internal" href="#input-data-formats">8.1. Input data formats</a><ul>
 <li><a class="reference internal" href="#newick-trees">Newick trees</a><ul>
@@ -165,12 +167,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="compress.html"
-                        title="previous chapter"><span class="section-number">7. </span>Compressing indexes for transmission</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="cli.html"
-                        title="next chapter"><span class="section-number">9. </span>Command-line interface</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="compress.html"
+                          title="previous chapter"><span class="section-number">7. </span>Compressing indexes for transmission</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="cli.html"
+                          title="next chapter"><span class="section-number">9. </span>Command-line interface</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -187,7 +194,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
 
@@ -197,8 +204,8 @@
           <div class="body" role="main">
             
   <section id="file-formats">
-<span id="formats"></span><h1><span class="section-number">8. </span>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="contents">
+<span id="formats"></span><h1><span class="section-number">8. </span>File formats<a class="headerlink" href="#file-formats" title="Permalink to this heading">¶</a></h1>
+<nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#input-data-formats" id="id30">Input data formats</a></p>
 <ul>
@@ -276,14 +283,14 @@
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 <section id="input-data-formats">
-<h2><span class="section-number">8.1. </span>Input data formats<a class="headerlink" href="#input-data-formats" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>Input data formats<a class="headerlink" href="#input-data-formats" title="Permalink to this heading">¶</a></h2>
 <p>Node names should not contain the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> character, and they should not be equal to <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">0</span></code>, and <code class="docutils literal notranslate"><span class="pre">root</span></code> (reserved names).</p>
 <section id="newick-trees">
-<span id="index-0"></span><h3>Newick trees<a class="headerlink" href="#newick-trees" title="Permalink to this headline">¶</a></h3>
+<span id="index-0"></span><h3>Newick trees<a class="headerlink" href="#newick-trees" title="Permalink to this heading">¶</a></h3>
 <section id="introduction">
-<h4>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h4>
+<h4>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h4>
 <p>The Newick format can be used for index construction
 in combination with the <code class="docutils literal notranslate"><span class="pre">-A</span></code> parameter.
 Names of files with sequences will be inferred from the names of leaves
@@ -293,14 +300,14 @@ as the lexigraphically minimal name of children’s names with incremented ID.
 Branch lenghts are ignored.</p>
 </section>
 <section id="specification">
-<h4>Specification<a class="headerlink" href="#specification" title="Permalink to this headline">¶</a></h4>
+<h4>Specification<a class="headerlink" href="#specification" title="Permalink to this heading">¶</a></h4>
 <p>See specifications of Newick on the
 <a class="reference external" href="http://evolution.genetics.washington.edu/phylip/newicktree.html">Phylip website</a>
 or on
 <a class="reference external" href="https://en.wikipedia.org/wiki/Newick_format">Wikipedia</a>.</p>
 </section>
 <section id="examples">
-<h4>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h4>
+<h4>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h4>
 <p>A Newick tree with named leaves:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">((</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">,</span><span class="n">n3</span><span class="p">),(</span><span class="n">n5</span><span class="p">,</span><span class="n">n6</span><span class="p">));</span>
 </pre></div>
@@ -316,21 +323,21 @@ or on
 </section>
 </section>
 <section id="nhx-trees">
-<span id="index-1"></span><h3>NHX trees<a class="headerlink" href="#nhx-trees" title="Permalink to this headline">¶</a></h3>
+<span id="index-1"></span><h3>NHX trees<a class="headerlink" href="#nhx-trees" title="Permalink to this heading">¶</a></h3>
 <section id="id1">
-<h4>Introduction<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h4>Introduction<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h4>
 <p><a class="reference external" href="https://sites.google.com/site/cmzmasek/home/software/forester/nhx">New Hampshire X Format</a>
 is parsed using the <a class="reference external" href="http://etetoolkit.org/">ETE3 library</a>  (see specification of <a class="reference external" href="http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#reading-and-writing-newick-trees">Format 1</a>).</p>
 </section>
 <section id="id2">
-<h4>Specification<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<h4>Specification<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h4>
 <blockquote>
-<div><table class="colwidths-given docutils align-default" id="id20">
+<div><table class="docutils align-default" id="id20">
 <caption><span class="caption-text">NHX attributes</span><a class="headerlink" href="#id20" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 21%" />
-<col style="width: 21%" />
-<col style="width: 59%" />
+<col style="width: 20.6%" />
+<col style="width: 20.6%" />
+<col style="width: 58.8%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
@@ -376,7 +383,7 @@ is parsed using the <a class="reference external" href="http://etetoolkit.org/">
 </div></blockquote>
 </section>
 <section id="example">
-<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h4>
 <p>Previous tree after autocompleting to NHX:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(((</span><span class="n">n1</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">path</span><span class="o">=</span><span class="n">n1</span><span class="o">.</span><span class="n">fa</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">],</span><span class="n">n2</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">path</span><span class="o">=</span><span class="n">n2</span><span class="o">.</span><span class="n">fa</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">])</span><span class="n">o1</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">],(</span><span class="n">n3</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">path</span><span class="o">=</span><span class="n">n3</span><span class="o">.</span><span class="n">fa</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">],</span><span class="n">n4</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">path</span><span class="o">=</span><span class="n">n4</span><span class="o">.</span><span class="n">fa</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">],</span><span class="n">n5</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">path</span><span class="o">=</span><span class="n">n5</span><span class="o">.</span><span class="n">fa</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">])</span><span class="n">o2</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">])</span><span class="n">p1</span><span class="p">:</span><span class="mi">0</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">0.0</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">])</span><span class="n">merge_root</span><span class="p">:</span><span class="mi">1</span><span class="p">[</span><span class="o">&amp;&amp;</span><span class="n">NHX</span><span class="p">:</span><span class="n">dist</span><span class="o">=</span><span class="mf">1.0</span><span class="p">:</span><span class="n">support</span><span class="o">=</span><span class="mf">1.0</span><span class="p">];</span>
 </pre></div>
@@ -384,30 +391,30 @@ is parsed using the <a class="reference external" href="http://etetoolkit.org/">
 </section>
 </section>
 <section id="sequences">
-<h3>Sequences<a class="headerlink" href="#sequences" title="Permalink to this headline">¶</a></h3>
+<h3>Sequences<a class="headerlink" href="#sequences" title="Permalink to this heading">¶</a></h3>
 <p>Input sequences can be provided in the FASTA or FASTQ formats. Any non-<code class="docutils literal notranslate"><span class="pre">ACGT</span></code> characters are treated as
 unknown nucleotides and k-mers containing them thus discarded.
 Sequence names are ignored.</p>
 </section>
 </section>
 <section id="assignments">
-<h2><span class="section-number">8.2. </span>Assignments<a class="headerlink" href="#assignments" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>Assignments<a class="headerlink" href="#assignments" title="Permalink to this heading">¶</a></h2>
 <section id="read-assignments-in-sam-bam">
-<span id="index-2"></span><h3>Read assignments in SAM/BAM<a class="headerlink" href="#read-assignments-in-sam-bam" title="Permalink to this headline">¶</a></h3>
+<span id="index-2"></span><h3>Read assignments in SAM/BAM<a class="headerlink" href="#read-assignments-in-sam-bam" title="Permalink to this heading">¶</a></h3>
 <section id="id3">
-<h4>Introduction<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<h4>Introduction<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h4>
 <p>ProPhyle uses <a class="reference external" href="http://samtools.github.io/hts-specs/">SAM/BAM</a> as
 the main format for reporting the final assignments, i.e.,
 the output of classification.</p>
 </section>
 <section id="id4">
-<h4>Specification<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<h4>Specification<a class="headerlink" href="#id4" title="Permalink to this heading">¶</a></h4>
 <blockquote>
-<div><table class="colwidths-given docutils align-default" id="id21">
+<div><table class="docutils align-default" id="id21">
 <caption><span class="caption-text">ProPhyle SAM headers</span><a class="headerlink" href="#id21" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 75%" />
+<col style="width: 25.0%" />
+<col style="width: 75.0%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Tag</p></th>
@@ -431,12 +438,12 @@ the output of classification.</p>
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><table class="colwidths-given docutils align-default" id="id22">
+<div><table class="docutils align-default" id="id22">
 <caption><span class="caption-text">ProPhyle SAM fields</span><a class="headerlink" href="#id22" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 77%" />
+<col style="width: 11.5%" />
+<col style="width: 11.5%" />
+<col style="width: 76.9%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Column</p></th>
@@ -496,13 +503,13 @@ the output of classification.</p>
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><table class="colwidths-given docutils align-default" id="id23">
+<div><table class="docutils align-default" id="id23">
 <caption><span class="caption-text">ProPhyle SAM tags</span><a class="headerlink" href="#id23" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 54%" />
-<col style="width: 25%" />
+<col style="width: 10.7%" />
+<col style="width: 10.7%" />
+<col style="width: 53.6%" />
+<col style="width: 25.0%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Tag</p></th>
@@ -571,20 +578,20 @@ the output of classification.</p>
 </section>
 </section>
 <section id="read-assignments-in-a-kraken-like-format">
-<h3>Read assignments in a Kraken-like format<a class="headerlink" href="#read-assignments-in-a-kraken-like-format" title="Permalink to this headline">¶</a></h3>
+<h3>Read assignments in a Kraken-like format<a class="headerlink" href="#read-assignments-in-a-kraken-like-format" title="Permalink to this heading">¶</a></h3>
 <section id="id5">
-<h4>Introduction<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<h4>Introduction<a class="headerlink" href="#id5" title="Permalink to this heading">¶</a></h4>
 <p>ProPhyle uses a format similar to the <a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#output-format">Kraken output</a> for reporting k-mer matches by <a class="reference external" href="https://github.com/prophyle/prophyle_index">ProPhyle Index</a>. It can also use this format
 for reporting the final assignments.</p>
 </section>
 <section id="id6">
-<h4>Specification<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<h4>Specification<a class="headerlink" href="#id6" title="Permalink to this heading">¶</a></h4>
 <blockquote>
-<div><table class="colwidths-given docutils align-default" id="id24">
+<div><table class="docutils align-default" id="id24">
 <caption><span class="caption-text">Kraken-like format</span><a class="headerlink" href="#id24" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 11%" />
-<col style="width: 89%" />
+<col style="width: 10.7%" />
+<col style="width: 89.3%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Column</p></th>
@@ -612,7 +619,7 @@ for reporting the final assignments.</p>
 </div></blockquote>
 </section>
 <section id="id7">
-<h4>Examples<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<h4>Examples<a class="headerlink" href="#id7" title="Permalink to this heading">¶</a></h4>
 <p>Assigned k-mers, no sequences:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">U</span>       <span class="n">read3</span>   <span class="mi">0</span>       <span class="mi">8</span>       <span class="n">left</span><span class="p">,</span><span class="n">right</span><span class="p">:</span><span class="mi">1</span> <span class="n">A</span><span class="p">:</span><span class="mi">3</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span> <span class="n">right</span><span class="p">:</span><span class="mi">1</span>
 </pre></div>
@@ -625,21 +632,21 @@ for reporting the final assignments.</p>
 </section>
 </section>
 <section id="abundances-estimates-experimental">
-<h2><span class="section-number">8.3. </span>Abundances estimates (experimental)<a class="headerlink" href="#abundances-estimates-experimental" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.3. </span>Abundances estimates (experimental)<a class="headerlink" href="#abundances-estimates-experimental" title="Permalink to this heading">¶</a></h2>
 <section id="abundances-in-the-kraken-report-format">
-<span id="index-3"></span><h3>Abundances in the Kraken report format<a class="headerlink" href="#abundances-in-the-kraken-report-format" title="Permalink to this headline">¶</a></h3>
+<span id="index-3"></span><h3>Abundances in the Kraken report format<a class="headerlink" href="#abundances-in-the-kraken-report-format" title="Permalink to this heading">¶</a></h3>
 <section id="id8">
-<h4>Introduction<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<h4>Introduction<a class="headerlink" href="#id8" title="Permalink to this heading">¶</a></h4>
 </section>
 <section id="id9">
-<h4>Specification<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<h4>Specification<a class="headerlink" href="#id9" title="Permalink to this heading">¶</a></h4>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/kraken/MANUAL.html#sample-reports">kraken-report</a> format:</p>
 <blockquote>
-<div><table class="colwidths-given docutils align-default" id="id25">
+<div><table class="docutils align-default" id="id25">
 <caption><span class="caption-text">Kraken report format</span><a class="headerlink" href="#id25" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Column</p></th>
@@ -671,20 +678,20 @@ for reporting the final assignments.</p>
 </section>
 </section>
 <section id="abundances-in-the-metaphlan2-report-format">
-<span id="index-4"></span><h3>Abundances in the MetaPhlAn2 report format<a class="headerlink" href="#abundances-in-the-metaphlan2-report-format" title="Permalink to this headline">¶</a></h3>
+<span id="index-4"></span><h3>Abundances in the MetaPhlAn2 report format<a class="headerlink" href="#abundances-in-the-metaphlan2-report-format" title="Permalink to this heading">¶</a></h3>
 <section id="id10">
-<h4>Introduction<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<h4>Introduction<a class="headerlink" href="#id10" title="Permalink to this heading">¶</a></h4>
 <p><a class="reference external" href="http://huttenhower.sph.harvard.edu/metaphlan2">MetaPhlAn2</a> is a computational tool for profiling the composition of microbial communities from metagenomic sequencing data.</p>
 </section>
 <section id="id11">
-<h4>Specification<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<h4>Specification<a class="headerlink" href="#id11" title="Permalink to this heading">¶</a></h4>
 <p><a class="reference external" href="https://bitbucket.org/biobakery/biobakery/wiki/metaphlan2#rst-header-output-files">MetaPhlAn2 report format</a></p>
 <blockquote>
-<div><table class="colwidths-given docutils align-default" id="id26">
+<div><table class="docutils align-default" id="id26">
 <caption><span class="caption-text">Metaphlan 2 report format</span><a class="headerlink" href="#id26" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Column</p></th>
@@ -705,19 +712,19 @@ for reporting the final assignments.</p>
 </section>
 </section>
 <section id="abundances-in-the-centrifuge-report-format">
-<span id="index-5"></span><h3>Abundances in the Centrifuge report format<a class="headerlink" href="#abundances-in-the-centrifuge-report-format" title="Permalink to this headline">¶</a></h3>
+<span id="index-5"></span><h3>Abundances in the Centrifuge report format<a class="headerlink" href="#abundances-in-the-centrifuge-report-format" title="Permalink to this heading">¶</a></h3>
 <section id="id12">
-<h4>Introduction<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<h4>Introduction<a class="headerlink" href="#id12" title="Permalink to this heading">¶</a></h4>
 <p><a class="reference external" href="https://ccb.jhu.edu/software/centrifuge/manual.shtml#centrifuge-summary-output-the-default-filename-is-centrifuge_report.tsv">Centrifuge</a> format.</p>
 </section>
 <section id="id13">
-<h4>Specification<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<h4>Specification<a class="headerlink" href="#id13" title="Permalink to this heading">¶</a></h4>
 <blockquote>
-<div><table class="colwidths-given docutils align-default" id="id27">
+<div><table class="docutils align-default" id="id27">
 <caption><span class="caption-text">Centrifuge format</span><a class="headerlink" href="#id27" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Column</p></th>
@@ -751,7 +758,7 @@ for reporting the final assignments.</p>
 </div></blockquote>
 </section>
 <section id="id14">
-<h4>Example<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<h4>Example<a class="headerlink" href="#id14" title="Permalink to this heading">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#name                                                           taxID   taxRank    kmerCount   numReads   numUniqueReads   abundance</span>
 <span class="n">Wigglesworthia</span> <span class="n">glossinidia</span> <span class="n">endosymbiont</span> <span class="n">of</span> <span class="n">Glossina</span> <span class="n">brevipalpis</span> <span class="mi">36870</span>   <span class="n">leaf</span>       <span class="mi">703004</span>      <span class="mf">5981.37</span>    <span class="mi">5964</span>             <span class="mi">0</span>
 </pre></div>
@@ -760,22 +767,22 @@ for reporting the final assignments.</p>
 </section>
 </section>
 <section id="internal-prophyle-formats">
-<h2><span class="section-number">8.4. </span>Internal ProPhyle formats<a class="headerlink" href="#internal-prophyle-formats" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4. </span>Internal ProPhyle formats<a class="headerlink" href="#internal-prophyle-formats" title="Permalink to this heading">¶</a></h2>
 <section id="index-6">
-<span id="id15"></span><h3>ProPhyle Index<a class="headerlink" href="#index-6" title="Permalink to this headline">¶</a></h3>
+<span id="id15"></span><h3>ProPhyle Index<a class="headerlink" href="#index-6" title="Permalink to this heading">¶</a></h3>
 <section id="id16">
-<h4>Introduction<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h4>
+<h4>Introduction<a class="headerlink" href="#id16" title="Permalink to this heading">¶</a></h4>
 <p>ProPhyle index directory contains a BWA index,
 a k-LCP array and several auxiliary files.</p>
 </section>
 <section id="id17">
-<h4>Specification<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h4>
+<h4>Specification<a class="headerlink" href="#id17" title="Permalink to this heading">¶</a></h4>
 <blockquote>
-<div><table class="colwidths-given docutils align-default" id="id28">
+<div><table class="docutils align-default" id="id28">
 <caption><span class="caption-text">ProPhyle index</span><a class="headerlink" href="#id28" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>File name</p></th>
@@ -825,21 +832,21 @@ a k-LCP array and several auxiliary files.</p>
 </section>
 </section>
 <section id="compressed-prophyle-index-for-transmission">
-<span id="index-7"></span><h3>Compressed ProPhyle index for transmission<a class="headerlink" href="#compressed-prophyle-index-for-transmission" title="Permalink to this headline">¶</a></h3>
+<span id="index-7"></span><h3>Compressed ProPhyle index for transmission<a class="headerlink" href="#compressed-prophyle-index-for-transmission" title="Permalink to this heading">¶</a></h3>
 <section id="id18">
-<h4>Introduction<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h4>
+<h4>Introduction<a class="headerlink" href="#id18" title="Permalink to this heading">¶</a></h4>
 <p>ProPhyle can create a <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> archive with the a subset of the index files so
 that the original index can be derived.</p>
 </section>
 <section id="id19">
-<h4>Specification<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h4>
+<h4>Specification<a class="headerlink" href="#id19" title="Permalink to this heading">¶</a></h4>
 <p>The archive contains the following subset of the original index files:</p>
 <blockquote>
-<div><table class="colwidths-given docutils align-default" id="id29">
+<div><table class="docutils align-default" id="id29">
 <caption><span class="caption-text">Compressed ProPhyle index</span><a class="headerlink" href="#id29" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>File name</p></th>
@@ -904,8 +911,8 @@ that the original index can be derived.</p>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2021, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+        &#169; Copyright 2015-2022, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

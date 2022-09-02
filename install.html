@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>3. Installing ProPhyle &#8212; ProPhyle 0.3.3.1 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -12,6 +12,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="Search within ProPhyle 0.3.3.1 documentation"
@@ -96,8 +97,9 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="contents.html">Table of Contents</a></h3>
-  <ul>
+  <div>
+    <h3><a href="contents.html">Table of Contents</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">3. Installing ProPhyle</a><ul>
 <li><a class="reference internal" href="#installing-prophyle-using-bioconda">3.1. Installing ProPhyle using Bioconda</a></li>
 <li><a class="reference internal" href="#installing-prophyle-using-pip">3.2. Installing ProPhyle using PIP</a></li>
@@ -110,12 +112,17 @@
 </li>
 </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="requirements.html"
-                        title="previous chapter"><span class="section-number">2. </span>Requirements</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="standard_db.html"
-                        title="next chapter"><span class="section-number">4. </span>Building a standard database</a></p>
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="requirements.html"
+                          title="previous chapter"><span class="section-number">2. </span>Requirements</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="standard_db.html"
+                          title="next chapter"><span class="section-number">4. </span>Building a standard database</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -132,7 +139,7 @@
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
 
@@ -142,7 +149,7 @@
           <div class="body" role="main">
             
   <section id="installing-prophyle">
-<span id="install"></span><h1><span class="section-number">3. </span>Installing ProPhyle<a class="headerlink" href="#installing-prophyle" title="Permalink to this headline">¶</a></h1>
+<span id="install"></span><h1><span class="section-number">3. </span>Installing ProPhyle<a class="headerlink" href="#installing-prophyle" title="Permalink to this heading">¶</a></h1>
 <p>ProPhyle is written in Python, C and C++. It is distributed as a Python package
 and all C/C++ programs are compiled upon the first execution
 of the main program. ProPhyle requires a Unix operating system and the following dependencies:</p>
@@ -152,15 +159,15 @@ of the main program. ProPhyle requires a Unix operating system and the following
 <li><p>ZLib</p></li>
 </ul>
 <p>There are multiple ways of installation:</p>
-<div class="contents local topic" id="contents">
+<nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#installing-prophyle-using-bioconda" id="id1">Installing ProPhyle using Bioconda</a></p></li>
 <li><p><a class="reference internal" href="#installing-prophyle-using-pip" id="id2">Installing ProPhyle using PIP</a></p></li>
 <li><p><a class="reference internal" href="#running-prophyle-directly-from-the-repository" id="id3">Running ProPhyle directly from the repository</a></p></li>
 </ul>
-</div>
+</nav>
 <section id="installing-prophyle-using-bioconda">
-<h2><span class="section-number">3.1. </span>Installing ProPhyle using Bioconda<a class="headerlink" href="#installing-prophyle-using-bioconda" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Installing ProPhyle using Bioconda<a class="headerlink" href="#installing-prophyle-using-bioconda" title="Permalink to this heading">¶</a></h2>
 <p>To set-up Bioconda, install
 <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a>
 or another Conda distribution, and
@@ -182,7 +189,7 @@ conda config --add channels bioconda
 </div>
 </section>
 <section id="installing-prophyle-using-pip">
-<h2><span class="section-number">3.2. </span>Installing ProPhyle using PIP<a class="headerlink" href="#installing-prophyle-using-pip" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.2. </span>Installing ProPhyle using PIP<a class="headerlink" href="#installing-prophyle-using-pip" title="Permalink to this heading">¶</a></h2>
 <p>There are three options of installing ProPhyle using PIP.</p>
 <ol class="arabic">
 <li><p>From PyPI</p>
@@ -211,7 +218,7 @@ conda config --add channels bioconda
 </ol>
 </section>
 <section id="running-prophyle-directly-from-the-repository">
-<h2><span class="section-number">3.3. </span>Running ProPhyle directly from the repository<a class="headerlink" href="#running-prophyle-directly-from-the-repository" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">3.3. </span>Running ProPhyle directly from the repository<a class="headerlink" href="#running-prophyle-directly-from-the-repository" title="Permalink to this heading">¶</a></h2>
 <p>It also is possible to run ProPhyle directly from the repository, by calling
 the main script</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle/prophyle/prophyle.py
@@ -228,7 +235,7 @@ be clonned with the <cite>–recursive</cite> option</p>
 </pre></div>
 </div>
 <section id="adjusting-the-path-variable">
-<h3>Adjusting the PATH variable<a class="headerlink" href="#adjusting-the-path-variable" title="Permalink to this headline">¶</a></h3>
+<h3>Adjusting the PATH variable<a class="headerlink" href="#adjusting-the-path-variable" title="Permalink to this heading">¶</a></h3>
 <p>The ProPhyle path can be prepended to the <cite>$PATH</cite> variable so that ProPhyle
 can be executed in the same way as if it was installed using PIP</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/prophyle/prophyle:<span class="nv">$PATH</span>
@@ -236,7 +243,7 @@ can be executed in the same way as if it was installed using PIP</p>
 </div>
 </section>
 <section id="installing-dependencies">
-<h3>Installing dependencies<a class="headerlink" href="#installing-dependencies" title="Permalink to this headline">¶</a></h3>
+<h3>Installing dependencies<a class="headerlink" href="#installing-dependencies" title="Permalink to this heading">¶</a></h3>
 <p>When run from the repository,
 some of the ProPhyle dependencies, listed in <cite>requirements.txt</cite>, might
 be missing in the system.
@@ -280,8 +287,8 @@ It is possible to install them either using BioConda</p>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2021, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.2.
+        &#169; Copyright 2015-2022, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
