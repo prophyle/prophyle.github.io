@@ -170,19 +170,19 @@ of the main program. ProPhyle requires a Unix operating system and the following
 <a class="reference external" href="https://conda.io/miniconda.html">Miniconda</a>
 or another Conda distribution, and
 add <a class="reference external" href="https://bioconda.github.io/">Bioconda channels</a></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels defaults
-conda config --add channels conda-forge
-conda config --add channels bioconda
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>defaults
+conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
+conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>bioconda
 </pre></div>
 </div>
 <p>You may either create a separate Conda environment
 (which is the recommended approach)</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n prophyle prophyle
-<span class="nb">source</span> activate prophyle
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>prophyle<span class="w"> </span>prophyle
+<span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>prophyle
 </pre></div>
 </div>
 <p>or install ProPhyle directly to your main environment</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install prophyle
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>prophyle
 </pre></div>
 </div>
 </section>
@@ -192,23 +192,23 @@ conda config --add channels bioconda
 <ol class="arabic">
 <li><p>From PyPI</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U prophyle
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>prophyle
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>From Git</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U git+https://github.com/prophyle/prophyle
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>git+https://github.com/prophyle/prophyle
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>From PyPI to the current directory</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install --user prophyle
-<span class="nb">export</span> <span class="nv">PYTHONUSERBASE</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/bin
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>prophyle
+<span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONUSERBASE</span><span class="o">=</span><span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/bin
 </pre></div>
 </div>
 </div></blockquote>
@@ -229,14 +229,14 @@ the main script</p>
 <p>ProPhyle will then automatically adjust all paths of the auxiliary programs.</p>
 <p>Note that ProPhyle uses submodules, therefore the repository needs to
 be clonned with the <cite>–recursive</cite> option</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone --recursive http://github.com/prophyle/prophyle
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--recursive<span class="w"> </span>http://github.com/prophyle/prophyle
 </pre></div>
 </div>
 <section id="adjusting-the-path-variable">
 <h3>Adjusting the PATH variable<a class="headerlink" href="#adjusting-the-path-variable" title="Permalink to this heading">¶</a></h3>
 <p>The ProPhyle path can be prepended to the <cite>$PATH</cite> variable so that ProPhyle
 can be executed in the same way as if it was installed using PIP</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/prophyle/prophyle:<span class="nv">$PATH</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/prophyle/prophyle:<span class="nv">$PATH</span>
 </pre></div>
 </div>
 </section>
@@ -246,11 +246,11 @@ can be executed in the same way as if it was installed using PIP</p>
 some of the ProPhyle dependencies, listed in <cite>requirements.txt</cite>, might
 be missing in the system.
 It is possible to install them either using BioConda</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat prophyle/requirements.txt <span class="p">|</span> perl -pe <span class="s1">&#39;s/==.*//g&#39;</span> <span class="p">|</span> xargs conda install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>prophyle/requirements.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>perl<span class="w"> </span>-pe<span class="w"> </span><span class="s1">&#39;s/==.*//g&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>conda<span class="w"> </span>install
 </pre></div>
 </div>
 <p>or using PIP</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat prophyle/requirements.txt <span class="p">|</span> xargs pip install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>prophyle/requirements.txt<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>pip<span class="w"> </span>install
 </pre></div>
 </div>
 </section>
@@ -285,8 +285,8 @@ It is possible to install them either using BioConda</p>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2022, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.0.0.
+        &#169; Copyright 2015-2023, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

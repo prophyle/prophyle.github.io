@@ -172,11 +172,11 @@
 <li><p>Download an <code class="docutils literal notranslate"><span class="pre">assembly_summary.txt</span></code> file from NCBI’s FTP server. For RefSeq’s bacterial genomes, follow this <a class="reference external" href="ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt">link</a>. More information about these files can be found <a class="reference external" href="ftp://ftp.ncbi.nlm.nih.gov/genomes/README_assembly_summary.txt">here</a></p></li>
 <li><p>Select genomes of interest; the following command will select all complete genomes, but it is sufficient to add more conditions to <code class="docutils literal notranslate"><span class="pre">awk</span></code> to select a subset. Fields 1, 6 and 20 contain respectively the accession number, taxonomic identifier and ftp directory of each genome. <code class="docutils literal notranslate"><span class="pre">acc2taxid.tsv</span></code> will therefore be a tab separated file containing the taxid corresponding to each sequence’s accession number. Please refer to <a class="reference external" href="https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq">NCBI’s genomes download FAQ</a> for further information). Since strain taxids are deprecated, we are working on a solution to create artificial nodes for each genome. For the moment, you can associate the sequences to the species node, by selecting field 7 instead of 6 in the assembly summary, which corresponds to the species taxid.</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk -F <span class="s2">&quot;\t&quot;</span> -v <span class="nv">OFS</span><span class="o">=</span><span class="s2">&quot;\t&quot;</span> <span class="s1">&#39;$12==&quot;Complete Genome&quot; &amp;&amp; $11==&quot;latest&quot;\</span>
-<span class="s1">        {split($1, a, &quot;.&quot;); print a[1], $7, $20}&#39;</span> assembly_summary.txt &gt;ftpselection.tsv
-cut -f <span class="m">3</span> ftpselection.tsv <span class="p">|</span> awk <span class="s1">&#39;BEGIN{FS=OFS=&quot;/&quot;;filesuffix=&quot;genomic.fna.gz&quot;}\</span>
-<span class="s1">        {ftpdir=$0;asm=$10;file=asm&quot;_&quot;filesuffix;print ftpdir,file}&#39;</span> &gt;ftpfilepaths.tsv
-cut -f <span class="m">1</span>,2 ftpselection.tsv &gt;acc2taxid.tsv
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>awk<span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;\t&quot;</span><span class="w"> </span>-v<span class="w"> </span><span class="nv">OFS</span><span class="o">=</span><span class="s2">&quot;\t&quot;</span><span class="w"> </span><span class="s1">&#39;$12==&quot;Complete Genome&quot; &amp;&amp; $11==&quot;latest&quot;\</span>
+<span class="s1">        {split($1, a, &quot;.&quot;); print a[1], $7, $20}&#39;</span><span class="w"> </span>assembly_summary.txt<span class="w"> </span>&gt;ftpselection.tsv
+cut<span class="w"> </span>-f<span class="w"> </span><span class="m">3</span><span class="w"> </span>ftpselection.tsv<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;BEGIN{FS=OFS=&quot;/&quot;;filesuffix=&quot;genomic.fna.gz&quot;}\</span>
+<span class="s1">        {ftpdir=$0;asm=$10;file=asm&quot;_&quot;filesuffix;print ftpdir,file}&#39;</span><span class="w"> </span>&gt;ftpfilepaths.tsv
+cut<span class="w"> </span>-f<span class="w"> </span><span class="m">1</span>,2<span class="w"> </span>ftpselection.tsv<span class="w"> </span>&gt;acc2taxid.tsv
 </pre></div>
 </div>
 <ul class="simple">
@@ -188,8 +188,8 @@ cut -f <span class="m">1</span>,2 ftpselection.tsv &gt;acc2taxid.tsv
 <section id="build-a-tree">
 <h3>Build a tree<a class="headerlink" href="#build-a-tree" title="Permalink to this heading">¶</a></h3>
 <p>Build a taxonomic tree for the downloaded sequences using</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle_ncbi_tree.py &lt;library_name&gt; &lt;library_main_dir&gt;<span class="se">\</span>
-        &lt;output_file&gt; acc2taxid.tsv -l &lt;log_file&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle_ncbi_tree.py<span class="w"> </span>&lt;library_name&gt;<span class="w"> </span>&lt;library_main_dir&gt;<span class="se">\</span>
+<span class="w">        </span>&lt;output_file&gt;<span class="w"> </span>acc2taxid.tsv<span class="w"> </span>-l<span class="w"> </span>&lt;log_file&gt;
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">library_name</span></code> is the name of the subdirectory where the sequences are downloaded (e.g. bacteria, archaea, viral for the standard DBs, or any name of your choice), which will be prepended to the filenames in the tree. <code class="docutils literal notranslate"><span class="pre">library_main_dir</span></code> is the directory where all the sequences are downloaded, which usually is the parent of library_name. This should be used at indexing time (the -g parameter of prophyle index), unless the tree is placed in the very same directory.
@@ -208,7 +208,7 @@ easy to adapt any tree to match the requirements above.</p>
 <section id="build-the-index">
 <h3>Build the index<a class="headerlink" href="#build-the-index" title="Permalink to this heading">¶</a></h3>
 <p>Run the standard command to build ProPhyle index</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle index -k &lt;kmer_length&gt; <span class="o">[</span>-g &lt;library_main_dir&gt;<span class="o">]</span> &lt;tree_1.nw&gt; <span class="o">[</span>&lt;tree_2.nw&gt; ...<span class="o">]</span> &lt;index_dir&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle<span class="w"> </span>index<span class="w"> </span>-k<span class="w"> </span>&lt;kmer_length&gt;<span class="w"> </span><span class="o">[</span>-g<span class="w"> </span>&lt;library_main_dir&gt;<span class="o">]</span><span class="w"> </span>&lt;tree_1.nw&gt;<span class="w"> </span><span class="o">[</span>&lt;tree_2.nw&gt;<span class="w"> </span>...<span class="o">]</span><span class="w"> </span>&lt;index_dir&gt;
 </pre></div>
 </div>
 </section>
@@ -243,8 +243,8 @@ easy to adapt any tree to match the requirements above.</p>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2022, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.0.0.
+        &#169; Copyright 2015-2023, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

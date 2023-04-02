@@ -152,14 +152,14 @@ where <code class="docutils literal notranslate"><span class="pre">&lt;library&g
 The command also copies a prebuild Newick/NHX tree for the specified library.
 If the <cite>-d</cite> parameter is not specified, all files are placed to <cite>~/prophyle</cite>.</p>
 <p>To download all viral and bacterial genomes from RefSeq, execute</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle download bacteria viruses
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle<span class="w"> </span>download<span class="w"> </span>bacteria<span class="w"> </span>viruses
 </pre></div>
 </div>
 </section>
 <section id="index-construction">
 <h2><span class="section-number">4.2. </span>Index construction<a class="headerlink" href="#index-construction" title="Permalink to this heading">¶</a></h2>
 <p>Once a library is downloaded, a ProPhyle index can be constructed using</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle index <span class="o">[</span>-g DIR<span class="o">]</span> <span class="o">[</span>-j INT<span class="o">]</span> <span class="o">[</span>-k INT<span class="o">]</span> <span class="o">[</span>-M<span class="o">]</span> <span class="o">[</span>-P<span class="o">]</span> <span class="o">[</span>-K<span class="o">]</span> &lt;tree.nw&gt; <span class="o">[</span>&lt;tree.nw&gt; ...<span class="o">]</span> &lt;index.dir&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle<span class="w"> </span>index<span class="w"> </span><span class="o">[</span>-g<span class="w"> </span>DIR<span class="o">]</span><span class="w"> </span><span class="o">[</span>-j<span class="w"> </span>INT<span class="o">]</span><span class="w"> </span><span class="o">[</span>-k<span class="w"> </span>INT<span class="o">]</span><span class="w"> </span><span class="o">[</span>-M<span class="o">]</span><span class="w"> </span><span class="o">[</span>-P<span class="o">]</span><span class="w"> </span><span class="o">[</span>-K<span class="o">]</span><span class="w"> </span>&lt;tree.nw&gt;<span class="w"> </span><span class="o">[</span>&lt;tree.nw&gt;<span class="w"> </span>...<span class="o">]</span><span class="w"> </span>&lt;index.dir&gt;
 </pre></div>
 </div>
 <p><cite>&lt;tree.nw&gt;</cite> is a Newick/NHX for the index. The trees from the previous command
@@ -177,7 +177,7 @@ The <cite>-K</cite> parameter can be used to deactivate <em>k</em>-LCP array con
 would be slightly smaller, but querying would become much slower.</p>
 <p>So the entire command for index construction can look, for instance,
 like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle index -k <span class="m">25</span> ~/prophyle/bacteria.nw ~/prophyle/viruses.nw my_BV_index
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle<span class="w"> </span>index<span class="w"> </span>-k<span class="w"> </span><span class="m">25</span><span class="w"> </span>~/prophyle/bacteria.nw<span class="w"> </span>~/prophyle/viruses.nw<span class="w"> </span>my_BV_index
 </pre></div>
 </div>
 <p>Index construction might take several hours, based on the database size, <em>k</em> and the number
@@ -213,8 +213,8 @@ of used cores.</p>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2022, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.0.0.
+        &#169; Copyright 2015-2023, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

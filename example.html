@@ -135,31 +135,31 @@
 <ol class="arabic">
 <li><p>Install ProPhyle using <a class="reference external" href="https://bioconda.github.io/">Bioconda</a>:</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda config --add channels defaults
-conda config --add channels conda-forge
-conda config --add channels bioconda
-conda install prophyle
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>defaults
+conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>conda-forge
+conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>bioconda
+conda<span class="w"> </span>install<span class="w"> </span>prophyle
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Download the <a class="reference external" href="https://www.ncbi.nlm.nih.gov/refseq/">RefSeq</a> bacterial database:</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle download bacteria
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle<span class="w"> </span>download<span class="w"> </span>bacteria
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Build an index for randomly selected 10% genomes from the E.coli subtree (taxid 561 in the NCBI taxonomy), with k-mer size 25:</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle index -s <span class="m">0</span>.10 -k <span class="m">25</span> ~/prophyle/bacteria.nw@561 _index_ecoli
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle<span class="w"> </span>index<span class="w"> </span>-s<span class="w"> </span><span class="m">0</span>.10<span class="w"> </span>-k<span class="w"> </span><span class="m">25</span><span class="w"> </span>~/prophyle/bacteria.nw@561<span class="w"> </span>_index_ecoli
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Classify your reads:</p>
 <blockquote>
-<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle classify _index_ecoli reads.fq &gt; result.sam
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle<span class="w"> </span>classify<span class="w"> </span>_index_ecoli<span class="w"> </span>reads.fq<span class="w"> </span>&gt;<span class="w"> </span>result.sam
 </pre></div>
 </div>
 </div></blockquote>
@@ -195,8 +195,8 @@ conda install prophyle
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2022, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.0.0.
+        &#169; Copyright 2015-2023, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
