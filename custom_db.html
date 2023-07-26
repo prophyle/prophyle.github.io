@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>5. Building a custom database &#8212; ProPhyle 0.3.3.1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx13.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=67a8c293" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx13.css?v=ec60a4c3" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=870b08a1"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="Search within ProPhyle 0.3.3.1 documentation"
           href="_static/opensearch.xml"/>
@@ -161,6 +161,22 @@
 </nav>
 <section id="building-a-custom-database-with-user-provided-data">
 <h2><span class="section-number">5.1. </span>Building a custom database with user-provided data<a class="headerlink" href="#building-a-custom-database-with-user-provided-data" title="Permalink to this heading">¶</a></h2>
+<ul>
+<li><p>Put all your genomes in a separate directory</p></li>
+<li><p>Create a phylogenetic/taxonomic tree in the newick format,
+with leaves named the same way as the FASTA files (e.g., a leaf named <cite>genome1</cite> will correspond to
+<cite>genome1.fa</cite>). Ensure that all leaves have their respective FASTA files.</p></li>
+<li><dl>
+<dt>Build a ProPhyle index by</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle<span class="w"> </span>index<span class="w"> </span>-A<span class="w"> </span>-k<span class="w"> </span>&lt;kmer_length&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-g<span class="w"> </span><span class="o">[</span>&lt;dir_with_genomes&gt;<span class="o">]</span><span class="w"> </span>&lt;tree_1.nw&gt;<span class="w"> </span>&lt;index_dir&gt;
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>The <cite>-A</cite> parameter will ensure that your tree gets autocompleted, which includes creating
+names for internal nodes.</p>
+</li>
+</ul>
 </section>
 <section id="building-a-custom-database-with-refseq-genomes-and-the-ncbi-taxonomy">
 <h2><span class="section-number">5.2. </span>Building a custom database with RefSeq genomes and the NCBI taxonomy<a class="headerlink" href="#building-a-custom-database-with-refseq-genomes-and-the-ncbi-taxonomy" title="Permalink to this heading">¶</a></h2>
@@ -242,8 +258,8 @@ easy to adapt any tree to match the requirements above.</p>
 
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015-2023, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
+    &#169; Copyright 2015-2023, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.0.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
