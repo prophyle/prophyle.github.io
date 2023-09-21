@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>4. Building a standard database &#8212; ProPhyle 0.3.3.1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=67a8c293" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d10597a4" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx13.css?v=ec60a4c3" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=870b08a1"></script>
+    <script src="_static/documentation_options.js?v=d01b9837"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="Search within ProPhyle 0.3.3.1 documentation"
           href="_static/opensearch.xml"/>
@@ -140,12 +140,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="standard-db"></span><section id="building-a-standard-database">
-<span id="index-0"></span><h1><span class="section-number">4. </span>Building a standard database<a class="headerlink" href="#building-a-standard-database" title="Permalink to this heading">¶</a></h1>
+  <section id="building-a-standard-database">
+<span id="index-0"></span><span id="standard-db"></span><h1><span class="section-number">4. </span>Building a standard database<a class="headerlink" href="#building-a-standard-database" title="Link to this heading">¶</a></h1>
 <p>ProPhyle comes with several genome libraries containing
 RefSeq genomes, augmented with the NCBI taxonomy.</p>
 <section id="downloading-genomes">
-<h2><span class="section-number">4.1. </span>Downloading genomes<a class="headerlink" href="#downloading-genomes" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">4.1. </span>Downloading genomes<a class="headerlink" href="#downloading-genomes" title="Link to this heading">¶</a></h2>
 <p>These libraries can be downloaded using <code class="docutils literal notranslate"><span class="pre">prophyle</span> <span class="pre">download</span> <span class="pre">&lt;library&gt;</span> <span class="pre">[&lt;library&gt;</span> <span class="pre">...]</span></code>,
 where <code class="docutils literal notranslate"><span class="pre">&lt;library&gt;</span></code> should be replaced by <code class="docutils literal notranslate"><span class="pre">bacteria</span></code>, <code class="docutils literal notranslate"><span class="pre">viruses</span></code>, or <code class="docutils literal notranslate"><span class="pre">plasmids</span></code>.
 The command also copies a prebuild Newick/NHX tree for the specified library.
@@ -156,7 +156,7 @@ If the <cite>-d</cite> parameter is not specified, all files are placed to <cite
 </div>
 </section>
 <section id="index-construction">
-<h2><span class="section-number">4.2. </span>Index construction<a class="headerlink" href="#index-construction" title="Permalink to this heading">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Index construction<a class="headerlink" href="#index-construction" title="Link to this heading">¶</a></h2>
 <p>Once a library is downloaded, a ProPhyle index can be constructed using</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>prophyle<span class="w"> </span>index<span class="w"> </span><span class="o">[</span>-g<span class="w"> </span>DIR<span class="o">]</span><span class="w"> </span><span class="o">[</span>-j<span class="w"> </span>INT<span class="o">]</span><span class="w"> </span><span class="o">[</span>-k<span class="w"> </span>INT<span class="o">]</span><span class="w"> </span><span class="o">[</span>-M<span class="o">]</span><span class="w"> </span><span class="o">[</span>-P<span class="o">]</span><span class="w"> </span><span class="o">[</span>-K<span class="o">]</span><span class="w"> </span>&lt;tree.nw&gt;<span class="w"> </span><span class="o">[</span>&lt;tree.nw&gt;<span class="w"> </span>...<span class="o">]</span><span class="w"> </span>&lt;index.dir&gt;
 </pre></div>
@@ -213,7 +213,7 @@ of used cores.</p>
 
     <div class="footer" role="contentinfo">
     &#169; Copyright 2015-2023, Karel Břinda, Kamil Salikhov, Simone Pignotti, Gregory Kucherov.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
